@@ -7,8 +7,9 @@ tags:
   - 计算机科学
   - 技术
   - VSCODE
+  
 description: vscode的配置
-comments: true
+# comments: true
 ---
 ## VSC换python内核
 ```

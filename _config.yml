@@ -3,11 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: asdasdo的博客
-subtitle: ''
+title: asdaso的blog
+subtitle:
+  enable: true
+
+  sub:
+    - 何其荣幸 何德何能
+    - 所有的不平凡都来自平凡
 description: 'cs'
 keywords:
-author: asdasdo
+author: asdaso
 language: zh-CN
 timezone: ''
 
@@ -45,7 +50,7 @@ relative_link: false
 future: true
 syntax_highlighter: highlight.js
 highlight:
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true
@@ -105,3 +110,6 @@ deploy:
   repository: git@github.com:wawzysys/wawzysys.github.io.git
   branch: main
 
+lazyload:
+  enable: true
+  loadingImg: /img/loading.gif
