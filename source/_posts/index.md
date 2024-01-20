@@ -41,3 +41,4 @@ C://Users/<username>/.vscode/extensions/yzane.markdown-pdf-1.4.1/template/templa
 在文件下的cmd输入：
 for /r %i in (*.exe) do del /q %i
 ```
+~~~
