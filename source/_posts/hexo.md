@@ -79,3 +79,14 @@ token
 ```
 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
 ```
+
+### git 子仓库：
+```git
+cd themes/butterfly
+git add .
+git commit -m "update"
+cd ../../
+git add themes/butterfly
+git commit -m "update"
+git push origin hexo
+```
