@@ -1,15 +1,14 @@
 ---
 title: 第一个博客
-date: 2024-01-19 23:56:08
 cover: /img/333.jpg
 tags:
   - 编程
   - 计算机科学
   - 技术
   - VSCODE
-  
 description: vscode的配置
-# comments: true
+abbrlink: 61585
+date: 2024-01-19 23:56:08
 ---
 ## VSC换python内核
 ```
