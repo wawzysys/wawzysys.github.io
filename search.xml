@@ -8,7 +8,7 @@
       <link href="/post/d87f7e0c.html"/>
       <url>/post/d87f7e0c.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p><code>print</code></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">a = <span class="hljs-built_in">input</span>()<br><span class="hljs-built_in">print</span>(a)<br></code></pre></td></tr></table></figure>]]></content>
       
       
       
