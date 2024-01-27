@@ -23,6 +23,25 @@
     
     
     <entry>
+      <title>test</title>
+      <link href="/post/b9ebdeb8.html"/>
+      <url>/post/b9ebdeb8.html</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">bisect_left:&gt;=<br>bisect_right:&gt;<br></code></pre></td></tr></table></figure><h2 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">dict</span> = defaultdict(<span class="hljs-built_in">list</span>)<br></code></pre></td></tr></table></figure><h2 id="SortedDict"><a href="#SortedDict" class="headerlink" title="SortedDict"></a>SortedDict</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">dict</span> = defaultdict(SortedDict)<br></code></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>jisuan</title>
       <link href="/post/71d32bd3.html"/>
       <url>/post/71d32bd3.html</url>
