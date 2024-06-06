@@ -30,11 +30,11 @@
     
     
     <entry>
-      <title>linux</title>
+      <title>linux/linux系统</title>
       <link href="/post/9211474f.html"/>
       <url>/post/9211474f.html</url>
       
-        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"># 1. 查看系统版本<br><br></code></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plaintext"># 1. 查看系统版本<br><br></code></pre></td></tr></table></figure><h2 id="中文输入法"><a href="#中文输入法" class="headerlink" title="中文输入法"></a>中文输入法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">下载 fcitx (输入法框架)<br>fcitx-rime<br>切换输入法快捷键：ctrl + space<br></code></pre></td></tr></table></figure>]]></content>
       
       
       
