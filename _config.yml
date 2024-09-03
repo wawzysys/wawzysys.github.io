@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: asdaso的blog
+title: asdasoのblog
 subtitle:
   enable: true
 
@@ -118,11 +118,11 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: git@github.com:wawzysys/wawzysys.github.io.git
+  repository: https://github.com/wawzysys/wawzysys.github.io.git
   branch: main
 
 lazyload:
-  enable: true
+  enable: false
   loadingImg: /img/loading.gif
 
 #文章字数与阅读时长统计
