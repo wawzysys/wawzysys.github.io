@@ -6,28 +6,46 @@ tags:
 ---
 sswc31689
 # 进入容器
+```
 docker exec -it wsy /bin/bash
+```
 # 退出容器，回到服务器宿主机
+```
 exit
+```
 # 查看所有容器
+```
 docker ps -a
+```
 # 安装python和pip
+```
 apt-get install -y python3 python3-pip
+```
 # 改名
+```
 ln -s /usr/bin/python3 /usr/bin/python
 ln -s /usr/bin/pip3 /usr/bin/pip
+```
 # 验证python
+```
 python --version
 pip --version
+```
 # 安装pytorch
+```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu116
+```
 # 验证安装和gpu可用性
+```
 python -c "import torch; print(torch.__version__); print('CUDA Available:', torch.cuda.is_available()); print('GPU Count:', torch.cuda.device_count()); print('Current GPU:', torch.cuda.get_device_name(0))"
+```
 # 在 Bash 终端中，输入 python 或 python3 进入 Python 解释器环境，然后输入 Python 代码：
 python
 # 当前是否可以使用 CUDA（即 GPU 资源）
+```
 import torch
 print(torch.cuda.is_available())
+```
 
 
 ```
