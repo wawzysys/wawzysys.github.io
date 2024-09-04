@@ -143,10 +143,29 @@ https://rylynn.notion.site/dockerfile-51925f5a19344df6a7d720485468fc19?pvs=4
 
 
 # ssh免密登录
-```
+现在本地和服务器输入
+```Bash
 ssh-keygen
+```
+连续三个回车之后生成密钥。搜索本地的公钥复制到服务器的authorized_keys文件
+```Bash
 touch ~/.ssh/authorized_keys
 ```
 ```
 ssh-copy-id username@ip
+```
+
+# git push报错 443
+先看本地代理的端口号是什么
+![20240904204851](https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240904204851.png)
+比我我的是7890，所以就改为7890
+```Bash
+git config --global https.proxy 127.0.0.1:7890
+
+git config --global http.proxy 127.0.0.1:7890
+#查看正确么
+user.name=wawzysys
+user.email=1916040083@qq.com
+init.defaultbranch=main
+http.proxy=127.0.0.1:7890
 ```
