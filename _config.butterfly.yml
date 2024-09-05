@@ -4,14 +4,12 @@
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: true  #底部footer是否显示字数统计属性文字(如站点总字数,站点阅读时长 ≈ 1 分钟)
-
+  item_text_total: true #底部footer是否显示字数统计属性文字(如站点总字数,站点阅读时长 ≈ 1 分钟)
 
 nav:
   logo: https://cdn.acwing.com/media/user/profile/photo/96356_lg_30e2a9f1af.jpg
   display_title: true
   fixed: false # fixed navigation bar
-
 
 # Menu 目錄
 menu:
@@ -24,6 +22,7 @@ menu:
   #   Movie: /movies/ || fas fa-video
   Link: /link/ || fas fa-link
   About: /about/ || fas fa-heart
+  Riji: /riji/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -34,7 +33,7 @@ highlight_copy: true # copy button  是否显示复制按钮
 highlight_lang: true # show the code language 是否显示代码块语言
 highlight_shrink: false #true:打开文章默认折叠代码块内容/false:打开文章默认展开代码块/none:关闭代码折叠按钮
 highlight_height_limit: 200 # unit: px
-code_word_wrap: false  # 关闭滚动条
+code_word_wrap: false # 关闭滚动条
 
 # Social Settings (社交圖標設置)
 # formal:
@@ -75,7 +74,7 @@ tag_img: /img/back.jpg
 # The banner image of tag page
 # format:
 #  - tag name: xxxxx
-tag_per_img: 
+tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
@@ -121,7 +120,6 @@ cover:
     - /img/cover/21.jpg
     - /img/cover/22.jpg
 
-
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
   flink: /img/friend_404.gif
@@ -130,7 +128,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: false
-  subtitle: 'Page Not Found'
+  subtitle: "Page Not Found"
   background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
 
 post_meta:
@@ -154,7 +152,7 @@ post_meta:
 # false: do not show the article introduction
 
 index_post_content:
-  method: 1  #description
+  method: 1 #description
   length: 500 # if you set method to 2 or 3, the length need to config
 
 # anchor
@@ -302,7 +300,7 @@ aside:
   card_post_series:
     enable: true
     series_title: false # The title shows the series name
-    orderBy: 'date' # Order by title or date
+    orderBy: "date" # Order by title or date
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
 
 # busuanzi count for PV / UV in site
@@ -321,7 +319,7 @@ runtimeshow:
 # Aside widget - Newest Comments
 newest_comments:
   enable: true
-  sort_order: 
+  sort_order:
   # Don't modify the setting unless you know how it works
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
@@ -340,9 +338,9 @@ translate:
   # Time delay
   translateDelay: 0
   # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: '繁'
+  msgToTraditionalChinese: "繁"
   # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: '簡'
+  msgToSimplifiedChinese: "簡"
 
 # Read Mode (閲讀模式)
 readmode: true
@@ -536,7 +534,6 @@ giscus:
     data-theme: light
     data-lang: zh-CN
     defaultCommentOrder: newest
-    
 
 # Remark42
 # https://remark42.com/docs/configuration/frontend/
@@ -682,7 +679,7 @@ text_align_justify: false
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:  url(https://picx.zhimg.com/80/v2-7ee6f104979814d2bf420461e3872475_1440w.webp?source=1def8aca)
+background: url(https://picx.zhimg.com/80/v2-7ee6f104979814d2bf420461e3872475_1440w.webp?source=1def8aca)
 # Footer Background
 footer_bg: false
 
@@ -727,7 +724,7 @@ canvas_fluttering_ribbon:
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
   enable: false
-  color: '0,0,255' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
   count: 99 # the number of lines, default: 99.
@@ -843,7 +840,7 @@ fancybox: true
 # series (系列文章)
 series:
   enable: true
-  orderBy: 'title' # Order by title or date
+  orderBy: "title" # Order by title or date
   order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
   number: true
 
@@ -900,8 +897,8 @@ aplayerInject:
 snackbar:
   enable: true
   position: top-right
-  bg_light: '#49b1f5' # The background color of Toast Notification in light mode
-  bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
+  bg_light: "#49b1f5" # The background color of Toast Notification in light mode
+  bg_dark: "#1f1f1f" # The background color of Toast Notification in dark mode
 
 # https://instant.page/
 # prefetch (預加載)

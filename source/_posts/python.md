@@ -537,6 +537,9 @@ for i in range(0,len(items),1):      #逐个打印
 ```
 
 输出示例：1 0 8 3 5 7 9 4 6 2
+
+
+## 对拍
 ```python
 import os
 from random import randint, uniform
@@ -605,3 +608,4 @@ if __name__ == "__main__":
     # 调用对比程序
     diff(file_true, file_my)
 ```
+

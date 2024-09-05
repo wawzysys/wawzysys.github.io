@@ -19,15 +19,14 @@ Math.abs(x-y);
 
 **求最大值**
 
- \( \text{max}(a, b) = \frac{a + b + \text{abs}(a - b)}{2} \) 
+  $\text{max}(a, b) = \frac{a + b + \text{abs}(a - b)}{2} $ 
 
 
- \[
-   \text{max}(a, b, c) = \frac{\left(\frac{a + b + \text{abs}(a - b)}{2} + c + \text{abs}\left(\frac{a + b + \text{abs}(a - b)}{2} - c\right)\right)}{2}
-   \]
 
-max(a,b)=(a+b+abs(a−b))/2
-max(a,b,c)=((a+b+abs(a−b))/2+c+abs((a+b+abs(a−b))/2-c))/2
+  $ \text{max}(a, b, c) = \frac{\left(\frac{a + b + \text{abs}(a - b)}{2} + c + \text{abs}\left(\frac{a + b + \text{abs}(a - b)}{2} - c\right)\right)}{2}$
+   
+
+
 &nbsp;
 
 **t+=1e-8;**
