@@ -20,3 +20,9 @@ fcitx-rime
 ## 实习日志：
 ### 2024.6.6
 Pbd 调试
+
+## 常用命令
+```
+# 解压文件
+tar -xzf cifar-10-python.tar.gz
+```

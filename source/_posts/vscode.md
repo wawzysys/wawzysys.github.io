@@ -126,3 +126,9 @@ CURRENT_SECONDS_UNIX自 Unix 纪元以来的秒数
 ```
 https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode
 ```
+
+### 解决vscode文件夹下只有一个子文件会折叠起来的问题
+>打开设置搜索'Compact Folders'
+>![20240912231502](https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240912231502.png)
+>取消即可
+

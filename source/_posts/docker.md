@@ -169,3 +169,26 @@ user.email=1916040083@qq.com
 init.defaultbranch=main
 http.proxy=127.0.0.1:7890
 ```
+
+# 连接服务器上传本地文件
+
+```
+sftp username@ip
+输入密码
+#查看remote路径
+pwd 
+#查看本地路径
+lpwd
+#上传
+put 文件 romte_path
+put data.txt /home/username/
+```
+# 查看显卡
+```
+nvidia-smi
+#安装
+sudo apt install nvtop
+#输入nvtop查看
+nvitop
+```
+![20240912232146](https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240912232146.png)
