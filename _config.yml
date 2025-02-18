@@ -3,26 +3,26 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: asdasoのblog
+title: Asdasoのblog
 subtitle:
   enable: true
 
   sub:
     - 何其荣幸 何德何能
     - 所有的不平凡都来自平凡
-description: 'cs'
-keywords:
-author: asdaso
+description: "Asdasoの小世界"
+keywords: "blog,技术,编程"
+author: Asdaso
 language: zh-CN
-timezone: ''
+timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://example.com
 permalink: post/:abbrlink.html
 abbrlink:
-  alg: crc32  # 算法：crc16(default) and crc32
-  rep: hex    # 进制：dec(default) and hex
+  alg: crc32 # 算法：crc16(default) and crc32
+  rep: hex # 进制：dec(default) and hex
 
 permalink_defaults:
 pretty_urls:
@@ -46,7 +46,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -69,14 +69,14 @@ highlight:
 prismjs:
   preprocess: true
   line_number: true
-  tab_replace: ''
+  tab_replace: ""
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
 
@@ -96,7 +96,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: "mtime"
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -112,7 +112,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: butterfly
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -127,11 +127,11 @@ lazyload:
 
 #文章字数与阅读时长统计
 symbols_count_time:
-  symbols: true               # 文章字数统计
-  time: true                  # 文章阅读时长
-  total_symbols: true         # 站点总字数统计
-  total_time: true            # 站点总阅读时长
-  exclude_codeblock: false     # 排除代码字数统计
-  awl: 2                      # 每个单词所占字符数，中文建议设置为2，英文建议设置为4
-  wpm: 300                    # 每分钟阅读单词数，中文建议设置为300，英文建议设置为275
-  suffix: "mins"              # 时间单位
+  symbols: true # 文章字数统计
+  time: true # 文章阅读时长
+  total_symbols: true # 站点总字数统计
+  total_time: true # 站点总阅读时长
+  exclude_codeblock: false # 排除代码字数统计
+  awl: 2 # 每个单词所占字符数，中文建议设置为2，英文建议设置为4
+  wpm: 300 # 每分钟阅读单词数，中文建议设置为300，英文建议设置为275
+  suffix: "mins" # 时间单位
