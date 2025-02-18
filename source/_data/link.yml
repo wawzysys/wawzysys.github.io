@@ -1,0 +1,38 @@
+- class_name: 友情链接
+  class_desc: 下面都是大佬！！！
+  link_list:
+    - name: 唐志远の博客
+      link: https://fe32.top/
+      avatar: https://bu.dusays.com/2022/01/14/cd5ffd485f867.jpg
+      descr: 古今之成大事者，不惟有超世之才，亦必有坚忍不拔之志。
+    - name: selfknowのknowledge
+      link: https://docs.selfknow.cn/
+      avatar: https://docs.selfknow.cn/img/avatar.jpg
+      descr: ⭐ 来看看我的知识库吧 ⭐
+    - name: 彩色铅笔
+      link: https://www.colopen-blog.com/
+      avatar: https://colopen-blog.com/image/images/2023/04/03/HRWSN9ZKZC5MVWBBVNX.jpg
+      descr: 彩铅的个人小屋
+    - name: asdaso
+      link: https://wawzysys.github.io/
+      avatar: https://wawzysys.github.io/img/tou.jpg
+      descr: Asdasoの小世界
+    - name: hell
+      link: https://hellfancy.github.io/
+      # avatar: https://hellfancy.github.io/img/avatar.jpg
+      descr: Hellのblog
+    - name: 笼中雀
+      link: https://www.wxwbaby.cn/
+      avatar: https://www.wxwbaby.cn/img/1.jpg
+      descr: 雀的博客
+    - name: hanasaki
+      link: https://lovehanasaki.com/
+      # avatar: https://lovehanasaki.com/img/avatar.jpg
+      descr: 花咲の博客
+- class_name: 网站
+  class_desc: 值得推荐的网站
+  link_list:
+    - name: Twitter
+      link: https://twitter.com/
+      avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
+      descr: 社交分享平台
