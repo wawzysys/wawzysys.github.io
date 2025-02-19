@@ -5,6 +5,7 @@ layout: page
 banner_img: /img/back.jpg
 banner_img_height: 60
 banner_mask_alpha: 0.3
+comments: true
 ---
 
 ## 2024年
