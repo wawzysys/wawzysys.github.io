@@ -26,13 +26,13 @@
 <meta property="og:site_name" content="Asdasoのblog">
 <meta property="og:description" content="配置博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/cover/15.jpg">
+<meta property="og:image" content="http://example.com/img/cover/2.jpeg">
 <meta property="article:published_time" content="2024-01-21T19:01:24.000Z">
 <meta property="article:modified_time" content="2024-03-01T12:56:21.578Z">
 <meta property="article:author" content="Asdaso">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/cover/15.jpg">
+<meta name="twitter:image" content="http://example.com/img/cover/2.jpeg">
   
   
   
@@ -46,6 +46,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
+  <link  rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
@@ -57,7 +59,7 @@
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -70,15 +72,11 @@
 
 
 
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"gHBUbGnezwPEckLGQuK5MYV1-MdYXbMMI","app_key":"kokqnKgfEiMRyh31b4ofNY5k","server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -88,6 +86,19 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 
   
@@ -104,7 +115,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Asdasoのblog</strong>
+      <strong>asdasoのblog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -171,20 +182,8 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/riji/" target="_self">
-                <i class="fas fa-heart"></i>
+                <i class="iconfont icon-book"></i>
                 <span>日记</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/link/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
               </a>
             </li>
           
@@ -197,6 +196,18 @@
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
               </a>
             </li>
           
@@ -224,7 +235,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/cover/15.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/cover/2.jpeg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -253,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          450 字
+          467 字
         
       </span>
     
@@ -270,6 +281,15 @@
     
 
     
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+      
     
   </div>
 
@@ -306,18 +326,27 @@
             
               <div class="markdown-body">
                 
-                <h1 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h1><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">hexo <span class="hljs-keyword">new</span> <span class="hljs-string">&quot;name&quot;</span><br></code></pre></td></tr></table></figure>
+                <h1 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo new &quot;name&quot;</code></pre></div></figure>
 <p>这篇文章会出现在/source/_post/</p>
-<h1 id="发表page"><a href="#发表page" class="headerlink" title="发表page"></a>发表page</h1><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">hexo</span> page <span class="hljs-string">&quot;name&quot;</span><br></code></pre></td></tr></table></figure>
-<h1 id="修改完毕之后在本地查看效果"><a href="#修改完毕之后在本地查看效果" class="headerlink" title="修改完毕之后在本地查看效果"></a>修改完毕之后在本地查看效果</h1><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs verilog">hexo clean<br>hexo <span class="hljs-keyword">generate</span><br>hexo cl &amp;&amp; hexo g<br>hexo serve<br></code></pre></td></tr></table></figure>
-<h1 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h1><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d</span> <br></code></pre></td></tr></table></figure>
+<h1 id="发表page"><a href="#发表page" class="headerlink" title="发表page"></a>发表page</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo page &quot;name&quot;</code></pre></div></figure>
+<h1 id="修改完毕之后在本地查看效果"><a href="#修改完毕之后在本地查看效果" class="headerlink" title="修改完毕之后在本地查看效果"></a>修改完毕之后在本地查看效果</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo clean
+hexo generate
+hexo cl &amp;&amp; hexo g
+hexo serve</code></pre></div></figure>
+<h1 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo d </code></pre></div></figure>
 <p>需要输入ssh密码</p>
 <h2 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h2><h3 id="彩色标签云"><a href="#彩色标签云" class="headerlink" title="彩色标签云"></a>彩色标签云</h3><p>在<code>config.yal</code>中将<code>aside</code>中的<code>card_tags</code>的<code>enable</code>设置为<code>true</code>即可</p>
-<h3 id="用giscus实现评论"><a href="#用giscus实现评论" class="headerlink" title="用giscus实现评论"></a>用<code>giscus</code>实现评论</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">待整理<br></code></pre></td></tr></table></figure>
-<h3 id="实现鼠标彩色"><a href="#实现鼠标彩色" class="headerlink" title="实现鼠标彩色"></a>实现鼠标彩色</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">待整理<br></code></pre></td></tr></table></figure>
-<h3 id="社交信息"><a href="#社交信息" class="headerlink" title="社交信息"></a>社交信息</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">social:</span><br>  <span class="hljs-attr">fab fa-github:</span>  <span class="hljs-string">&quot;填入github主页&quot;</span><span class="hljs-string">||</span> <span class="hljs-string">Github</span> <span class="hljs-string">||</span> <span class="hljs-string">&#x27;#24292e&#x27;</span><br>  <span class="hljs-attr">fas fa-envelope:</span>  <span class="hljs-string">mailto:&quot;邮箱&quot;</span> <span class="hljs-string">||</span> <span class="hljs-string">Email</span> <span class="hljs-string">||</span> <span class="hljs-string">&#x27;#4a7dbe&#x27;</span><br>  <span class="hljs-attr">fab fa-qq: fab fa-qq:</span> <span class="hljs-string">tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=&quot;QQ号👌&quot;&amp;website=www.oicqzone.com</span> <span class="hljs-string">||</span> <span class="hljs-string">QQ</span> <span class="hljs-string">||</span> <span class="hljs-string">&#x27;#qq-color-code&#x27;</span><br></code></pre></td></tr></table></figure>
-<h3 id="背景图片and渐变"><a href="#背景图片and渐变" class="headerlink" title="背景图片and渐变"></a>背景图片and渐变</h3><p><strong>⚠️：先在<code>config.butterfly.yaml</code>中将<code>backgroud</code>设一个图片 <code>url()</code><br>网上都没有这一步<br>但我试了好多次，只加个<code>css</code>不出现图片，不知道为什么</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">background:  url(https://picx.zhimg.com/80/v2-7ee6f104979814d2bf420461e3872475_1440w.webp?<span class="hljs-built_in">source</span>=1def8aca)<br>写css<br>然后inject<br></code></pre></td></tr></table></figure></p>
-<h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gradle">写css<br>然后<span class="hljs-keyword">inject</span><br></code></pre></td></tr></table></figure>
+<h3 id="用giscus实现评论"><a href="#用giscus实现评论" class="headerlink" title="用giscus实现评论"></a>用<code>giscus</code>实现评论</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">待整理</code></pre></div></figure>
+<h3 id="实现鼠标彩色"><a href="#实现鼠标彩色" class="headerlink" title="实现鼠标彩色"></a>实现鼠标彩色</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">待整理</code></pre></div></figure>
+<h3 id="社交信息"><a href="#社交信息" class="headerlink" title="社交信息"></a>社交信息</h3><figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">social:
+  fab fa-github:  &quot;填入github主页&quot;|| Github || &#39;#24292e&#39;
+  fas fa-envelope:  mailto:&quot;邮箱&quot; || Email || &#39;#4a7dbe&#39;
+  fab fa-qq: fab fa-qq: tencent:&#x2F;&#x2F;AddContact&#x2F;?fromId&#x3D;45&amp;fromSubId&#x3D;1&amp;subcmd&#x3D;all&amp;uin&#x3D;&quot;QQ号👌&quot;&amp;website&#x3D;www.oicqzone.com || QQ || &#39;#qq-color-code&#39;</code></pre></div></figure>
+<h3 id="背景图片and渐变"><a href="#背景图片and渐变" class="headerlink" title="背景图片and渐变"></a>背景图片and渐变</h3><p><strong>⚠️：先在<code>config.butterfly.yaml</code>中将<code>backgroud</code>设一个图片 <code>url()</code><br>网上都没有这一步<br>但我试了好多次，只加个<code>css</code>不出现图片，不知道为什么</strong><br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">background:  url(https:&#x2F;&#x2F;picx.zhimg.com&#x2F;80&#x2F;v2-7ee6f104979814d2bf420461e3872475_1440w.webp?source&#x3D;1def8aca)
+写css
+然后inject</code></pre></div></figure></p>
+<h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">写css
+然后inject</code></pre></div></figure>
 <h2 id="目前还不会的"><a href="#目前还不会的" class="headerlink" title="目前还不会的"></a>目前还不会的</h2><h3 id="2024-1-11"><a href="#2024-1-11" class="headerlink" title="2024.1.11"></a>2024.1.11</h3><ul>
 <li>[ ] <code>giscus</code>不会将评论顺序默认改成最新的</li>
 <li>[ ] 最新留言or评论不会弄到右边</li>
@@ -331,13 +360,33 @@
 <p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240301205545.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240301205518.png" srcset="/img/loading.gif" lazyload alt=""></p>
 <p>点击<strong>验证图片上传选项</strong>查看是否配置好</p>
-<h3 id="git-子仓库："><a href="#git-子仓库：" class="headerlink" title="git 子仓库："></a>git 子仓库：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs git">cd themes/butterfly<br>git add .<br>git commit -m &quot;update&quot;<br>cd ../../<br>git add themes/butterfly<br>git commit -m &quot;update&quot;<br>git push origin hexo<br></code></pre></td></tr></table></figure>
-<h3 id="将ssh代理改为https"><a href="#将ssh代理改为https" class="headerlink" title="将ssh代理改为https"></a>将ssh代理改为https</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">temp</span><br></code></pre></td></tr></table></figure>
-<h3 id="可以单独将public上传到github仓库，不用hexo-d"><a href="#可以单独将public上传到github仓库，不用hexo-d" class="headerlink" title="可以单独将public上传到github仓库，不用hexo d"></a>可以单独将public上传到github仓库，不用<code>hexo d</code></h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">temp</span><br></code></pre></td></tr></table></figure>
+<h3 id="git-子仓库："><a href="#git-子仓库：" class="headerlink" title="git 子仓库："></a>git 子仓库：</h3><figure><div class="code-wrapper"><pre class="line-numbers language-git" data-language="git"><code class="language-git">cd themes&#x2F;butterfly
+git add .
+git commit -m &quot;update&quot;
+cd ..&#x2F;..&#x2F;
+git add themes&#x2F;butterfly
+git commit -m &quot;update&quot;
+git push origin hexo</code></pre></div></figure>
+<h3 id="将ssh代理改为https"><a href="#将ssh代理改为https" class="headerlink" title="将ssh代理改为https"></a>将ssh代理改为https</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">temp</code></pre></div></figure>
+<h3 id="可以单独将public上传到github仓库，不用hexo-d"><a href="#可以单独将public上传到github仓库，不用hexo-d" class="headerlink" title="可以单独将public上传到github仓库，不用hexo d"></a>可以单独将public上传到github仓库，不用<code>hexo d</code></h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">temp</code></pre></div></figure>
 <h3 id="副标题"><a href="#副标题" class="headerlink" title="副标题"></a>副标题</h3><p>在’_config.yaml’里面更改</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">title:</span> <span class="hljs-string">asdaso的blog</span><br><span class="hljs-attr">subtitle:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br><br>  <span class="hljs-attr">sub:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">何其荣幸</span> <span class="hljs-string">何德何能</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">所有的不平凡都来自平凡</span><br><span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;cs&#x27;</span><br><span class="hljs-attr">keywords:</span><br><span class="hljs-attr">author:</span> <span class="hljs-string">asdaso</span><br><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span><br><span class="hljs-attr">timezone:</span> <span class="hljs-string">&#x27;&#x27;</span><br><br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">title: asdaso的blog
+subtitle:
+  enable: true
+
+  sub:
+    - 何其荣幸 何德何能
+    - 所有的不平凡都来自平凡
+description: &#39;cs&#39;
+keywords:
+author: asdaso
+language: zh-CN
+timezone: &#39;&#39;
+</code></pre></div></figure>
 <h3 id="封面不显示正文"><a href="#封面不显示正文" class="headerlink" title="封面不显示正文"></a>封面不显示正文</h3><p><code>method</code>选择1表示显示介绍</p>
-<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs oxygene">index_post_content:<br>  <span class="hljs-keyword">method</span>: <span class="hljs-number">1</span>  #description<br>  length: <span class="hljs-number">500</span> # <span class="hljs-keyword">if</span> you <span class="hljs-keyword">set</span> <span class="hljs-keyword">method</span> <span class="hljs-title function_">to</span> 2 <span class="hljs-title function_">or</span> 3, <span class="hljs-title function_">the</span> <span class="hljs-title function_">length</span> <span class="hljs-title function_">need</span> <span class="hljs-title function_">to</span> <span class="hljs-title function_">config</span><br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">index_post_content:
+  method: 1  #description
+  length: 500 # if you set method to 2 or 3, the length need to config</code></pre></div></figure>
 
                 
               </div>
@@ -565,7 +614,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     </div>
   
   
@@ -588,7 +637,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -621,7 +670,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
     var toc = jQuery('#toc');
     if (toc.length === 0 || !window.tocbot) { return; }
     var boardCtn = jQuery('#board-ctn');
@@ -659,6 +708,12 @@
 </script>
 
 
+  <script  src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
@@ -666,7 +721,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
     window.anchors.options = {
       placement: CONFIG.anchorjs.placement,
       visible  : CONFIG.anchorjs.visible
@@ -712,13 +767,11 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
+  <script defer src="/js/leancloud.js" ></script>
+
   <script  src="/js/local-search.js" ></script>
 
 
-
-
-  
-<script src="/js/randomCover.js"></script>
 
 
 

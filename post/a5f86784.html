@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Asdasoのblog">
 <meta property="og:description" content="学习anaconda常用命令，jupyter添加内核">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/cover/12.jpg">
+<meta property="og:image" content="http://example.com/img/cover/1.png">
 <meta property="article:published_time" content="2024-03-15T05:04:35.000Z">
 <meta property="article:modified_time" content="2024-03-15T08:27:36.866Z">
 <meta property="article:author" content="Asdaso">
@@ -36,7 +36,7 @@
 <meta property="article:tag" content="深度学习">
 <meta property="article:tag" content="pytorch">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/cover/12.jpg">
+<meta name="twitter:image" content="http://example.com/img/cover/1.png">
   
   
   
@@ -50,6 +50,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
+  <link  rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
@@ -61,7 +63,7 @@
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -74,15 +76,11 @@
 
 
 
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"gHBUbGnezwPEckLGQuK5MYV1-MdYXbMMI","app_key":"kokqnKgfEiMRyh31b4ofNY5k","server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -92,6 +90,19 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 
   
@@ -108,7 +119,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Asdasoのblog</strong>
+      <strong>asdasoのblog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -175,20 +186,8 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/riji/" target="_self">
-                <i class="fas fa-heart"></i>
+                <i class="iconfont icon-book"></i>
                 <span>日记</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/link/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
               </a>
             </li>
           
@@ -201,6 +200,18 @@
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
               </a>
             </li>
           
@@ -228,7 +239,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/cover/12.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/cover/1.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -257,7 +268,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          557 字
+          572 字
         
       </span>
     
@@ -274,6 +285,15 @@
     
 
     
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+      
     
   </div>
 
@@ -310,20 +330,49 @@
             
               <div class="markdown-body">
                 
-                <h2 id="anaconda"><a href="#anaconda" class="headerlink" title="anaconda"></a>anaconda</h2><h3 id="env"><a href="#env" class="headerlink" title="env"></a>env</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-string">创建虚拟环境</span><br><span class="hljs-string">conda</span> <span class="hljs-string">create</span> <span class="hljs-string">-n</span> <span class="hljs-string">env_name</span> <span class="hljs-string">python=3.8</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-string">查看虚拟环境</span><br><span class="hljs-string">conda</span> <span class="hljs-string">env</span> <span class="hljs-string">list</span><br></code></pre></td></tr></table></figure>
-<p>进入\激活虚拟环境<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-string">conda</span> <span class="hljs-string">activate</span> <span class="hljs-string">env_name</span><br></code></pre></td></tr></table></figure><br>退出虚拟环境<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-string">conda</span> <span class="hljs-string">activate</span><br></code></pre></td></tr></table></figure><br>删除虚拟环境<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-string">conda</span> <span class="hljs-string">remove</span> <span class="hljs-string">--name</span> <span class="hljs-string">env_name</span> <span class="hljs-string">--all</span><br></code></pre></td></tr></table></figure><br>导出环境<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#获得环境中的所有配置</span><br>conda <span class="hljs-built_in">env</span> <span class="hljs-built_in">export</span> --name myenv &gt; myenv.yml<br><span class="hljs-comment">#重新还原环境</span><br>conda <span class="hljs-built_in">env</span> create -f  myenv.yml<br></code></pre></td></tr></table></figure></p>
-<h3 id="pkg"><a href="#pkg" class="headerlink" title="pkg"></a>pkg</h3><p>查看当前虚拟环境的包/库<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">conda list</span><br></code></pre></td></tr></table></figure><br>查询是否安装哪个包<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs lsl">详细查找<br>conda <span class="hljs-type">list</span> pkgname        <br>模糊查找<br>conda <span class="hljs-type">list</span> pkgname*   <br></code></pre></td></tr></table></figure><br>安装包<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">conda</span> install package_name<br><span class="hljs-attribute">conda</span> install numpy=<span class="hljs-number">0</span>.<span class="hljs-number">20</span>.<span class="hljs-number">3</span><br></code></pre></td></tr></table></figure><br>查询包的版本 (不是本地的，是这个包网上有几个版本)<br><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ceylon">conda search <span class="hljs-keyword">package</span><span class="hljs-number">_n</span>ame<br></code></pre></td></tr></table></figure><br>卸载包<br><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ceylon">conda uninstall <span class="hljs-keyword">package</span><span class="hljs-number">_n</span>ame<br><br></code></pre></td></tr></table></figure></p>
-<p>清理anaconda缓存<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs scss">conda clean -<span class="hljs-selector-tag">p</span>      # 删除没有用的包 <span class="hljs-attr">--packages</span><br>conda clean -t      # 删除tar打包 <span class="hljs-attr">--tarballs</span><br>conda clean -y -<span class="hljs-attribute">all</span> # 删除所有的安装包及<span class="hljs-built_in">cache</span>(索引缓存、锁定文件、未使用过的包和tar包)<br></code></pre></td></tr></table></figure></p>
-<p>python版本管理<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vim">conda install <span class="hljs-keyword">python</span>=<span class="hljs-number">3.5</span> #将版本变更到指定版本<br><span class="hljs-keyword">python</span> --<span class="hljs-keyword">version</span>         #查看<span class="hljs-keyword">python</span>版本<br></code></pre></td></tr></table></figure></p>
-<p><code>conda install</code> vs <code>pip install</code><br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake">conda只能在conda管理的环境中使用，例如比如conda所创建的虚环境中使用。pip可以在任何环境中使用，在conda创建的环境 中使用pip命令，需要先安装pip（conda <span class="hljs-keyword">install</span> pip ），然后可以 环境A 中使用pip 。conda 安装的包，pip可以卸载，但不能卸载依赖包，pip安装的包，只能用pip卸载。<br><br></code></pre></td></tr></table></figure><br>如何判断conda中某个包是通过conda还是pip安装的？<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs lsl">执行​ conda <span class="hljs-type">list</span> ，用pip安装的包显示的build项目为pypi。<br></code></pre></td></tr></table></figure></p>
-<h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3><p>添加清华源channel<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">conda config --add channels https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/anaconda/</span>pkgs<span class="hljs-regexp">/free/</span><br><br></code></pre></td></tr></table></figure><br>删除<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs arduino">conda config --remove channels  https:<span class="hljs-comment">//mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><br></code></pre></td></tr></table></figure><br>展示所有<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs lua">conda <span class="hljs-built_in">config</span> <span class="hljs-comment">--show channels</span><br><br></code></pre></td></tr></table></figure><br>设置下载时候显示channel<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">conda<span class="hljs-built_in"> config </span>--<span class="hljs-built_in">set</span> show_channel_urls <span class="hljs-literal">yes</span><br></code></pre></td></tr></table></figure><br>查看现在的channel状态和优先级<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">conda<span class="hljs-built_in"> config </span>--<span class="hljs-built_in">get</span> channels<br><br></code></pre></td></tr></table></figure><br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240315122413.png" srcset="/img/loading.gif" lazyload alt="20240315122413"></p>
-<p>展示所有的镜像channel<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">conda <span class="hljs-built_in">config</span> --<span class="hljs-keyword">show </span>channels <span class="hljs-comment">#越上面优先级越高</span><br><br></code></pre></td></tr></table></figure><br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240315122438.png" srcset="/img/loading.gif" lazyload alt="20240315122438"></p>
-<p>添加conda-forge channel<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">conda-forge channel</span><br></code></pre></td></tr></table></figure><br><strong>最新添加的优先级越高</strong></p>
-<h3 id="jupyter"><a href="#jupyter" class="headerlink" title="jupyter"></a>jupyter</h3><p>方法一 为 conda 环境创建特殊内核<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs applescript">conda create -n <span class="hljs-keyword">my</span>-conda-env    <span class="hljs-comment"># creates new virtual env</span><br>conda <span class="hljs-built_in">activate</span> <span class="hljs-keyword">my</span>-conda-env     <span class="hljs-comment"># activate environment in terminal</span><br>conda install ipykernel      <span class="hljs-comment"># install Python kernel in new conda env</span><br>ipython kernel install <span class="hljs-comment">--user --name=环境名 # configure Jupyter to use Python kernel</span><br><br></code></pre></td></tr></table></figure><br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240315130049.png" srcset="/img/loading.gif" lazyload alt="20240315130049"><br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240315130130.png" srcset="/img/loading.gif" lazyload alt="20240315130130"></p>
-<p>方法一删除虚拟环境内核<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">jupyter kernelspec <span class="hljs-keyword">remove</span> 环境名 <span class="hljs-comment"># 删除虚拟环境的 kernel 内核</span><br></code></pre></td></tr></table></figure></p>
+                <h2 id="anaconda"><a href="#anaconda" class="headerlink" title="anaconda"></a>anaconda</h2><h3 id="env"><a href="#env" class="headerlink" title="env"></a>env</h3><figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">创建虚拟环境
+conda create -n env_name python&#x3D;3.8</code></pre></div></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">查看虚拟环境
+conda env list</code></pre></div></figure>
+<p>进入\激活虚拟环境<br><figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">conda activate env_name</code></pre></div></figure><br>退出虚拟环境<br><figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">conda activate</code></pre></div></figure><br>删除虚拟环境<br><figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">conda remove --name env_name --all</code></pre></div></figure><br>导出环境<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">#获得环境中的所有配置
+conda env export --name myenv &gt; myenv.yml
+#重新还原环境
+conda env create -f  myenv.yml</code></pre></div></figure></p>
+<h3 id="pkg"><a href="#pkg" class="headerlink" title="pkg"></a>pkg</h3><p>查看当前虚拟环境的包/库<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda list</code></pre></div></figure><br>查询是否安装哪个包<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">详细查找
+conda list pkgname        
+模糊查找
+conda list pkgname*   </code></pre></div></figure><br>安装包<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda install package_name
+conda install numpy&#x3D;0.20.3</code></pre></div></figure><br>查询包的版本 (不是本地的，是这个包网上有几个版本)<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda search package_name</code></pre></div></figure><br>卸载包<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda uninstall package_name
+</code></pre></div></figure></p>
+<p>清理anaconda缓存<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda clean -p      # 删除没有用的包 --packages
+conda clean -t      # 删除tar打包 --tarballs
+conda clean -y -all # 删除所有的安装包及cache(索引缓存、锁定文件、未使用过的包和tar包)</code></pre></div></figure></p>
+<p>python版本管理<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda install python&#x3D;3.5 #将版本变更到指定版本
+python --version         #查看python版本</code></pre></div></figure></p>
+<p><code>conda install</code> vs <code>pip install</code><br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda只能在conda管理的环境中使用，例如比如conda所创建的虚环境中使用。pip可以在任何环境中使用，在conda创建的环境 中使用pip命令，需要先安装pip（conda install pip ），然后可以 环境A 中使用pip 。conda 安装的包，pip可以卸载，但不能卸载依赖包，pip安装的包，只能用pip卸载。
+</code></pre></div></figure><br>如何判断conda中某个包是通过conda还是pip安装的？<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">执行​ conda list ，用pip安装的包显示的build项目为pypi。</code></pre></div></figure></p>
+<h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3><p>添加清华源channel<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;free&#x2F;
+</code></pre></div></figure><br>删除<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda config --remove channels  https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;free&#x2F;
+</code></pre></div></figure><br>展示所有<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda config --show channels
+</code></pre></div></figure><br>设置下载时候显示channel<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda config --set show_channel_urls yes</code></pre></div></figure><br>查看现在的channel状态和优先级<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda config --get channels
+</code></pre></div></figure><br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240315122413.png" srcset="/img/loading.gif" lazyload alt="20240315122413"></p>
+<p>展示所有的镜像channel<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda config --show channels #越上面优先级越高
+</code></pre></div></figure><br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240315122438.png" srcset="/img/loading.gif" lazyload alt="20240315122438"></p>
+<p>添加conda-forge channel<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda-forge channel</code></pre></div></figure><br><strong>最新添加的优先级越高</strong></p>
+<h3 id="jupyter"><a href="#jupyter" class="headerlink" title="jupyter"></a>jupyter</h3><p>方法一 为 conda 环境创建特殊内核<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda create -n my-conda-env    # creates new virtual env
+conda activate my-conda-env     # activate environment in terminal
+conda install ipykernel      # install Python kernel in new conda env
+ipython kernel install --user --name&#x3D;环境名 # configure Jupyter to use Python kernel
+</code></pre></div></figure><br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240315130049.png" srcset="/img/loading.gif" lazyload alt="20240315130049"><br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240315130130.png" srcset="/img/loading.gif" lazyload alt="20240315130130"></p>
+<p>方法一删除虚拟环境内核<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">jupyter kernelspec remove 环境名 # 删除虚拟环境的 kernel 内核</code></pre></div></figure></p>
 <p>方法二 使用 nb_conda_kernels 添加所有环境<br>第一种方法其实也挺不错的。有个缺点是，你新建一个环境，就要重复操作一次。</p>
-<p>而这个方法就是一键添加所有 conda 环境，但需要在新环境里面安装 <code>ipykernel</code><br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">conda activate my-conda-env    <br>conda <span class="hljs-keyword">install </span>ipykernel<br>conda deactivate<br><br>conda activate <span class="hljs-keyword">base </span>     <span class="hljs-comment"># could be also some other environment</span><br>conda <span class="hljs-keyword">install </span>nb_conda_kernels<br><span class="hljs-keyword">jupyter </span>notebook<br></code></pre></td></tr></table></figure><br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/a5ac79c8f5825d253d1c5dcbf3a786c7.png" srcset="/img/loading.gif" lazyload alt="a5ac79c8f5825d253d1c5dcbf3a786c7"><br><strong>第一个框是方法二<br>第二个框是方法一</strong><br>11</p>
+<p>而这个方法就是一键添加所有 conda 环境，但需要在新环境里面安装 <code>ipykernel</code><br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">conda activate my-conda-env    
+conda install ipykernel
+conda deactivate
+
+conda activate base      # could be also some other environment
+conda install nb_conda_kernels
+jupyter notebook</code></pre></div></figure><br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/a5ac79c8f5825d253d1c5dcbf3a786c7.png" srcset="/img/loading.gif" lazyload alt="a5ac79c8f5825d253d1c5dcbf3a786c7"><br><strong>第一个框是方法二<br>第二个框是方法一</strong><br>11</p>
 
                 
               </div>
@@ -559,7 +608,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     </div>
   
   
@@ -582,7 +631,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -615,7 +664,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
     var toc = jQuery('#toc');
     if (toc.length === 0 || !window.tocbot) { return; }
     var boardCtn = jQuery('#board-ctn');
@@ -653,6 +702,12 @@
 </script>
 
 
+  <script  src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
@@ -660,7 +715,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
     window.anchors.options = {
       placement: CONFIG.anchorjs.placement,
       visible  : CONFIG.anchorjs.visible
@@ -706,13 +761,11 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
+  <script defer src="/js/leancloud.js" ></script>
+
   <script  src="/js/local-search.js" ></script>
 
 
-
-
-  
-<script src="/js/randomCover.js"></script>
 
 
 

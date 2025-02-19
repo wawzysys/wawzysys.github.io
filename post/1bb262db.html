@@ -26,13 +26,13 @@
 <meta property="og:site_name" content="Asdasoのblog">
 <meta property="og:description" content="MQ怎么保证消费者顺序的？Redis为什么这么快 内存数据库 c语言实现 优化过的数据结构 单线程，避免多线切换的开销 I&#x2F;O多路复用 一个线程处理多个I&#x2F;O  Redis大key问题大key是value过大 造成的问题：会造成堵塞 解决方案：拆分大key，删除大key（不能用del，在redis6.0之后可以用unlock） Redis基本数据结构string list hash set zse">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/cover/18.jpg">
+<meta property="og:image" content="http://example.com/img/cover/8.jpg">
 <meta property="article:published_time" content="2024-12-17T03:17:43.000Z">
 <meta property="article:modified_time" content="2025-02-18T14:40:04.948Z">
 <meta property="article:author" content="Asdaso">
 <meta property="article:tag" content="blog,技术,编程">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/cover/18.jpg">
+<meta name="twitter:image" content="http://example.com/img/cover/8.jpg">
   
   
   
@@ -46,6 +46,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
+  <link  rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
@@ -57,7 +59,7 @@
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -70,15 +72,11 @@
 
 
 
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"gHBUbGnezwPEckLGQuK5MYV1-MdYXbMMI","app_key":"kokqnKgfEiMRyh31b4ofNY5k","server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -88,6 +86,19 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 
   
@@ -104,7 +115,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Asdasoのblog</strong>
+      <strong>asdasoのblog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -171,20 +182,8 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/riji/" target="_self">
-                <i class="fas fa-heart"></i>
+                <i class="iconfont icon-book"></i>
                 <span>日记</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/link/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
               </a>
             </li>
           
@@ -197,6 +196,18 @@
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
               </a>
             </li>
           
@@ -224,7 +235,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/cover/18.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/cover/8.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -270,6 +281,15 @@
     
 
     
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+      
     
   </div>
 
@@ -474,7 +494,7 @@
 <p>设置鼠标上下滚动：</p>
 </li>
 </ul>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">tmux <span class="hljs-keyword">set</span> -g mouse <span class="hljs-keyword">on</span><br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">tmux set -g mouse on</code></pre></div></figure>
 <ul>
 <li>粘贴：</li>
 </ul>
@@ -512,7 +532,43 @@
 <h4 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h4><p><img src="C:\Users\19160\AppData\Roaming\Typora\typora-user-images\image-20241205023630853.png" srcset="/img/loading.gif" lazyload alt="image-20241205023630853"></p>
 <h4 id="核心线程数"><a href="#核心线程数" class="headerlink" title="核心线程数"></a>核心线程数</h4><h4 id="线程池种类"><a href="#线程池种类" class="headerlink" title="线程池种类"></a><img src="C:\Users\19160\AppData\Roaming\Typora\typora-user-images\image-20241205023811682.png" srcset="/img/loading.gif" lazyload alt="image-20241205023811682">线程池种类</h4><p><img src="C:\Users\19160\AppData\Roaming\Typora\typora-user-images\image-20241205023844726.png" srcset="/img/loading.gif" lazyload alt="image-20241205023844726"></p>
 <h4 id="ThreadLocal"><a href="#ThreadLocal" class="headerlink" title="ThreadLocal"></a>ThreadLocal</h4><p><img src="C:\Users\19160\AppData\Roaming\Typora\typora-user-images\image-20241205025333416.png" srcset="/img/loading.gif" lazyload alt="image-20241205025333416"></p>
-<h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.wyj.singleton;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">SingleObject</span> &#123;<br>    <span class="hljs-comment">//创建一个SingleObject对象</span><br>    <span class="hljs-comment">// 用static 关键字修饰 表示该变量为静态变量  该类所有对象所共享的一个变量</span><br>    <span class="hljs-comment">//下方static方法中 不能调用非Static属性</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">SingleObject</span> <span class="hljs-variable">getInstance</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SingleObject</span>();<br>    <span class="hljs-keyword">private</span> String name;<br>    <span class="hljs-comment">//让其构造函数为private,那么他不会被实例化</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-title function_">SingleObject</span> <span class="hljs-params">()</span>&#123;<br>    &#125;<br>    <span class="hljs-comment">//获取唯一可用的对象</span><br>    <span class="hljs-comment">// 这里用static关键字修饰的话, 当该静态方法被调用时该类就会被类加载</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> SingleObject <span class="hljs-title function_">getSingleObject</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> getInstance;<br>    &#125;<br>    <span class="hljs-keyword">void</span> <span class="hljs-title function_">say</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;hello&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> name;<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setName</span><span class="hljs-params">(String name)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">singleDemo</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// 我们并没有去new一个实例，而是调用了该实例的 自己建造实例的方法</span><br>        <span class="hljs-type">SingleObject</span> <span class="hljs-variable">object</span> <span class="hljs-operator">=</span> SingleObject.getSingleObject();<br>        <span class="hljs-type">SingleObject</span> <span class="hljs-variable">object2</span> <span class="hljs-operator">=</span> SingleObject.getSingleObject();<br>        object.setName(<span class="hljs-string">&quot;wyj&quot;</span>);<br>        object2.setName(<span class="hljs-string">&quot;www&quot;</span>);<br>        System.out.println(object.getName());<br><br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><figure><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.wyj.singleton;
+class SingleObject &#123;
+    &#x2F;&#x2F;创建一个SingleObject对象
+    &#x2F;&#x2F; 用static 关键字修饰 表示该变量为静态变量  该类所有对象所共享的一个变量
+    &#x2F;&#x2F;下方static方法中 不能调用非Static属性
+    private static SingleObject getInstance &#x3D; new SingleObject();
+    private String name;
+    &#x2F;&#x2F;让其构造函数为private,那么他不会被实例化
+    private SingleObject ()&#123;
+    &#125;
+    &#x2F;&#x2F;获取唯一可用的对象
+    &#x2F;&#x2F; 这里用static关键字修饰的话, 当该静态方法被调用时该类就会被类加载
+    public static SingleObject getSingleObject() &#123;
+        return getInstance;
+    &#125;
+    void say() &#123;
+        System.out.println(&quot;hello&quot;);
+    &#125;
+    public String getName() &#123;
+        return name;
+    &#125;
+    public void setName(String name) &#123;
+        this.name &#x3D; name;
+    &#125;
+&#125;
+public class singleDemo &#123;
+    public static void main(String[] args) &#123;
+        &#x2F;&#x2F; 我们并没有去new一个实例，而是调用了该实例的 自己建造实例的方法
+        SingleObject object &#x3D; SingleObject.getSingleObject();
+        SingleObject object2 &#x3D; SingleObject.getSingleObject();
+        object.setName(&quot;wyj&quot;);
+        object2.setName(&quot;www&quot;);
+        System.out.println(object.getName());
+
+    &#125;
+&#125;
+</code></pre></div></figure>
 
                 
               </div>
@@ -727,7 +783,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     </div>
   
   
@@ -750,7 +806,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -783,7 +839,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
     var toc = jQuery('#toc');
     if (toc.length === 0 || !window.tocbot) { return; }
     var boardCtn = jQuery('#board-ctn');
@@ -821,6 +877,12 @@
 </script>
 
 
+  <script  src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
@@ -828,7 +890,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
     window.anchors.options = {
       placement: CONFIG.anchorjs.placement,
       visible  : CONFIG.anchorjs.visible
@@ -874,13 +936,11 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
+  <script defer src="/js/leancloud.js" ></script>
+
   <script  src="/js/local-search.js" ></script>
 
 
-
-
-  
-<script src="/js/randomCover.js"></script>
 
 
 

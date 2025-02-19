@@ -19,20 +19,20 @@
   <meta name="author" content="Asdaso">
   <meta name="keywords" content="blog,技术,编程">
   
-    <meta name="description" content="sswc31689 进入容器1docker exec -it wsy &#x2F;bin&#x2F;bash 退出容器，回到服务器宿主机1exit 查看所有容器1docker ps -a 安装python和pip1apt-get install -y python3 python3-pip 改名12ln -s &#x2F;usr&#x2F;bin&#x2F;python3 &#x2F;usr&#x2F;bin&#x2F;pythonln -s &#x2F;usr&#x2F;bin&#x2F;pip3 &#x2F;u">
+    <meta name="description" content="sswc31689 进入容器docker exec -it wsy &#x2F;bin&#x2F;bash 退出容器，回到服务器宿主机exit 查看所有容器docker ps -a 安装python和pipapt-get install -y python3 python3-pip 改名ln -s &#x2F;usr&#x2F;bin&#x2F;python3 &#x2F;usr&#x2F;bin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker">
 <meta property="og:url" content="http://example.com/post/f255ffad.html">
 <meta property="og:site_name" content="Asdasoのblog">
-<meta property="og:description" content="sswc31689 进入容器1docker exec -it wsy &#x2F;bin&#x2F;bash 退出容器，回到服务器宿主机1exit 查看所有容器1docker ps -a 安装python和pip1apt-get install -y python3 python3-pip 改名12ln -s &#x2F;usr&#x2F;bin&#x2F;python3 &#x2F;usr&#x2F;bin&#x2F;pythonln -s &#x2F;usr&#x2F;bin&#x2F;pip3 &#x2F;u">
+<meta property="og:description" content="sswc31689 进入容器docker exec -it wsy &#x2F;bin&#x2F;bash 退出容器，回到服务器宿主机exit 查看所有容器docker ps -a 安装python和pipapt-get install -y python3 python3-pip 改名ln -s &#x2F;usr&#x2F;bin&#x2F;python3 &#x2F;usr&#x2F;bin">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/cover/18.jpg">
+<meta property="og:image" content="http://example.com/img/cover/14.jpg">
 <meta property="article:published_time" content="2024-09-03T14:47:00.000Z">
 <meta property="article:modified_time" content="2024-11-08T08:46:44.420Z">
 <meta property="article:author" content="Asdaso">
 <meta property="article:tag" content="blog,技术,编程">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/cover/18.jpg">
+<meta name="twitter:image" content="http://example.com/img/cover/14.jpg">
   
   
   
@@ -46,6 +46,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
+  <link  rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
@@ -57,7 +59,7 @@
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -70,15 +72,11 @@
 
 
 
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"gHBUbGnezwPEckLGQuK5MYV1-MdYXbMMI","app_key":"kokqnKgfEiMRyh31b4ofNY5k","server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -88,6 +86,19 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 
   
@@ -104,7 +115,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Asdasoのblog</strong>
+      <strong>asdasoのblog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -171,20 +182,8 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/riji/" target="_self">
-                <i class="fas fa-heart"></i>
+                <i class="iconfont icon-book"></i>
                 <span>日记</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/link/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
               </a>
             </li>
           
@@ -197,6 +196,18 @@
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
               </a>
             </li>
           
@@ -224,7 +235,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/cover/18.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/cover/14.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -253,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          793 字
+          856 字
         
       </span>
     
@@ -264,12 +275,21 @@
         
         
         
-          7 分钟
+          8 分钟
         
       </span>
     
 
     
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+      
     
   </div>
 
@@ -307,44 +327,83 @@
               <div class="markdown-body">
                 
                 <p>sswc31689</p>
-<h1 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">exec</span> -it wsy /bin/bash<br></code></pre></td></tr></table></figure>
-<h1 id="退出容器，回到服务器宿主机"><a href="#退出容器，回到服务器宿主机" class="headerlink" title="退出容器，回到服务器宿主机"></a>退出容器，回到服务器宿主机</h1><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure>
-<h1 id="查看所有容器"><a href="#查看所有容器" class="headerlink" title="查看所有容器"></a>查看所有容器</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">docker ps -<span class="hljs-selector-tag">a</span><br></code></pre></td></tr></table></figure>
-<h1 id="安装python和pip"><a href="#安装python和pip" class="headerlink" title="安装python和pip"></a>安装python和pip</h1><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">apt-<span class="hljs-built_in">get</span> install -<span class="hljs-keyword">y</span> <span class="hljs-keyword">python3</span> <span class="hljs-keyword">python3</span>-pip<br></code></pre></td></tr></table></figure>
-<h1 id="改名"><a href="#改名" class="headerlink" title="改名"></a>改名</h1><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">ln -s <span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/python3 /u</span>sr<span class="hljs-regexp">/bin/</span>python<br>ln -s <span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/pip3 /u</span>sr<span class="hljs-regexp">/bin/</span>pip<br></code></pre></td></tr></table></figure>
-<h1 id="验证python"><a href="#验证python" class="headerlink" title="验证python"></a>验证python</h1><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-keyword">python</span> --<span class="hljs-keyword">version</span><br>pip --<span class="hljs-keyword">version</span><br></code></pre></td></tr></table></figure>
-<h1 id="安装pytorch"><a href="#安装pytorch" class="headerlink" title="安装pytorch"></a>安装pytorch</h1><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">pip install torch torchvision torchaudio --index-url https:<span class="hljs-regexp">//</span>download.pytorch.org<span class="hljs-regexp">/whl/</span>cu116<br></code></pre></td></tr></table></figure>
-<h1 id="验证安装和gpu可用性"><a href="#验证安装和gpu可用性" class="headerlink" title="验证安装和gpu可用性"></a>验证安装和gpu可用性</h1><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss">python -c &quot;import torch; <span class="hljs-built_in">print</span>(torch.__version__); <span class="hljs-built_in">print</span>(&#x27;CUDA Available:&#x27;, torch.cuda.is_available()); <span class="hljs-built_in">print</span>(&#x27;GPU Count:&#x27;, torch.cuda.device_count()); <span class="hljs-built_in">print</span>(&#x27;Current GPU:&#x27;, torch.cuda.get_device_name(<span class="hljs-number">0</span>))&quot;<br></code></pre></td></tr></table></figure>
+<h1 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">docker exec -it wsy &#x2F;bin&#x2F;bash</code></pre></div></figure>
+<h1 id="退出容器，回到服务器宿主机"><a href="#退出容器，回到服务器宿主机" class="headerlink" title="退出容器，回到服务器宿主机"></a>退出容器，回到服务器宿主机</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">exit</code></pre></div></figure>
+<h1 id="查看所有容器"><a href="#查看所有容器" class="headerlink" title="查看所有容器"></a>查看所有容器</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">docker ps -a</code></pre></div></figure>
+<h1 id="安装python和pip"><a href="#安装python和pip" class="headerlink" title="安装python和pip"></a>安装python和pip</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">apt-get install -y python3 python3-pip</code></pre></div></figure>
+<h1 id="改名"><a href="#改名" class="headerlink" title="改名"></a>改名</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">ln -s &#x2F;usr&#x2F;bin&#x2F;python3 &#x2F;usr&#x2F;bin&#x2F;python
+ln -s &#x2F;usr&#x2F;bin&#x2F;pip3 &#x2F;usr&#x2F;bin&#x2F;pip</code></pre></div></figure>
+<h1 id="验证python"><a href="#验证python" class="headerlink" title="验证python"></a>验证python</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">python --version
+pip --version</code></pre></div></figure>
+<h1 id="安装pytorch"><a href="#安装pytorch" class="headerlink" title="安装pytorch"></a>安装pytorch</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">pip install torch torchvision torchaudio --index-url https:&#x2F;&#x2F;download.pytorch.org&#x2F;whl&#x2F;cu116</code></pre></div></figure>
+<h1 id="验证安装和gpu可用性"><a href="#验证安装和gpu可用性" class="headerlink" title="验证安装和gpu可用性"></a>验证安装和gpu可用性</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">python -c &quot;import torch; print(torch.__version__); print(&#39;CUDA Available:&#39;, torch.cuda.is_available()); print(&#39;GPU Count:&#39;, torch.cuda.device_count()); print(&#39;Current GPU:&#39;, torch.cuda.get_device_name(0))&quot;</code></pre></div></figure>
 <h1 id="在-Bash-终端中，输入-python-或-python3-进入-Python-解释器环境，然后输入-Python-代码："><a href="#在-Bash-终端中，输入-python-或-python3-进入-Python-解释器环境，然后输入-Python-代码：" class="headerlink" title="在 Bash 终端中，输入 python 或 python3 进入 Python 解释器环境，然后输入 Python 代码："></a>在 Bash 终端中，输入 python 或 python3 进入 Python 解释器环境，然后输入 Python 代码：</h1><p>python</p>
-<h1 id="当前是否可以使用-CUDA（即-GPU-资源）"><a href="#当前是否可以使用-CUDA（即-GPU-资源）" class="headerlink" title="当前是否可以使用 CUDA（即 GPU 资源）"></a>当前是否可以使用 CUDA（即 GPU 资源）</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">import torch<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(torch.cuda.is_available()</span></span>)<br></code></pre></td></tr></table></figure>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">docker run -it -v <span class="hljs-string">/mnt/lustre/GPU4/home/sushuang/siyi</span>:<span class="hljs-string">/app</span> -p 8822<span class="hljs-function">:22</span> <span class="hljs-params">--name</span> wsy <span class="hljs-params">--gpus</span> all  <span class="hljs-params">--restart=always</span> iris-main <span class="hljs-string">/bin/bash</span><br><br>注意几个参数<br>-itd<br>-p<br>-v<br><span class="hljs-params">--gpus</span><br></code></pre></td></tr></table></figure>
-<h1 id="汉语"><a href="#汉语" class="headerlink" title="汉语"></a>汉语</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt-get update<br>apt-get install -y locales fonts-noto-cjk<br>locale-gen zh_CN.UTF-8<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export LANG=zh_CN.UTF-8&#x27;</span> &gt;&gt; ~/.bashrc<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export LC_ALL=zh_CN.UTF-8&#x27;</span> &gt;&gt; ~/.bashrc<br><span class="hljs-built_in">source</span> ~/.bashrc<br></code></pre></td></tr></table></figure>
+<h1 id="当前是否可以使用-CUDA（即-GPU-资源）"><a href="#当前是否可以使用-CUDA（即-GPU-资源）" class="headerlink" title="当前是否可以使用 CUDA（即 GPU 资源）"></a>当前是否可以使用 CUDA（即 GPU 资源）</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">import torch
+print(torch.cuda.is_available())</code></pre></div></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">docker run -it -v &#x2F;mnt&#x2F;lustre&#x2F;GPU4&#x2F;home&#x2F;sushuang&#x2F;siyi:&#x2F;app -p 8822:22 --name wsy --gpus all  --restart&#x3D;always iris-main &#x2F;bin&#x2F;bash
+
+注意几个参数
+-itd
+-p
+-v
+--gpus</code></pre></div></figure>
+<h1 id="汉语"><a href="#汉语" class="headerlink" title="汉语"></a>汉语</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">apt-get update
+apt-get install -y locales fonts-noto-cjk
+locale-gen zh_CN.UTF-8
+echo &#39;export LANG&#x3D;zh_CN.UTF-8&#39; &gt;&gt; ~&#x2F;.bashrc
+echo &#39;export LC_ALL&#x3D;zh_CN.UTF-8&#39; &gt;&gt; ~&#x2F;.bashrc
+source ~&#x2F;.bashrc</code></pre></div></figure>
 <h1 id="docker-ssh"><a href="#docker-ssh" class="headerlink" title="docker ssh"></a>docker ssh</h1><p>如果在容器中运行 <code>service ssh status</code> 时显示“ssh: unrecognized service”，可能是因为容器中没有安装 SSH 服务。通常，Docker 容器默认不安装 SSH 服务，特别是精简镜像或者仅用于运行特定应用的容器。</p>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
 <li><p><strong>安装 SSH 服务</strong></p>
 <p>如果你需要在 Docker 容器中运行 SSH 服务，你可以尝试安装并配置它。以下是在基于 Debian/Ubuntu 镜像的容器中安装和配置 SSH 服务的步骤：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt-get update<br>apt-get install -y openssh-server<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">apt-get update
+apt-get install -y openssh-server</code></pre></div></figure>
 <p>安装完成后，创建 SSH 服务的运行目录，并启动 SSH 服务：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> /var/run/sshd<br>service ssh start<br></code></pre></td></tr></table></figure></li>
-<li><strong>配置 SSH</strong><br>确保 SSH 配置文件正确，特别是 <code>sshd_config</code> 文件中的设置。例如，确保 <code>PermitRootLogin</code> 被设置为 <code>yes</code>，如果你要以 root 用户登录：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sed -i <span class="hljs-string">&#x27;s/PermitRootLogin.*/PermitRootLogin yes/&#x27;</span> /etc/ssh/sshd_config<br></code></pre></td></tr></table></figure></li>
+<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">mkdir &#x2F;var&#x2F;run&#x2F;sshd
+service ssh start</code></pre></div></figure></li>
+<li><strong>配置 SSH</strong><br>确保 SSH 配置文件正确，特别是 <code>sshd_config</code> 文件中的设置。例如，确保 <code>PermitRootLogin</code> 被设置为 <code>yes</code>，如果你要以 root 用户登录：<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">sed -i &#39;s&#x2F;PermitRootLogin.*&#x2F;PermitRootLogin yes&#x2F;&#39; &#x2F;etc&#x2F;ssh&#x2F;sshd_config</code></pre></div></figure></li>
 <li><strong>暴露 SSH 端口</strong><br>确保 Docker 容器正确暴露了 SSH 端口（通常是端口 22）。你在启动容器时已经进行了端口映射，所以确保端口映射正确并且容器内部的服务配置无误。</li>
-<li><strong>重新启动容器</strong><br>重新启动容器以确保所有配置生效：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker restart wsy<br></code></pre></td></tr></table></figure></li>
-<li><strong>检查 SSH 服务</strong><br>再次检查 SSH 服务是否正在运行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">service ssh status<br></code></pre></td></tr></table></figure></li>
-<li><strong>连接到容器</strong><br>使用 SSH 客户端连接到容器：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -p 8822 sushuang@127.0.0.1<br></code></pre></td></tr></table></figure>
+<li><strong>重新启动容器</strong><br>重新启动容器以确保所有配置生效：<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker restart wsy</code></pre></div></figure></li>
+<li><strong>检查 SSH 服务</strong><br>再次检查 SSH 服务是否正在运行：<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">service ssh status</code></pre></div></figure></li>
+<li><strong>连接到容器</strong><br>使用 SSH 客户端连接到容器：<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh -p 8822 sushuang@127.0.0.1</code></pre></div></figure>
 <h3 id="如果不需要-SSH"><a href="#如果不需要-SSH" class="headerlink" title="如果不需要 SSH"></a>如果不需要 SSH</h3></li>
 </ol>
 <p>如果你只是需要在容器内执行一些命令，而不需要通过 SSH 访问容器，可以直接使用 <code>docker exec</code> 进入容器：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">exec</span> -it wsy /bin/bash<br></code></pre></td></tr></table></figure>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo docker<span class="hljs-built_in"> port </span>[新的容器ID] 22<br>sudo docker<span class="hljs-built_in"> port </span>d92fd3e9f4a0  22<span class="hljs-built_in"></span><br><span class="hljs-built_in">service </span>ssh restart<br></code></pre></td></tr></table></figure>
-<h1 id="设置docker-root-密码"><a href="#设置docker-root-密码" class="headerlink" title="设置docker root 密码"></a>设置docker root 密码</h1><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">passwd</span><br></code></pre></td></tr></table></figure>
-<h1 id="用docker的root链接"><a href="#用docker的root链接" class="headerlink" title="用docker的root链接"></a>用docker的root链接</h1><p>Host docker-container<br>  HostName 172.10.60.143<br>    User root<br>    Port 8822<br>csdn:<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//</span>blog.csdn.net<span class="hljs-regexp">/weixin_43268590/</span>article<span class="hljs-regexp">/details/</span><span class="hljs-number">129244984</span><br></code></pre></td></tr></table></figure><br>rr notion<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">https</span>://rylynn.notion.site/dockerfile-<span class="hljs-number">51925</span>f5a19344df6a7d720485468fc19?pvs=<span class="hljs-number">4</span><br></code></pre></td></tr></table></figure></p>
-<h1 id="ssh免密登录"><a href="#ssh免密登录" class="headerlink" title="ssh免密登录"></a>ssh免密登录</h1><p>现在本地和服务器输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Bash">ssh-keygen<br></code></pre></td></tr></table></figure><br>连续三个回车之后生成密钥。搜索本地的公钥复制到服务器的authorized_keys文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Bash"><span class="hljs-built_in">touch</span> ~/.ssh/authorized_keys<br></code></pre></td></tr></table></figure><br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">ssh-<span class="hljs-keyword">copy</span>-<span class="hljs-built_in">id</span> username@ip<br></code></pre></td></tr></table></figure></p>
-<h1 id="git-push报错-443"><a href="#git-push报错-443" class="headerlink" title="git push报错 443"></a>git push报错 443</h1><p>先看本地代理的端口号是什么<br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240904204851.png" srcset="/img/loading.gif" lazyload alt="20240904204851"><br>比我我的是7890，所以就改为7890<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs Bash">git config --global https.proxy 127.0.0.1:7890<br><br>git config --global http.proxy 127.0.0.1:7890<br><span class="hljs-comment">#查看正确么</span><br>git config --list<br><br>user.name=wawzysys<br>user.email=1916040083@qq.com<br>init.defaultbranch=main<br>http.proxy=127.0.0.1:7890<br></code></pre></td></tr></table></figure></p>
-<h1 id="连接服务器上传本地文件"><a href="#连接服务器上传本地文件" class="headerlink" title="连接服务器上传本地文件"></a>连接服务器上传本地文件</h1><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs applescript">sftp username@ip<br>输入密码<br><span class="hljs-comment">#查看remote路径</span><br>pwd <br><span class="hljs-comment">#查看本地路径</span><br>lpwd<br><span class="hljs-comment">#上传</span><br><span class="hljs-keyword">put</span> 文件 romte_path<br><span class="hljs-keyword">put</span> data.txt /home/username/<br></code></pre></td></tr></table></figure>
-<h1 id="查看显卡"><a href="#查看显卡" class="headerlink" title="查看显卡"></a>查看显卡</h1><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake">nvidia-smi<br><span class="hljs-comment">#安装</span><br>sudo apt <span class="hljs-keyword">install</span> nvtop<br><span class="hljs-comment">#输入nvtop查看</span><br>nvitop<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker exec -it wsy &#x2F;bin&#x2F;bash</code></pre></div></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">sudo docker port [新的容器ID] 22
+sudo docker port d92fd3e9f4a0  22
+service ssh restart</code></pre></div></figure>
+<h1 id="设置docker-root-密码"><a href="#设置docker-root-密码" class="headerlink" title="设置docker root 密码"></a>设置docker root 密码</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">passwd</code></pre></div></figure>
+<h1 id="用docker的root链接"><a href="#用docker的root链接" class="headerlink" title="用docker的root链接"></a>用docker的root链接</h1><p>Host docker-container<br>  HostName 172.10.60.143<br>    User root<br>    Port 8822<br>csdn:<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_43268590&#x2F;article&#x2F;details&#x2F;129244984</code></pre></div></figure><br>rr notion<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;rylynn.notion.site&#x2F;dockerfile-51925f5a19344df6a7d720485468fc19?pvs&#x3D;4</code></pre></div></figure></p>
+<h1 id="ssh免密登录"><a href="#ssh免密登录" class="headerlink" title="ssh免密登录"></a>ssh免密登录</h1><p>现在本地和服务器输入<br><figure><div class="code-wrapper"><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">ssh-keygen</code></pre></div></figure><br>连续三个回车之后生成密钥。搜索本地的公钥复制到服务器的authorized_keys文件<br><figure><div class="code-wrapper"><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">touch ~&#x2F;.ssh&#x2F;authorized_keys</code></pre></div></figure><br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">ssh-copy-id username@ip</code></pre></div></figure></p>
+<h1 id="git-push报错-443"><a href="#git-push报错-443" class="headerlink" title="git push报错 443"></a>git push报错 443</h1><p>先看本地代理的端口号是什么<br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240904204851.png" srcset="/img/loading.gif" lazyload alt="20240904204851"><br>比我我的是7890，所以就改为7890<br><figure><div class="code-wrapper"><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">git config --global https.proxy 127.0.0.1:7890
+
+git config --global http.proxy 127.0.0.1:7890
+#查看正确么
+git config --list
+
+user.name&#x3D;wawzysys
+user.email&#x3D;1916040083@qq.com
+init.defaultbranch&#x3D;main
+http.proxy&#x3D;127.0.0.1:7890</code></pre></div></figure></p>
+<h1 id="连接服务器上传本地文件"><a href="#连接服务器上传本地文件" class="headerlink" title="连接服务器上传本地文件"></a>连接服务器上传本地文件</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">sftp username@ip
+输入密码
+#查看remote路径
+pwd 
+#查看本地路径
+lpwd
+#上传
+put 文件 romte_path
+put data.txt &#x2F;home&#x2F;username&#x2F;</code></pre></div></figure>
+<h1 id="查看显卡"><a href="#查看显卡" class="headerlink" title="查看显卡"></a>查看显卡</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">nvidia-smi
+#安装
+sudo apt install nvtop
+#输入nvtop查看
+nvitop</code></pre></div></figure>
 <p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240912232146.png" srcset="/img/loading.gif" lazyload alt="20240912232146"></p>
 <h2 id="vsocde打开远程太慢"><a href="#vsocde打开远程太慢" class="headerlink" title="vsocde打开远程太慢"></a>vsocde打开远程太慢</h2><p>先用ssh命令连接 然后删除 <code>rm -rf ~/.vscode-server</code></p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs subunit">$ ssh -p 29974 -i &quot;C:\Users\19160\wangsiyi_2024<span class="hljs-string">-11</span><span class="hljs-string">-03</span>_20<span class="hljs-string">-11</span><span class="hljs-string">-00</span><span class="hljs-string">-494</span>.txt&quot; root@172.18.36.57<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">$ ssh -p 29974 -i &quot;C:\Users\19160\wangsiyi_2024-11-03_20-11-00-494.txt&quot; root@172.18.36.57</code></pre></div></figure>
 
                 
               </div>
@@ -565,7 +624,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     </div>
   
   
@@ -588,7 +647,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -621,7 +680,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
     var toc = jQuery('#toc');
     if (toc.length === 0 || !window.tocbot) { return; }
     var boardCtn = jQuery('#board-ctn');
@@ -659,6 +718,12 @@
 </script>
 
 
+  <script  src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
@@ -666,7 +731,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
     window.anchors.options = {
       placement: CONFIG.anchorjs.placement,
       visible  : CONFIG.anchorjs.visible
@@ -712,13 +777,11 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
+  <script defer src="/js/leancloud.js" ></script>
+
   <script  src="/js/local-search.js" ></script>
 
 
-
-
-  
-<script src="/js/randomCover.js"></script>
 
 
 

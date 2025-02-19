@@ -19,20 +19,20 @@
   <meta name="author" content="Asdaso">
   <meta name="keywords" content="blog,技术,编程">
   
-    <meta name="description" content="pymodel12345678910111213141516171819202122232425262728import syssys.setrecursionlimit(100000)input&#x3D;lambda:sys.stdin.readline().strip()# write&#x3D;lambda x:sys.stdout.write(str(x)+&#x27;\n&#x27;)# from dec">
+    <meta name="description" content="pymodelimport sys sys.setrecursionlimit(100000) input&#x3D;lambda:sys.stdin.readline().strip() # write&#x3D;lambda x:sys.stdout.write(str(x)+&#39;\n&#39;) # from decimal import Decimal # from datetime">
 <meta property="og:type" content="article">
 <meta property="og:title" content="model">
 <meta property="og:url" content="http://example.com/post/d79572d9.html">
 <meta property="og:site_name" content="Asdasoのblog">
-<meta property="og:description" content="pymodel12345678910111213141516171819202122232425262728import syssys.setrecursionlimit(100000)input&#x3D;lambda:sys.stdin.readline().strip()# write&#x3D;lambda x:sys.stdout.write(str(x)+&#x27;\n&#x27;)# from dec">
+<meta property="og:description" content="pymodelimport sys sys.setrecursionlimit(100000) input&#x3D;lambda:sys.stdin.readline().strip() # write&#x3D;lambda x:sys.stdout.write(str(x)+&#39;\n&#39;) # from decimal import Decimal # from datetime">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/cover/18.jpg">
+<meta property="og:image" content="http://example.com/img/cover/20.jpg">
 <meta property="article:published_time" content="2024-05-18T12:23:59.000Z">
 <meta property="article:modified_time" content="2024-05-18T12:24:56.078Z">
 <meta property="article:author" content="Asdaso">
 <meta property="article:tag" content="blog,技术,编程">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/cover/18.jpg">
+<meta name="twitter:image" content="http://example.com/img/cover/20.jpg">
   
   
   
@@ -46,6 +46,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
+  <link  rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
@@ -57,7 +59,7 @@
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -70,15 +72,11 @@
 
 
 
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"gHBUbGnezwPEckLGQuK5MYV1-MdYXbMMI","app_key":"kokqnKgfEiMRyh31b4ofNY5k","server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -88,6 +86,19 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 
   
@@ -104,7 +115,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Asdasoのblog</strong>
+      <strong>asdasoのblog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -171,20 +182,8 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/riji/" target="_self">
-                <i class="fas fa-heart"></i>
+                <i class="iconfont icon-book"></i>
                 <span>日记</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/link/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
               </a>
             </li>
           
@@ -197,6 +196,18 @@
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
               </a>
             </li>
           
@@ -224,7 +235,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/cover/18.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/cover/20.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -253,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k 字
+          2.9k 字
         
       </span>
     
@@ -264,12 +275,21 @@
         
         
         
-          21 分钟
+          24 分钟
         
       </span>
     
 
     
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+      
     
   </div>
 
@@ -306,26 +326,665 @@
             
               <div class="markdown-body">
                 
-                <h3 id="pymodel"><a href="#pymodel" class="headerlink" title="pymodel"></a>pymodel</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys<br>sys.setrecursionlimit(<span class="hljs-number">100000</span>)<br><span class="hljs-built_in">input</span>=<span class="hljs-keyword">lambda</span>:sys.stdin.readline().strip()<br><span class="hljs-comment"># write=lambda x:sys.stdout.write(str(x)+&#x27;\n&#x27;)</span><br><span class="hljs-comment"># from decimal import Decimal</span><br><span class="hljs-comment"># from datetime import datetime,timedelta</span><br><span class="hljs-comment"># from random import randint</span><br><span class="hljs-comment"># from copy import deepcopy</span><br><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> *<br><span class="hljs-comment"># from heapq import heapify,heappush,heappop</span><br><span class="hljs-comment"># from bisect import bisect_left,bisect,insort</span><br><span class="hljs-comment"># from math import inf,sqrt,gcd,pow,ceil,floor,log,log2,log10,pi,sin,cos,tan,asin,acos,atan</span><br><span class="hljs-comment"># from functools import cmp_to_key,reduce</span><br><span class="hljs-comment"># from operator import or_,xor,add,mul</span><br><span class="hljs-comment"># from itertools import permutations,combinations,accumulate</span><br>sint = <span class="hljs-keyword">lambda</span>: <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>mint = <span class="hljs-keyword">lambda</span>: <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>lint = <span class="hljs-keyword">lambda</span>: <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">solve</span>():<br>    <br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    <span class="hljs-comment">#t=int(input())</span><br>    <span class="hljs-comment">#for _ in range(t):</span><br>    <span class="hljs-comment">#   solve()</span><br><br>    solve()<br></code></pre></td></tr></table></figure>
-<h3 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">DSU</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, n</span>):<br>        self.parent = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(n))<br>        self.size = [<span class="hljs-number">1</span>] * n<br>        self.n = n<br>        self.setCount = n<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">find</span>(<span class="hljs-params">self, x</span>):<br>        <span class="hljs-keyword">if</span> self.parent[x] != x:<br>            self.parent[x] = self.find(self.parent[x])<br>        <span class="hljs-keyword">return</span> self.parent[x]<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">union</span>(<span class="hljs-params">self, x, y</span>):<br>        x, y = self.find(x), self.find(y)<br>        <span class="hljs-keyword">if</span> x == y:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>        <span class="hljs-keyword">if</span> self.size[x] &lt; self.size[y]:<br>            x, y = y, x<br>        self.parent[y] = x<br>        self.size[x] += self.size[y]<br>        self.setCount -= <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">connected</span>(<span class="hljs-params">self, x, y</span>):<br>        x, y = self.find(x), self.find(y)<br>        <span class="hljs-keyword">return</span> x == y<br></code></pre></td></tr></table></figure>
-<h3 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Factorial</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, N, mod</span>) -&gt; <span class="hljs-literal">None</span>:<br>        N += <span class="hljs-number">1</span><br>        self.mod = mod<br>        self.f = [<span class="hljs-number">1</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N)]<br>        self.g = [<span class="hljs-number">1</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N)]<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, N):<br>            self.f[i] = self.f[i - <span class="hljs-number">1</span>] * i % self.mod<br>        self.g[-<span class="hljs-number">1</span>] = <span class="hljs-built_in">pow</span>(self.f[-<span class="hljs-number">1</span>], mod - <span class="hljs-number">2</span>, mod)<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N - <span class="hljs-number">2</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>):<br>            self.g[i] = self.g[i + <span class="hljs-number">1</span>] * (i + <span class="hljs-number">1</span>) % self.mod<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">fac</span>(<span class="hljs-params">self, n</span>):<br>        <span class="hljs-keyword">return</span> self.f[n]<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">fac_inv</span>(<span class="hljs-params">self, n</span>):<br>        <span class="hljs-keyword">return</span> self.g[n]<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">comb</span>(<span class="hljs-params">self, n, m</span>):<br>        <span class="hljs-keyword">if</span> n &lt; m <span class="hljs-keyword">or</span> m &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> n &lt; <span class="hljs-number">0</span>: <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        <span class="hljs-keyword">return</span> self.f[n] * self.g[m] % self.mod * self.g[n - m] % self.mod<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">permu</span>(<span class="hljs-params">self, n, m</span>):<br>        <span class="hljs-keyword">if</span> n &lt; m <span class="hljs-keyword">or</span> m &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> n &lt; <span class="hljs-number">0</span>: <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        <span class="hljs-keyword">return</span> self.f[n] * self.g[n - m] % self.mod<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">catalan</span>(<span class="hljs-params">self, n</span>):<br>        <span class="hljs-keyword">return</span> (self.comb(<span class="hljs-number">2</span> * n, n) - self.comb(<span class="hljs-number">2</span> * n, n - <span class="hljs-number">1</span>)) % self.mod<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">inv</span>(<span class="hljs-params">self, n</span>):<br>        <span class="hljs-keyword">return</span> self.f[n - <span class="hljs-number">1</span>] * self.g[n] % self.mod<br></code></pre></td></tr></table></figure>
-<h3 id="质数筛"><a href="#质数筛" class="headerlink" title="质数筛"></a>质数筛</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python">pri = []<br>not_prime = [<span class="hljs-literal">False</span>] * N<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">pre</span>(<span class="hljs-params">n</span>):<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, n + <span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_prime[i]:<br>            pri.append(i)<br>        <span class="hljs-keyword">for</span> pri_j <span class="hljs-keyword">in</span> pri:<br>            <span class="hljs-keyword">if</span> i * pri_j &gt; n:<br>                <span class="hljs-keyword">break</span><br>            not_prime[i * pri_j] = <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">if</span> i % pri_j == <span class="hljs-number">0</span>:<br>                <span class="hljs-keyword">break</span><br></code></pre></td></tr></table></figure>
-<h3 id="质因数个数"><a href="#质因数个数" class="headerlink" title="质因数个数"></a>质因数个数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">divide</span>(<span class="hljs-params">n</span>):<br>    ans = []<br>    i = <span class="hljs-number">2</span><br>    <span class="hljs-keyword">while</span> i &lt;= n // i:<br>        <span class="hljs-keyword">if</span> n % i == <span class="hljs-number">0</span>:<br>            cnt = <span class="hljs-number">0</span><br>            <span class="hljs-keyword">while</span> n % i == <span class="hljs-number">0</span>:<br>                cnt += <span class="hljs-number">1</span><br>                n //= i<br>            ans.append((i, cnt))<br>        i += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">if</span> n &gt; <span class="hljs-number">1</span>:<br>        ans.append((n, <span class="hljs-number">1</span>))<br>    <span class="hljs-keyword">return</span> ans<br></code></pre></td></tr></table></figure>
-<h3 id="约数之和"><a href="#约数之和" class="headerlink" title="约数之和"></a>约数之和</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs python">mod = <span class="hljs-built_in">int</span>(<span class="hljs-number">1e9</span> + <span class="hljs-number">7</span>)<br>primes = &#123;&#125;<br>a = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><span class="hljs-keyword">while</span> a:<br>    a -= <span class="hljs-number">1</span><br>    n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>    i = <span class="hljs-number">2</span><br>    <span class="hljs-keyword">while</span> i &lt;= n // i:<br>        <span class="hljs-keyword">while</span> n % i == <span class="hljs-number">0</span>:<br>            n //= i<br>            <span class="hljs-keyword">if</span> i <span class="hljs-keyword">in</span> primes:<br>                primes[i] += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                primes[i] = <span class="hljs-number">1</span><br>        i += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">if</span> n &gt; <span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">if</span> n <span class="hljs-keyword">in</span> primes:<br>            primes[n] += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">else</span>:<br>            primes[n] = <span class="hljs-number">1</span><br>res = <span class="hljs-number">1</span><br><span class="hljs-keyword">for</span> i,val <span class="hljs-keyword">in</span> primes.items():<br>    t = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">while</span> val:<br>        val -= <span class="hljs-number">1</span><br>        t = (t * i + <span class="hljs-number">1</span>) % mod<br>    res = res * t % mod<br><span class="hljs-built_in">print</span>(res)<br></code></pre></td></tr></table></figure>
-<h3 id="约数个数"><a href="#约数个数" class="headerlink" title="约数个数"></a>约数个数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs python">mod = <span class="hljs-number">1e9</span> + <span class="hljs-number">7</span><br><br>primes = &#123;&#125;<br>a = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><span class="hljs-keyword">while</span> a:<br>    a -= <span class="hljs-number">1</span><br>    n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>    i = <span class="hljs-number">2</span><br>    <span class="hljs-keyword">while</span> i &lt;= n // i:<br>        <span class="hljs-keyword">while</span> n % i == <span class="hljs-number">0</span>:<br>            n //= i<br>            <span class="hljs-keyword">if</span> i <span class="hljs-keyword">in</span> primes:<br>                primes[i] += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                primes[i] = <span class="hljs-number">1</span><br>        i += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">if</span> n &gt; <span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">if</span> n <span class="hljs-keyword">in</span> primes:<br>            primes[n] += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">else</span>:<br>            primes[n] = <span class="hljs-number">1</span><br><br>res = <span class="hljs-number">1</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> primes.values():<br>    res = <span class="hljs-built_in">int</span>(res * (i + <span class="hljs-number">1</span>) % mod)<br><span class="hljs-built_in">print</span>(res)<br></code></pre></td></tr></table></figure>
-<h3 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h3><p><img src="image.png" srcset="/img/loading.gif" lazyload alt="alt text"><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    a = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>    res = a<br>    j = <span class="hljs-number">2</span><br>    <span class="hljs-keyword">while</span> j * j &lt;= a :<br>        <span class="hljs-keyword">if</span> a % j == <span class="hljs-number">0</span>:<br>            res = res * (j - <span class="hljs-number">1</span>) // j<br>            <span class="hljs-keyword">while</span> a % j == <span class="hljs-number">0</span>:<br>                a = a // j<br>        j += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">if</span> a &gt; <span class="hljs-number">1</span>:<br>        res = res * (a - <span class="hljs-number">1</span>) // a<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">int</span>(res))<br></code></pre></td></tr></table></figure></p>
-<h3 id="筛法求欧拉函数"><a href="#筛法求欧拉函数" class="headerlink" title="筛法求欧拉函数"></a>筛法求欧拉函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs python">N = <span class="hljs-number">1000010</span><br>primes = [<span class="hljs-number">0</span>]*N<br>phi = [<span class="hljs-number">0</span>]*N<br>st = [<span class="hljs-literal">False</span>]*N<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_eulers</span>(<span class="hljs-params">n</span>):<br>    phi[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span><br>    cnt = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>,n+<span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> st[i]:<br>            primes[cnt] = i<br>            cnt += <span class="hljs-number">1</span><br>            phi[i] = i - <span class="hljs-number">1</span><br>        j = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">while</span> primes[j] &lt;= n // i:<br>            st[primes[j] * i] = <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">if</span> i % primes[j] == <span class="hljs-number">0</span>:<br>                phi[primes[j] * i] = phi[i] * primes[j]<br>                <span class="hljs-keyword">break</span><br>            phi[primes[j] * i] = phi[i] * (primes[j] - <span class="hljs-number">1</span>)<br>            j += <span class="hljs-number">1</span><br><br></code></pre></td></tr></table></figure>
-<h3 id="扩展欧几里得"><a href="#扩展欧几里得" class="headerlink" title="扩展欧几里得"></a>扩展欧几里得</h3><p><img src="image-1.png" srcset="/img/loading.gif" lazyload alt="alt text"><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">extend_gcd</span>(<span class="hljs-params">a,b,x,y</span>):<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> b:<br>        <span class="hljs-keyword">return</span> a,<span class="hljs-number">1</span>,<span class="hljs-number">0</span><br><br>    d,y,x = extend_gcd(b, a % b, y, x)<br>    y -= a // b * x<br>    <span class="hljs-keyword">return</span> d,x,y<br><br>n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><span class="hljs-keyword">while</span> n:<br>    n -= <span class="hljs-number">1</span><br>    a,b = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>,<span class="hljs-built_in">input</span>().split())<br>    x,y = <span class="hljs-number">0</span>,<span class="hljs-number">0</span><br>    d,x,y = extend_gcd(a,b,x,y)<br>    <span class="hljs-built_in">print</span>(x,y)<br></code></pre></td></tr></table></figure></p>
-<h3 id="线性同余方程"><a href="#线性同余方程" class="headerlink" title="线性同余方程"></a>线性同余方程</h3><p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240518200819.png" srcset="/img/loading.gif" lazyload alt="20240518200819"><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">extend_gcd</span>(<span class="hljs-params">a,b,x,y</span>):<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> b:<br>        <span class="hljs-keyword">return</span> a,<span class="hljs-number">1</span>,<span class="hljs-number">0</span><br><br>    d,y,x = extend_gcd(b, a % b, y, x)<br>    y -= a // b * x<br>    <span class="hljs-keyword">return</span> d,x,y<br><br>n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><span class="hljs-keyword">while</span> n:<br>    n -= <span class="hljs-number">1</span><br>    a,b,m = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>,<span class="hljs-built_in">input</span>().split())<br>    x,y = <span class="hljs-number">0</span>,<span class="hljs-number">0</span><br>    d,x,y = extend_gcd(a,m,x,y)<br>    <span class="hljs-keyword">if</span> b % d:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;impossible&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(x * (b // d) % m)<br></code></pre></td></tr></table></figure></p>
-<h3 id="求组合数"><a href="#求组合数" class="headerlink" title="求组合数"></a>求组合数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> math<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">C</span>(<span class="hljs-params">n, m</span>):<br>    <span class="hljs-keyword">return</span> math.factorial(n) // (math.factorial(m) * math.factorial(n - m))<br>n, m = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br><span class="hljs-built_in">print</span>(C(n, m))<br></code></pre></td></tr></table></figure>
-<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 左闭右闭</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">FenWick</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, n: <span class="hljs-built_in">int</span></span>):<br>        self.n = n<br>        self.tr = [<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n + <span class="hljs-number">1</span>)]<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">sum</span>(<span class="hljs-params">self, i: <span class="hljs-built_in">int</span></span>):<br>        i += <span class="hljs-number">1</span><br>        s = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">while</span> i &gt;= <span class="hljs-number">1</span>:<br>            s += self.tr[i]<br>            i &amp;= i - <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> s<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">rangeSum</span>(<span class="hljs-params">self, l: <span class="hljs-built_in">int</span>, r: <span class="hljs-built_in">int</span></span>):<br>        <span class="hljs-keyword">return</span> self.<span class="hljs-built_in">sum</span>(r) - self.<span class="hljs-built_in">sum</span>(l - <span class="hljs-number">1</span>)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">self, i: <span class="hljs-built_in">int</span>, val: <span class="hljs-built_in">int</span></span>):<br>        i += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">while</span> i &lt;= self.n:<br>            self.tr[i] += val<br>            i += i &amp; -i<br></code></pre></td></tr></table></figure>
-<h3 id="线段数"><a href="#线段数" class="headerlink" title="线段数"></a>线段数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys<br><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> defaultdict<br><span class="hljs-comment"># region fastio</span><br><span class="hljs-built_in">input</span> = <span class="hljs-keyword">lambda</span>: sys.stdin.readline().rstrip()<br>sint = <span class="hljs-keyword">lambda</span>: <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>mint = <span class="hljs-keyword">lambda</span>: <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>ints = <span class="hljs-keyword">lambda</span>: <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">segtree</span>:<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, n: <span class="hljs-built_in">int</span>, m: <span class="hljs-built_in">int</span></span>):<br>        self.n = n<br>        self.m = m<br>        self.<span class="hljs-built_in">max</span> = [<span class="hljs-number">0</span>] * (<span class="hljs-number">4</span>*n)  <span class="hljs-comment"># 维护区间最大值</span><br>        self.<span class="hljs-built_in">sum</span> = [<span class="hljs-number">0</span>] * (<span class="hljs-number">4</span>*n)  <span class="hljs-comment"># 维护区间和</span><br>        <span class="hljs-comment"># self.build(m, 1, n, 1)  # 建树【线段树下标从1开始】</span><br>    <br>    <span class="hljs-comment"># &#x27;&#x27;&#x27;自定义build函数：建树&#x27;&#x27;&#x27;</span><br>    <span class="hljs-comment"># def build(self, val, left, right, root):</span><br>    <span class="hljs-comment">#     if left == right:       # 到达叶子节点，递归终止</span><br>    <span class="hljs-comment">#         self.max[root] = val</span><br>    <span class="hljs-comment">#         self.sum[root] = val</span><br>    <span class="hljs-comment">#         return</span><br>    <span class="hljs-comment">#     mid = (left + right) // 2</span><br>    <span class="hljs-comment">#     self.build(val, left, mid, 2*root)  # 左右递归</span><br>    <span class="hljs-comment">#     self.build(val, mid+1, right, 2*root+1)</span><br>    <span class="hljs-comment">#     self.pushUp(root)                   # 更新信息</span><br>    <br>    <span class="hljs-string">&#x27;&#x27;&#x27;自定义pushUp函数：更新节点信息&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">pushUp</span>(<span class="hljs-params">self, root</span>):<br>        self.<span class="hljs-built_in">max</span>[root] = <span class="hljs-built_in">max</span>(self.<span class="hljs-built_in">max</span>[<span class="hljs-number">2</span>*root], self.<span class="hljs-built_in">max</span>[<span class="hljs-number">2</span>*root+<span class="hljs-number">1</span>])<br>        self.<span class="hljs-built_in">sum</span>[root] = self.<span class="hljs-built_in">sum</span>[<span class="hljs-number">2</span>*root] + self.<span class="hljs-built_in">sum</span>[<span class="hljs-number">2</span>*root+<span class="hljs-number">1</span>]<br>    <br>    <span class="hljs-string">&#x27;&#x27;&#x27;自定义add函数：单点更新&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">self, i: <span class="hljs-built_in">int</span>, val: <span class="hljs-built_in">int</span>, left: <span class="hljs-built_in">int</span>, right: <span class="hljs-built_in">int</span>, root: <span class="hljs-built_in">int</span></span>) -&gt; <span class="hljs-literal">None</span>:<br>        <span class="hljs-comment"># i表示操作位置编号; root表示当前节点编号(树中)，[left, right]表示root节点所维护的区间</span><br>        <span class="hljs-keyword">if</span> left == right:           <span class="hljs-comment"># 到达叶子节点，递归终止</span><br>            self.<span class="hljs-built_in">max</span>[root] += val   <span class="hljs-comment"># root节点更新，+val</span><br>            self.<span class="hljs-built_in">sum</span>[root] += val   <span class="hljs-comment"># root节点更新，+val</span><br>            <span class="hljs-keyword">return</span><br>        mid = (left + right) // <span class="hljs-number">2</span><br>        <span class="hljs-keyword">if</span> i &lt;= mid:                <span class="hljs-comment"># 根据条件判断去往左/右子树</span><br>            self.add(i, val, left, mid, <span class="hljs-number">2</span>*root)<br>        <span class="hljs-keyword">else</span>:<br>            self.add(i, val, mid+<span class="hljs-number">1</span>, right, <span class="hljs-number">2</span>*root+<span class="hljs-number">1</span>)<br>        self.pushUp(root)           <span class="hljs-comment"># 子节点更新了，父节点信息也需要更新</span><br>    <br>    <span class="hljs-string">&#x27;&#x27;&#x27;自定义query函数：区间和查询&#x27;&#x27;&#x27;</span><br>    <span class="hljs-comment"># 查询[L, R]之间合</span><br>    <span class="hljs-comment"># 在区间[left, right]中查询区间[L,R]中的数值之和【求和】</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">self, L: <span class="hljs-built_in">int</span>, R: <span class="hljs-built_in">int</span>, left: <span class="hljs-built_in">int</span>, right: <span class="hljs-built_in">int</span>, root: <span class="hljs-built_in">int</span></span>):<br>        <span class="hljs-comment"># L,R表示操作区间; root表示当前节点编号(树中)，[left, right]表示root节点所维护的区间</span><br>        <span class="hljs-keyword">if</span> L&lt;=left <span class="hljs-keyword">and</span> right&lt;=R:<br>            <span class="hljs-keyword">return</span> self.<span class="hljs-built_in">sum</span>[root]<br>        mid = (left+right) // <span class="hljs-number">2</span><br>        range_sum = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">if</span> L &lt;= mid:        <span class="hljs-comment"># 左区间有重合</span><br>            range_sum += self.query(L, R, left, mid, <span class="hljs-number">2</span>*root)<br>        <span class="hljs-keyword">if</span> R &gt; mid:         <span class="hljs-comment"># 右区间有重合</span><br>            range_sum += self.query(L, R, mid+<span class="hljs-number">1</span>, right, <span class="hljs-number">2</span>*root+<span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">return</span> range_sum<br><br>    <span class="hljs-comment">#查询[L, R]之间的最大值</span><br>    <span class="hljs-comment">#qeery_max(L,R,1,N,1)</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">query_max</span>(<span class="hljs-params">self, L:<span class="hljs-built_in">int</span>, R: <span class="hljs-built_in">int</span>, left :<span class="hljs-built_in">int</span>, right: <span class="hljs-built_in">int</span>, root : <span class="hljs-built_in">int</span></span>):<br>        <span class="hljs-keyword">if</span> L &lt;= left <span class="hljs-keyword">and</span> right &lt;= R:<br>            <span class="hljs-keyword">return</span> self.<span class="hljs-built_in">max</span>[root]<br>        mid = (left + right) // <span class="hljs-number">2</span><br>        mm = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">if</span> L &lt;= mid:<br>            mm = self.query_max(L, R, left, mid, <span class="hljs-number">2</span> * root)<br>        <span class="hljs-keyword">if</span> R &gt; mid:<br>            mm = <span class="hljs-built_in">max</span>(mm, self.query_max(L, R, mid + <span class="hljs-number">1</span>, right, <span class="hljs-number">2</span> * root + <span class="hljs-number">1</span>))<br>        <span class="hljs-keyword">return</span> mm<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">solve</span>():<br>    m, p = mint()<br>    se = segtree(m, <span class="hljs-number">0</span>)<br>    last = <span class="hljs-number">0</span><br>    n = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(m):<br>        op, l = <span class="hljs-built_in">input</span>().split()<br>        l = <span class="hljs-built_in">int</span>(l)<br>        <span class="hljs-keyword">if</span> op == <span class="hljs-string">&#x27;A&#x27;</span>:<br>            <span class="hljs-comment"># print(&quot;val&quot;, (last + l) % p)</span><br>            se.add(n + <span class="hljs-number">1</span>, (last + l) % p, <span class="hljs-number">1</span>, m, <span class="hljs-number">1</span>)<br>            n += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">else</span>:<br>            last = se.query_max(n - l + <span class="hljs-number">1</span>, n, <span class="hljs-number">1</span>, m, <span class="hljs-number">1</span> )<br>            <span class="hljs-built_in">print</span>(last)<br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br><br>    solve()<br></code></pre></td></tr></table></figure>
-<h3 id="SortedList"><a href="#SortedList" class="headerlink" title="SortedList"></a>SortedList</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br></pre></td><td class="code"><pre><code class="hljs python"><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">SortedList</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, iterable=[], _load=<span class="hljs-number">200</span></span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Initialize sorted list instance.&quot;&quot;&quot;</span><br>        values = <span class="hljs-built_in">sorted</span>(iterable)<br>        self._<span class="hljs-built_in">len</span> = _<span class="hljs-built_in">len</span> = <span class="hljs-built_in">len</span>(values)<br>        self._load = _load<br>        self._lists = _lists = [values[i:i + _load] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, _<span class="hljs-built_in">len</span>, _load)]<br>        self._list_lens = [<span class="hljs-built_in">len</span>(_<span class="hljs-built_in">list</span>) <span class="hljs-keyword">for</span> _<span class="hljs-built_in">list</span> <span class="hljs-keyword">in</span> _lists]<br>        self._mins = [_<span class="hljs-built_in">list</span>[<span class="hljs-number">0</span>] <span class="hljs-keyword">for</span> _<span class="hljs-built_in">list</span> <span class="hljs-keyword">in</span> _lists]<br>        self._fen_tree = []<br>        self._rebuild = <span class="hljs-literal">True</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_fen_build</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Build a fenwick tree instance.&quot;&quot;&quot;</span><br>        self._fen_tree[:] = self._list_lens<br>        _fen_tree = self._fen_tree<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(_fen_tree)):<br>            <span class="hljs-keyword">if</span> i | i + <span class="hljs-number">1</span> &lt; <span class="hljs-built_in">len</span>(_fen_tree):<br>                _fen_tree[i | i + <span class="hljs-number">1</span>] += _fen_tree[i]<br>        self._rebuild = <span class="hljs-literal">False</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_fen_update</span>(<span class="hljs-params">self, index, value</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Update `fen_tree[index] += value`.&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self._rebuild:<br>            _fen_tree = self._fen_tree<br>            <span class="hljs-keyword">while</span> index &lt; <span class="hljs-built_in">len</span>(_fen_tree):<br>                _fen_tree[index] += value<br>                index |= index + <span class="hljs-number">1</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_fen_query</span>(<span class="hljs-params">self, end</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return `sum(_fen_tree[:end])`.&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">if</span> self._rebuild:<br>            self._fen_build()<br><br>        _fen_tree = self._fen_tree<br>        x = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">while</span> end:<br>            x += _fen_tree[end - <span class="hljs-number">1</span>]<br>            end &amp;= end - <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> x<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_fen_findkth</span>(<span class="hljs-params">self, k</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return a pair of (the largest `idx` such that `sum(_fen_tree[:idx]) &lt;= k`, `k - sum(_fen_tree[:idx])`).&quot;&quot;&quot;</span><br>        _list_lens = self._list_lens<br>        <span class="hljs-keyword">if</span> k &lt; _list_lens[<span class="hljs-number">0</span>]:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>, k<br>        <span class="hljs-keyword">if</span> k &gt;= self._<span class="hljs-built_in">len</span> - _list_lens[-<span class="hljs-number">1</span>]:<br>            <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(_list_lens) - <span class="hljs-number">1</span>, k + _list_lens[-<span class="hljs-number">1</span>] - self._<span class="hljs-built_in">len</span><br>        <span class="hljs-keyword">if</span> self._rebuild:<br>            self._fen_build()<br><br>        _fen_tree = self._fen_tree<br>        idx = -<span class="hljs-number">1</span><br>        <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> <span class="hljs-built_in">reversed</span>(<span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(_fen_tree).bit_length())):<br>            right_idx = idx + (<span class="hljs-number">1</span> &lt;&lt; d)<br>            <span class="hljs-keyword">if</span> right_idx &lt; <span class="hljs-built_in">len</span>(_fen_tree) <span class="hljs-keyword">and</span> k &gt;= _fen_tree[right_idx]:<br>                idx = right_idx<br>                k -= _fen_tree[idx]<br>        <span class="hljs-keyword">return</span> idx + <span class="hljs-number">1</span>, k<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_delete</span>(<span class="hljs-params">self, pos, idx</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Delete value at the given `(pos, idx)`.&quot;&quot;&quot;</span><br>        _lists = self._lists<br>        _mins = self._mins<br>        _list_lens = self._list_lens<br><br>        self._<span class="hljs-built_in">len</span> -= <span class="hljs-number">1</span><br>        self._fen_update(pos, -<span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">del</span> _lists[pos][idx]<br>        _list_lens[pos] -= <span class="hljs-number">1</span><br><br>        <span class="hljs-keyword">if</span> _list_lens[pos]:<br>            _mins[pos] = _lists[pos][<span class="hljs-number">0</span>]<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-keyword">del</span> _lists[pos]<br>            <span class="hljs-keyword">del</span> _list_lens[pos]<br>            <span class="hljs-keyword">del</span> _mins[pos]<br>            self._rebuild = <span class="hljs-literal">True</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_loc_left</span>(<span class="hljs-params">self, value</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return an index pair that corresponds to the first position of `value` in the sorted list.&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self._<span class="hljs-built_in">len</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br><br>        _lists = self._lists<br>        _mins = self._mins<br><br>        lo, pos = -<span class="hljs-number">1</span>, <span class="hljs-built_in">len</span>(_lists) - <span class="hljs-number">1</span><br>        <span class="hljs-keyword">while</span> lo + <span class="hljs-number">1</span> &lt; pos:<br>            mi = (lo + pos) &gt;&gt; <span class="hljs-number">1</span><br>            <span class="hljs-keyword">if</span> value &lt;= _mins[mi]:<br>                pos = mi<br>            <span class="hljs-keyword">else</span>:<br>                lo = mi<br><br>        <span class="hljs-keyword">if</span> pos <span class="hljs-keyword">and</span> value &lt;= _lists[pos - <span class="hljs-number">1</span>][-<span class="hljs-number">1</span>]:<br>            pos -= <span class="hljs-number">1</span><br><br>        _<span class="hljs-built_in">list</span> = _lists[pos]<br>        lo, idx = -<span class="hljs-number">1</span>, <span class="hljs-built_in">len</span>(_<span class="hljs-built_in">list</span>)<br>        <span class="hljs-keyword">while</span> lo + <span class="hljs-number">1</span> &lt; idx:<br>            mi = (lo + idx) &gt;&gt; <span class="hljs-number">1</span><br>            <span class="hljs-keyword">if</span> value &lt;= _<span class="hljs-built_in">list</span>[mi]:<br>                idx = mi<br>            <span class="hljs-keyword">else</span>:<br>                lo = mi<br><br>        <span class="hljs-keyword">return</span> pos, idx<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_loc_right</span>(<span class="hljs-params">self, value</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return an index pair that corresponds to the last position of `value` in the sorted list.&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self._<span class="hljs-built_in">len</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br><br>        _lists = self._lists<br>        _mins = self._mins<br><br>        pos, hi = <span class="hljs-number">0</span>, <span class="hljs-built_in">len</span>(_lists)<br>        <span class="hljs-keyword">while</span> pos + <span class="hljs-number">1</span> &lt; hi:<br>            mi = (pos + hi) &gt;&gt; <span class="hljs-number">1</span><br>            <span class="hljs-keyword">if</span> value &lt; _mins[mi]:<br>                hi = mi<br>            <span class="hljs-keyword">else</span>:<br>                pos = mi<br><br>        _<span class="hljs-built_in">list</span> = _lists[pos]<br>        lo, idx = -<span class="hljs-number">1</span>, <span class="hljs-built_in">len</span>(_<span class="hljs-built_in">list</span>)<br>        <span class="hljs-keyword">while</span> lo + <span class="hljs-number">1</span> &lt; idx:<br>            mi = (lo + idx) &gt;&gt; <span class="hljs-number">1</span><br>            <span class="hljs-keyword">if</span> value &lt; _<span class="hljs-built_in">list</span>[mi]:<br>                idx = mi<br>            <span class="hljs-keyword">else</span>:<br>                lo = mi<br><br>        <span class="hljs-keyword">return</span> pos, idx<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">self, value</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Add `value` to sorted list.&quot;&quot;&quot;</span><br>        _load = self._load<br>        _lists = self._lists<br>        _mins = self._mins<br>        _list_lens = self._list_lens<br><br>        self._<span class="hljs-built_in">len</span> += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">if</span> _lists:<br>            pos, idx = self._loc_right(value)<br>            self._fen_update(pos, <span class="hljs-number">1</span>)<br>            _<span class="hljs-built_in">list</span> = _lists[pos]<br>            _<span class="hljs-built_in">list</span>.insert(idx, value)<br>            _list_lens[pos] += <span class="hljs-number">1</span><br>            _mins[pos] = _<span class="hljs-built_in">list</span>[<span class="hljs-number">0</span>]<br>            <span class="hljs-keyword">if</span> _load + _load &lt; <span class="hljs-built_in">len</span>(_<span class="hljs-built_in">list</span>):<br>                _lists.insert(pos + <span class="hljs-number">1</span>, _<span class="hljs-built_in">list</span>[_load:])<br>                _list_lens.insert(pos + <span class="hljs-number">1</span>, <span class="hljs-built_in">len</span>(_<span class="hljs-built_in">list</span>) - _load)<br>                _mins.insert(pos + <span class="hljs-number">1</span>, _<span class="hljs-built_in">list</span>[_load])<br>                _list_lens[pos] = _load<br>                <span class="hljs-keyword">del</span> _<span class="hljs-built_in">list</span>[_load:]<br>                self._rebuild = <span class="hljs-literal">True</span><br>        <span class="hljs-keyword">else</span>:<br>            _lists.append([value])<br>            _mins.append(value)<br>            _list_lens.append(<span class="hljs-number">1</span>)<br>            self._rebuild = <span class="hljs-literal">True</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">discard</span>(<span class="hljs-params">self, value</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Remove `value` from sorted list if it is a member.&quot;&quot;&quot;</span><br>        _lists = self._lists<br>        <span class="hljs-keyword">if</span> _lists:<br>            pos, idx = self._loc_right(value)<br>            <span class="hljs-keyword">if</span> idx <span class="hljs-keyword">and</span> _lists[pos][idx - <span class="hljs-number">1</span>] == value:<br>                self._delete(pos, idx - <span class="hljs-number">1</span>)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">remove</span>(<span class="hljs-params">self, value</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Remove `value` from sorted list; `value` must be a member.&quot;&quot;&quot;</span><br>        _<span class="hljs-built_in">len</span> = self._<span class="hljs-built_in">len</span><br>        self.discard(value)<br>        <span class="hljs-keyword">if</span> _<span class="hljs-built_in">len</span> == self._<span class="hljs-built_in">len</span>:<br>            <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&#x27;&#123;0!r&#125; not in list&#x27;</span>.<span class="hljs-built_in">format</span>(value))<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">pop</span>(<span class="hljs-params">self, index=-<span class="hljs-number">1</span></span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Remove and return value at `index` in sorted list.&quot;&quot;&quot;</span><br>        pos, idx = self._fen_findkth(self._<span class="hljs-built_in">len</span> + index <span class="hljs-keyword">if</span> index &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> index)<br>        value = self._lists[pos][idx]<br>        self._delete(pos, idx)<br>        <span class="hljs-keyword">return</span> value<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">bisect_left</span>(<span class="hljs-params">self, value</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return the first index to insert `value` in the sorted list.&quot;&quot;&quot;</span><br>        pos, idx = self._loc_left(value)<br>        <span class="hljs-keyword">return</span> self._fen_query(pos) + idx<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">bisect_right</span>(<span class="hljs-params">self, value</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return the last index to insert `value` in the sorted list.&quot;&quot;&quot;</span><br>        pos, idx = self._loc_right(value)<br>        <span class="hljs-keyword">return</span> self._fen_query(pos) + idx<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">count</span>(<span class="hljs-params">self, value</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return number of occurrences of `value` in the sorted list.&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">return</span> self.bisect_right(value) - self.bisect_left(value)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__len__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return the size of the sorted list.&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">return</span> self._<span class="hljs-built_in">len</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__getitem__</span>(<span class="hljs-params">self, index</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Lookup value at `index` in sorted list.&quot;&quot;&quot;</span><br>        pos, idx = self._fen_findkth(self._<span class="hljs-built_in">len</span> + index <span class="hljs-keyword">if</span> index &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> index)<br>        <span class="hljs-keyword">return</span> self._lists[pos][idx]<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__delitem__</span>(<span class="hljs-params">self, index</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Remove value at `index` from sorted list.&quot;&quot;&quot;</span><br>        pos, idx = self._fen_findkth(self._<span class="hljs-built_in">len</span> + index <span class="hljs-keyword">if</span> index &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> index)<br>        self._delete(pos, idx)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__contains__</span>(<span class="hljs-params">self, value</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return true if `value` is an element of the sorted list.&quot;&quot;&quot;</span><br>        _lists = self._lists<br>        <span class="hljs-keyword">if</span> _lists:<br>            pos, idx = self._loc_left(value)<br>            <span class="hljs-keyword">return</span> idx &lt; <span class="hljs-built_in">len</span>(_lists[pos]) <span class="hljs-keyword">and</span> _lists[pos][idx] == value<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__iter__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return an iterator over the sorted list.&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">return</span> (value <span class="hljs-keyword">for</span> _<span class="hljs-built_in">list</span> <span class="hljs-keyword">in</span> self._lists <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> _<span class="hljs-built_in">list</span>)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__reversed__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return a reverse iterator over the sorted list.&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">return</span> (value <span class="hljs-keyword">for</span> _<span class="hljs-built_in">list</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">reversed</span>(self._lists) <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-built_in">reversed</span>(_<span class="hljs-built_in">list</span>))<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__repr__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;Return string representation of sorted list.&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;SortedList(&#123;0&#125;)&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-built_in">list</span>(self))<br></code></pre></td></tr></table></figure>
-<h3 id="字符串哈希"><a href="#字符串哈希" class="headerlink" title="字符串哈希"></a>字符串哈希</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">StringHash</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, s</span>):<br>        n = <span class="hljs-built_in">len</span>(s)<br>        self.base = <span class="hljs-number">131</span><br>        self.mod = <span class="hljs-number">10</span> ** <span class="hljs-number">13</span> + <span class="hljs-number">7</span><br>        self.h = h = [<span class="hljs-number">0</span>] * (n + <span class="hljs-number">1</span>)<br>        self.p = p = [<span class="hljs-number">1</span>] * (n + <span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>):<br>            p[i] = p[i - <span class="hljs-number">1</span>] * self.base % self.mod<br>            h[i] = h[i - <span class="hljs-number">1</span>] * self.base + <span class="hljs-built_in">ord</span>(s[i - <span class="hljs-number">1</span>])<br>            h[i] %= self.mod<br><br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_hash</span>(<span class="hljs-params">self, l, r</span>):<br>            res = self.h[r] - self.h[l] * self.p[r - l]<br>            <span class="hljs-keyword">return</span> res % self.mod<br></code></pre></td></tr></table></figure>
-<h3 id="二维差分"><a href="#二维差分" class="headerlink" title="二维差分"></a>二维差分</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, m + <span class="hljs-number">1</span>):<br>        b[i][j] = a[i][j] - a[i - <span class="hljs-number">1</span>][j] - a[i][j - <span class="hljs-number">1</span>] + a[i - <span class="hljs-number">1</span>][j - <span class="hljs-number">1</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(q):<br>    x1, y1, x2, y2, c = mint()<br>    b[x1][y1] += c<br>    b[x1][y2 + <span class="hljs-number">1</span>] -= c<br>    b[x2 + <span class="hljs-number">1</span>][y1] -= c<br>    b[x2 + <span class="hljs-number">1</span>][y2 + <span class="hljs-number">1</span>] += c<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, m + <span class="hljs-number">1</span>):<br>        a[i][j] = b[i][j] + a[i - <span class="hljs-number">1</span>][j] + a[i][j - <span class="hljs-number">1</span>] - a[i - <span class="hljs-number">1</span>][j - <span class="hljs-number">1</span>]<br>        <span class="hljs-built_in">print</span>(a[i][j], end = <span class="hljs-string">&#x27; &#x27;</span>)<br>    <span class="hljs-built_in">print</span>()<br></code></pre></td></tr></table></figure>
-<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><h3 id="spfa"><a href="#spfa" class="headerlink" title="spfa"></a>spfa</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">spfa</span>(<span class="hljs-params">u, n, g</span>) -&gt; <span class="hljs-built_in">int</span>:<br>    q = deque()<br>    q.append(u)<br>    vis = <span class="hljs-built_in">set</span>()<br>    dist = defaultdict(<span class="hljs-keyword">lambda</span> : inf)<br>    vis.add(u)<br>    dist[u] = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">while</span> q:<br>        t = q.popleft()<br>        vis.remove(t)<br>        <span class="hljs-keyword">for</span> j, d <span class="hljs-keyword">in</span> g[t]:<br>            <span class="hljs-keyword">if</span> dist[j] &gt; dist[t] + d:<br>                dist[j] = dist[t] + d<br>                <span class="hljs-keyword">if</span> j <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> vis:<br>                    vis.add(j)<br>                    q.append(j)<br>    <span class="hljs-keyword">return</span> dist[n]<br></code></pre></td></tr></table></figure>
-<h3 id="dijkstra"><a href="#dijkstra" class="headerlink" title="dijkstra"></a>dijkstra</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">dij</span>(<span class="hljs-params">u, n, g</span>) -&gt; <span class="hljs-built_in">int</span>:<br>    q = [(<span class="hljs-number">0</span>, u)] <span class="hljs-comment"># 距离 顶点</span><br>    vis = <span class="hljs-built_in">set</span>()<br>    dist = defaultdict(<span class="hljs-keyword">lambda</span> : inf)<br>    dist[<span class="hljs-number">1</span>] = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">while</span> q:<br>        d, u = heappop(q)<br>        <span class="hljs-keyword">if</span> u <span class="hljs-keyword">in</span> vis:<br>            <span class="hljs-keyword">continue</span><br>        vis.add(u)<br>        <span class="hljs-keyword">for</span> j, d <span class="hljs-keyword">in</span> g[u]:<br>            <span class="hljs-keyword">if</span> j <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> vis <span class="hljs-keyword">and</span> dist[j] &gt; dist[u] + d:<br>                dist[j] = dist[u] + d<br>                heappush(q, (dist[j], j))<br>    <span class="hljs-keyword">return</span> dist[n]<br></code></pre></td></tr></table></figure>
-<h3 id="krushkal"><a href="#krushkal" class="headerlink" title="krushkal"></a>krushkal</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">kruskal</span>():<br>    dsu = DSU(n)<br>    edges.sort(key = <span class="hljs-keyword">lambda</span> x : x[<span class="hljs-number">2</span>])<br>    res = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> u, v, w <span class="hljs-keyword">in</span> edges:<br>        <span class="hljs-keyword">if</span> dsu.same(u, v):<br>            <span class="hljs-keyword">continue</span><br>        dsu.merge(u, v)<br>        res += w<br>    <span class="hljs-keyword">return</span> res <span class="hljs-keyword">if</span> dsu.n == <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> inf<br></code></pre></td></tr></table></figure>
+                <h3 id="pymodel"><a href="#pymodel" class="headerlink" title="pymodel"></a>pymodel</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import sys
+sys.setrecursionlimit(100000)
+input&#x3D;lambda:sys.stdin.readline().strip()
+# write&#x3D;lambda x:sys.stdout.write(str(x)+&#39;\n&#39;)
+# from decimal import Decimal
+# from datetime import datetime,timedelta
+# from random import randint
+# from copy import deepcopy
+from collections import *
+# from heapq import heapify,heappush,heappop
+# from bisect import bisect_left,bisect,insort
+# from math import inf,sqrt,gcd,pow,ceil,floor,log,log2,log10,pi,sin,cos,tan,asin,acos,atan
+# from functools import cmp_to_key,reduce
+# from operator import or_,xor,add,mul
+# from itertools import permutations,combinations,accumulate
+sint &#x3D; lambda: int(input())
+mint &#x3D; lambda: map(int, input().split())
+lint &#x3D; lambda: list(map(int, input().split()))
+
+def solve():
+    
+
+if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
+    #t&#x3D;int(input())
+    #for _ in range(t):
+    #   solve()
+
+    solve()</code></pre></div></figure>
+<h3 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">class DSU:
+    def __init__(self, n):
+        self.parent &#x3D; list(range(n))
+        self.size &#x3D; [1] * n
+        self.n &#x3D; n
+        self.setCount &#x3D; n
+
+    def find(self, x):
+        if self.parent[x] !&#x3D; x:
+            self.parent[x] &#x3D; self.find(self.parent[x])
+        return self.parent[x]
+
+    def union(self, x, y):
+        x, y &#x3D; self.find(x), self.find(y)
+        if x &#x3D;&#x3D; y:
+            return False
+        if self.size[x] &lt; self.size[y]:
+            x, y &#x3D; y, x
+        self.parent[y] &#x3D; x
+        self.size[x] +&#x3D; self.size[y]
+        self.setCount -&#x3D; 1
+        return True
+
+    def connected(self, x, y):
+        x, y &#x3D; self.find(x), self.find(y)
+        return x &#x3D;&#x3D; y</code></pre></div></figure>
+<h3 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">class Factorial:
+    def __init__(self, N, mod) -&gt; None:
+        N +&#x3D; 1
+        self.mod &#x3D; mod
+        self.f &#x3D; [1 for _ in range(N)]
+        self.g &#x3D; [1 for _ in range(N)]
+        for i in range(1, N):
+            self.f[i] &#x3D; self.f[i - 1] * i % self.mod
+        self.g[-1] &#x3D; pow(self.f[-1], mod - 2, mod)
+        for i in range(N - 2, -1, -1):
+            self.g[i] &#x3D; self.g[i + 1] * (i + 1) % self.mod
+
+    def fac(self, n):
+        return self.f[n]
+
+    def fac_inv(self, n):
+        return self.g[n]
+
+    def comb(self, n, m):
+        if n &lt; m or m &lt; 0 or n &lt; 0: return 0
+        return self.f[n] * self.g[m] % self.mod * self.g[n - m] % self.mod
+
+    def permu(self, n, m):
+        if n &lt; m or m &lt; 0 or n &lt; 0: return 0
+        return self.f[n] * self.g[n - m] % self.mod
+
+    def catalan(self, n):
+        return (self.comb(2 * n, n) - self.comb(2 * n, n - 1)) % self.mod
+
+    def inv(self, n):
+        return self.f[n - 1] * self.g[n] % self.mod</code></pre></div></figure>
+<h3 id="质数筛"><a href="#质数筛" class="headerlink" title="质数筛"></a>质数筛</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">pri &#x3D; []
+not_prime &#x3D; [False] * N
+
+def pre(n):
+    for i in range(2, n + 1):
+        if not not_prime[i]:
+            pri.append(i)
+        for pri_j in pri:
+            if i * pri_j &gt; n:
+                break
+            not_prime[i * pri_j] &#x3D; True
+            if i % pri_j &#x3D;&#x3D; 0:
+                break</code></pre></div></figure>
+<h3 id="质因数个数"><a href="#质因数个数" class="headerlink" title="质因数个数"></a>质因数个数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def divide(n):
+    ans &#x3D; []
+    i &#x3D; 2
+    while i &lt;&#x3D; n &#x2F;&#x2F; i:
+        if n % i &#x3D;&#x3D; 0:
+            cnt &#x3D; 0
+            while n % i &#x3D;&#x3D; 0:
+                cnt +&#x3D; 1
+                n &#x2F;&#x2F;&#x3D; i
+            ans.append((i, cnt))
+        i +&#x3D; 1
+    if n &gt; 1:
+        ans.append((n, 1))
+    return ans</code></pre></div></figure>
+<h3 id="约数之和"><a href="#约数之和" class="headerlink" title="约数之和"></a>约数之和</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">mod &#x3D; int(1e9 + 7)
+primes &#x3D; &#123;&#125;
+a &#x3D; int(input())
+while a:
+    a -&#x3D; 1
+    n &#x3D; int(input())
+    i &#x3D; 2
+    while i &lt;&#x3D; n &#x2F;&#x2F; i:
+        while n % i &#x3D;&#x3D; 0:
+            n &#x2F;&#x2F;&#x3D; i
+            if i in primes:
+                primes[i] +&#x3D; 1
+            else:
+                primes[i] &#x3D; 1
+        i +&#x3D; 1
+    if n &gt; 1:
+        if n in primes:
+            primes[n] +&#x3D; 1
+        else:
+            primes[n] &#x3D; 1
+res &#x3D; 1
+for i,val in primes.items():
+    t &#x3D; 1
+    while val:
+        val -&#x3D; 1
+        t &#x3D; (t * i + 1) % mod
+    res &#x3D; res * t % mod
+print(res)</code></pre></div></figure>
+<h3 id="约数个数"><a href="#约数个数" class="headerlink" title="约数个数"></a>约数个数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">mod &#x3D; 1e9 + 7
+
+primes &#x3D; &#123;&#125;
+a &#x3D; int(input())
+while a:
+    a -&#x3D; 1
+    n &#x3D; int(input())
+    i &#x3D; 2
+    while i &lt;&#x3D; n &#x2F;&#x2F; i:
+        while n % i &#x3D;&#x3D; 0:
+            n &#x2F;&#x2F;&#x3D; i
+            if i in primes:
+                primes[i] +&#x3D; 1
+            else:
+                primes[i] &#x3D; 1
+        i +&#x3D; 1
+    if n &gt; 1:
+        if n in primes:
+            primes[n] +&#x3D; 1
+        else:
+            primes[n] &#x3D; 1
+
+res &#x3D; 1
+for i in primes.values():
+    res &#x3D; int(res * (i + 1) % mod)
+print(res)</code></pre></div></figure>
+<h3 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h3><p><img src="image.png" srcset="/img/loading.gif" lazyload alt="alt text"><br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">n &#x3D; int(input())
+for i in range(n):
+    a &#x3D; int(input())
+    res &#x3D; a
+    j &#x3D; 2
+    while j * j &lt;&#x3D; a :
+        if a % j &#x3D;&#x3D; 0:
+            res &#x3D; res * (j - 1) &#x2F;&#x2F; j
+            while a % j &#x3D;&#x3D; 0:
+                a &#x3D; a &#x2F;&#x2F; j
+        j +&#x3D; 1
+    if a &gt; 1:
+        res &#x3D; res * (a - 1) &#x2F;&#x2F; a
+    print(int(res))</code></pre></div></figure></p>
+<h3 id="筛法求欧拉函数"><a href="#筛法求欧拉函数" class="headerlink" title="筛法求欧拉函数"></a>筛法求欧拉函数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">N &#x3D; 1000010
+primes &#x3D; [0]*N
+phi &#x3D; [0]*N
+st &#x3D; [False]*N
+
+def get_eulers(n):
+    phi[1] &#x3D; 1
+    cnt &#x3D; 0
+    for i in range(2,n+1):
+        if not st[i]:
+            primes[cnt] &#x3D; i
+            cnt +&#x3D; 1
+            phi[i] &#x3D; i - 1
+        j &#x3D; 0
+        while primes[j] &lt;&#x3D; n &#x2F;&#x2F; i:
+            st[primes[j] * i] &#x3D; True
+            if i % primes[j] &#x3D;&#x3D; 0:
+                phi[primes[j] * i] &#x3D; phi[i] * primes[j]
+                break
+            phi[primes[j] * i] &#x3D; phi[i] * (primes[j] - 1)
+            j +&#x3D; 1
+</code></pre></div></figure>
+<h3 id="扩展欧几里得"><a href="#扩展欧几里得" class="headerlink" title="扩展欧几里得"></a>扩展欧几里得</h3><p><img src="image-1.png" srcset="/img/loading.gif" lazyload alt="alt text"><br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def extend_gcd(a,b,x,y):
+    if not b:
+        return a,1,0
+
+    d,y,x &#x3D; extend_gcd(b, a % b, y, x)
+    y -&#x3D; a &#x2F;&#x2F; b * x
+    return d,x,y
+
+n &#x3D; int(input())
+while n:
+    n -&#x3D; 1
+    a,b &#x3D; map(int,input().split())
+    x,y &#x3D; 0,0
+    d,x,y &#x3D; extend_gcd(a,b,x,y)
+    print(x,y)</code></pre></div></figure></p>
+<h3 id="线性同余方程"><a href="#线性同余方程" class="headerlink" title="线性同余方程"></a>线性同余方程</h3><p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240518200819.png" srcset="/img/loading.gif" lazyload alt="20240518200819"><br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def extend_gcd(a,b,x,y):
+    if not b:
+        return a,1,0
+
+    d,y,x &#x3D; extend_gcd(b, a % b, y, x)
+    y -&#x3D; a &#x2F;&#x2F; b * x
+    return d,x,y
+
+n &#x3D; int(input())
+while n:
+    n -&#x3D; 1
+    a,b,m &#x3D; map(int,input().split())
+    x,y &#x3D; 0,0
+    d,x,y &#x3D; extend_gcd(a,m,x,y)
+    if b % d:
+        print(&quot;impossible&quot;)
+    else:
+        print(x * (b &#x2F;&#x2F; d) % m)</code></pre></div></figure></p>
+<h3 id="求组合数"><a href="#求组合数" class="headerlink" title="求组合数"></a>求组合数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import math
+def C(n, m):
+    return math.factorial(n) &#x2F;&#x2F; (math.factorial(m) * math.factorial(n - m))
+n, m &#x3D; map(int, input().split())
+print(C(n, m))</code></pre></div></figure>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"># 左闭右闭
+class FenWick:
+    def __init__(self, n: int):
+        self.n &#x3D; n
+        self.tr &#x3D; [0 for _ in range(n + 1)]
+
+    def sum(self, i: int):
+        i +&#x3D; 1
+        s &#x3D; 0
+        while i &gt;&#x3D; 1:
+            s +&#x3D; self.tr[i]
+            i &amp;&#x3D; i - 1
+        return s
+
+    def rangeSum(self, l: int, r: int):
+        return self.sum(r) - self.sum(l - 1)
+
+    def add(self, i: int, val: int):
+        i +&#x3D; 1
+        while i &lt;&#x3D; self.n:
+            self.tr[i] +&#x3D; val
+            i +&#x3D; i &amp; -i</code></pre></div></figure>
+<h3 id="线段数"><a href="#线段数" class="headerlink" title="线段数"></a>线段数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import sys
+from collections import defaultdict
+# region fastio
+input &#x3D; lambda: sys.stdin.readline().rstrip()
+sint &#x3D; lambda: int(input())
+mint &#x3D; lambda: map(int, input().split())
+ints &#x3D; lambda: list(map(int, input().split()))
+class segtree:
+
+    def __init__(self, n: int, m: int):
+        self.n &#x3D; n
+        self.m &#x3D; m
+        self.max &#x3D; [0] * (4*n)  # 维护区间最大值
+        self.sum &#x3D; [0] * (4*n)  # 维护区间和
+        # self.build(m, 1, n, 1)  # 建树【线段树下标从1开始】
+    
+    # &#39;&#39;&#39;自定义build函数：建树&#39;&#39;&#39;
+    # def build(self, val, left, right, root):
+    #     if left &#x3D;&#x3D; right:       # 到达叶子节点，递归终止
+    #         self.max[root] &#x3D; val
+    #         self.sum[root] &#x3D; val
+    #         return
+    #     mid &#x3D; (left + right) &#x2F;&#x2F; 2
+    #     self.build(val, left, mid, 2*root)  # 左右递归
+    #     self.build(val, mid+1, right, 2*root+1)
+    #     self.pushUp(root)                   # 更新信息
+    
+    &#39;&#39;&#39;自定义pushUp函数：更新节点信息&#39;&#39;&#39;
+    def pushUp(self, root):
+        self.max[root] &#x3D; max(self.max[2*root], self.max[2*root+1])
+        self.sum[root] &#x3D; self.sum[2*root] + self.sum[2*root+1]
+    
+    &#39;&#39;&#39;自定义add函数：单点更新&#39;&#39;&#39;
+    def add(self, i: int, val: int, left: int, right: int, root: int) -&gt; None:
+        # i表示操作位置编号; root表示当前节点编号(树中)，[left, right]表示root节点所维护的区间
+        if left &#x3D;&#x3D; right:           # 到达叶子节点，递归终止
+            self.max[root] +&#x3D; val   # root节点更新，+val
+            self.sum[root] +&#x3D; val   # root节点更新，+val
+            return
+        mid &#x3D; (left + right) &#x2F;&#x2F; 2
+        if i &lt;&#x3D; mid:                # 根据条件判断去往左&#x2F;右子树
+            self.add(i, val, left, mid, 2*root)
+        else:
+            self.add(i, val, mid+1, right, 2*root+1)
+        self.pushUp(root)           # 子节点更新了，父节点信息也需要更新
+    
+    &#39;&#39;&#39;自定义query函数：区间和查询&#39;&#39;&#39;
+    # 查询[L, R]之间合
+    # 在区间[left, right]中查询区间[L,R]中的数值之和【求和】
+    def query(self, L: int, R: int, left: int, right: int, root: int):
+        # L,R表示操作区间; root表示当前节点编号(树中)，[left, right]表示root节点所维护的区间
+        if L&lt;&#x3D;left and right&lt;&#x3D;R:
+            return self.sum[root]
+        mid &#x3D; (left+right) &#x2F;&#x2F; 2
+        range_sum &#x3D; 0
+        if L &lt;&#x3D; mid:        # 左区间有重合
+            range_sum +&#x3D; self.query(L, R, left, mid, 2*root)
+        if R &gt; mid:         # 右区间有重合
+            range_sum +&#x3D; self.query(L, R, mid+1, right, 2*root+1)
+        return range_sum
+
+    #查询[L, R]之间的最大值
+    #qeery_max(L,R,1,N,1)
+    def query_max(self, L:int, R: int, left :int, right: int, root : int):
+        if L &lt;&#x3D; left and right &lt;&#x3D; R:
+            return self.max[root]
+        mid &#x3D; (left + right) &#x2F;&#x2F; 2
+        mm &#x3D; 0
+        if L &lt;&#x3D; mid:
+            mm &#x3D; self.query_max(L, R, left, mid, 2 * root)
+        if R &gt; mid:
+            mm &#x3D; max(mm, self.query_max(L, R, mid + 1, right, 2 * root + 1))
+        return mm
+
+def solve():
+    m, p &#x3D; mint()
+    se &#x3D; segtree(m, 0)
+    last &#x3D; 0
+    n &#x3D; 0
+    for _ in range(m):
+        op, l &#x3D; input().split()
+        l &#x3D; int(l)
+        if op &#x3D;&#x3D; &#39;A&#39;:
+            # print(&quot;val&quot;, (last + l) % p)
+            se.add(n + 1, (last + l) % p, 1, m, 1)
+            n +&#x3D; 1
+        else:
+            last &#x3D; se.query_max(n - l + 1, n, 1, m, 1 )
+            print(last)
+if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
+
+    solve()</code></pre></div></figure>
+<h3 id="SortedList"><a href="#SortedList" class="headerlink" title="SortedList"></a>SortedList</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">
+class SortedList:
+    def __init__(self, iterable&#x3D;[], _load&#x3D;200):
+        &quot;&quot;&quot;Initialize sorted list instance.&quot;&quot;&quot;
+        values &#x3D; sorted(iterable)
+        self._len &#x3D; _len &#x3D; len(values)
+        self._load &#x3D; _load
+        self._lists &#x3D; _lists &#x3D; [values[i:i + _load] for i in range(0, _len, _load)]
+        self._list_lens &#x3D; [len(_list) for _list in _lists]
+        self._mins &#x3D; [_list[0] for _list in _lists]
+        self._fen_tree &#x3D; []
+        self._rebuild &#x3D; True
+
+    def _fen_build(self):
+        &quot;&quot;&quot;Build a fenwick tree instance.&quot;&quot;&quot;
+        self._fen_tree[:] &#x3D; self._list_lens
+        _fen_tree &#x3D; self._fen_tree
+        for i in range(len(_fen_tree)):
+            if i | i + 1 &lt; len(_fen_tree):
+                _fen_tree[i | i + 1] +&#x3D; _fen_tree[i]
+        self._rebuild &#x3D; False
+
+    def _fen_update(self, index, value):
+        &quot;&quot;&quot;Update &#96;fen_tree[index] +&#x3D; value&#96;.&quot;&quot;&quot;
+        if not self._rebuild:
+            _fen_tree &#x3D; self._fen_tree
+            while index &lt; len(_fen_tree):
+                _fen_tree[index] +&#x3D; value
+                index |&#x3D; index + 1
+
+    def _fen_query(self, end):
+        &quot;&quot;&quot;Return &#96;sum(_fen_tree[:end])&#96;.&quot;&quot;&quot;
+        if self._rebuild:
+            self._fen_build()
+
+        _fen_tree &#x3D; self._fen_tree
+        x &#x3D; 0
+        while end:
+            x +&#x3D; _fen_tree[end - 1]
+            end &amp;&#x3D; end - 1
+        return x
+
+    def _fen_findkth(self, k):
+        &quot;&quot;&quot;Return a pair of (the largest &#96;idx&#96; such that &#96;sum(_fen_tree[:idx]) &lt;&#x3D; k&#96;, &#96;k - sum(_fen_tree[:idx])&#96;).&quot;&quot;&quot;
+        _list_lens &#x3D; self._list_lens
+        if k &lt; _list_lens[0]:
+            return 0, k
+        if k &gt;&#x3D; self._len - _list_lens[-1]:
+            return len(_list_lens) - 1, k + _list_lens[-1] - self._len
+        if self._rebuild:
+            self._fen_build()
+
+        _fen_tree &#x3D; self._fen_tree
+        idx &#x3D; -1
+        for d in reversed(range(len(_fen_tree).bit_length())):
+            right_idx &#x3D; idx + (1 &lt;&lt; d)
+            if right_idx &lt; len(_fen_tree) and k &gt;&#x3D; _fen_tree[right_idx]:
+                idx &#x3D; right_idx
+                k -&#x3D; _fen_tree[idx]
+        return idx + 1, k
+
+    def _delete(self, pos, idx):
+        &quot;&quot;&quot;Delete value at the given &#96;(pos, idx)&#96;.&quot;&quot;&quot;
+        _lists &#x3D; self._lists
+        _mins &#x3D; self._mins
+        _list_lens &#x3D; self._list_lens
+
+        self._len -&#x3D; 1
+        self._fen_update(pos, -1)
+        del _lists[pos][idx]
+        _list_lens[pos] -&#x3D; 1
+
+        if _list_lens[pos]:
+            _mins[pos] &#x3D; _lists[pos][0]
+        else:
+            del _lists[pos]
+            del _list_lens[pos]
+            del _mins[pos]
+            self._rebuild &#x3D; True
+
+    def _loc_left(self, value):
+        &quot;&quot;&quot;Return an index pair that corresponds to the first position of &#96;value&#96; in the sorted list.&quot;&quot;&quot;
+        if not self._len:
+            return 0, 0
+
+        _lists &#x3D; self._lists
+        _mins &#x3D; self._mins
+
+        lo, pos &#x3D; -1, len(_lists) - 1
+        while lo + 1 &lt; pos:
+            mi &#x3D; (lo + pos) &gt;&gt; 1
+            if value &lt;&#x3D; _mins[mi]:
+                pos &#x3D; mi
+            else:
+                lo &#x3D; mi
+
+        if pos and value &lt;&#x3D; _lists[pos - 1][-1]:
+            pos -&#x3D; 1
+
+        _list &#x3D; _lists[pos]
+        lo, idx &#x3D; -1, len(_list)
+        while lo + 1 &lt; idx:
+            mi &#x3D; (lo + idx) &gt;&gt; 1
+            if value &lt;&#x3D; _list[mi]:
+                idx &#x3D; mi
+            else:
+                lo &#x3D; mi
+
+        return pos, idx
+
+    def _loc_right(self, value):
+        &quot;&quot;&quot;Return an index pair that corresponds to the last position of &#96;value&#96; in the sorted list.&quot;&quot;&quot;
+        if not self._len:
+            return 0, 0
+
+        _lists &#x3D; self._lists
+        _mins &#x3D; self._mins
+
+        pos, hi &#x3D; 0, len(_lists)
+        while pos + 1 &lt; hi:
+            mi &#x3D; (pos + hi) &gt;&gt; 1
+            if value &lt; _mins[mi]:
+                hi &#x3D; mi
+            else:
+                pos &#x3D; mi
+
+        _list &#x3D; _lists[pos]
+        lo, idx &#x3D; -1, len(_list)
+        while lo + 1 &lt; idx:
+            mi &#x3D; (lo + idx) &gt;&gt; 1
+            if value &lt; _list[mi]:
+                idx &#x3D; mi
+            else:
+                lo &#x3D; mi
+
+        return pos, idx
+
+    def add(self, value):
+        &quot;&quot;&quot;Add &#96;value&#96; to sorted list.&quot;&quot;&quot;
+        _load &#x3D; self._load
+        _lists &#x3D; self._lists
+        _mins &#x3D; self._mins
+        _list_lens &#x3D; self._list_lens
+
+        self._len +&#x3D; 1
+        if _lists:
+            pos, idx &#x3D; self._loc_right(value)
+            self._fen_update(pos, 1)
+            _list &#x3D; _lists[pos]
+            _list.insert(idx, value)
+            _list_lens[pos] +&#x3D; 1
+            _mins[pos] &#x3D; _list[0]
+            if _load + _load &lt; len(_list):
+                _lists.insert(pos + 1, _list[_load:])
+                _list_lens.insert(pos + 1, len(_list) - _load)
+                _mins.insert(pos + 1, _list[_load])
+                _list_lens[pos] &#x3D; _load
+                del _list[_load:]
+                self._rebuild &#x3D; True
+        else:
+            _lists.append([value])
+            _mins.append(value)
+            _list_lens.append(1)
+            self._rebuild &#x3D; True
+
+    def discard(self, value):
+        &quot;&quot;&quot;Remove &#96;value&#96; from sorted list if it is a member.&quot;&quot;&quot;
+        _lists &#x3D; self._lists
+        if _lists:
+            pos, idx &#x3D; self._loc_right(value)
+            if idx and _lists[pos][idx - 1] &#x3D;&#x3D; value:
+                self._delete(pos, idx - 1)
+
+    def remove(self, value):
+        &quot;&quot;&quot;Remove &#96;value&#96; from sorted list; &#96;value&#96; must be a member.&quot;&quot;&quot;
+        _len &#x3D; self._len
+        self.discard(value)
+        if _len &#x3D;&#x3D; self._len:
+            raise ValueError(&#39;&#123;0!r&#125; not in list&#39;.format(value))
+
+    def pop(self, index&#x3D;-1):
+        &quot;&quot;&quot;Remove and return value at &#96;index&#96; in sorted list.&quot;&quot;&quot;
+        pos, idx &#x3D; self._fen_findkth(self._len + index if index &lt; 0 else index)
+        value &#x3D; self._lists[pos][idx]
+        self._delete(pos, idx)
+        return value
+
+    def bisect_left(self, value):
+        &quot;&quot;&quot;Return the first index to insert &#96;value&#96; in the sorted list.&quot;&quot;&quot;
+        pos, idx &#x3D; self._loc_left(value)
+        return self._fen_query(pos) + idx
+
+    def bisect_right(self, value):
+        &quot;&quot;&quot;Return the last index to insert &#96;value&#96; in the sorted list.&quot;&quot;&quot;
+        pos, idx &#x3D; self._loc_right(value)
+        return self._fen_query(pos) + idx
+
+    def count(self, value):
+        &quot;&quot;&quot;Return number of occurrences of &#96;value&#96; in the sorted list.&quot;&quot;&quot;
+        return self.bisect_right(value) - self.bisect_left(value)
+
+    def __len__(self):
+        &quot;&quot;&quot;Return the size of the sorted list.&quot;&quot;&quot;
+        return self._len
+
+    def __getitem__(self, index):
+        &quot;&quot;&quot;Lookup value at &#96;index&#96; in sorted list.&quot;&quot;&quot;
+        pos, idx &#x3D; self._fen_findkth(self._len + index if index &lt; 0 else index)
+        return self._lists[pos][idx]
+
+    def __delitem__(self, index):
+        &quot;&quot;&quot;Remove value at &#96;index&#96; from sorted list.&quot;&quot;&quot;
+        pos, idx &#x3D; self._fen_findkth(self._len + index if index &lt; 0 else index)
+        self._delete(pos, idx)
+
+    def __contains__(self, value):
+        &quot;&quot;&quot;Return true if &#96;value&#96; is an element of the sorted list.&quot;&quot;&quot;
+        _lists &#x3D; self._lists
+        if _lists:
+            pos, idx &#x3D; self._loc_left(value)
+            return idx &lt; len(_lists[pos]) and _lists[pos][idx] &#x3D;&#x3D; value
+        return False
+
+    def __iter__(self):
+        &quot;&quot;&quot;Return an iterator over the sorted list.&quot;&quot;&quot;
+        return (value for _list in self._lists for value in _list)
+
+    def __reversed__(self):
+        &quot;&quot;&quot;Return a reverse iterator over the sorted list.&quot;&quot;&quot;
+        return (value for _list in reversed(self._lists) for value in reversed(_list))
+
+    def __repr__(self):
+        &quot;&quot;&quot;Return string representation of sorted list.&quot;&quot;&quot;
+        return &#39;SortedList(&#123;0&#125;)&#39;.format(list(self))</code></pre></div></figure>
+<h3 id="字符串哈希"><a href="#字符串哈希" class="headerlink" title="字符串哈希"></a>字符串哈希</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">class StringHash:
+    def __init__(self, s):
+        n &#x3D; len(s)
+        self.base &#x3D; 131
+        self.mod &#x3D; 10 ** 13 + 7
+        self.h &#x3D; h &#x3D; [0] * (n + 1)
+        self.p &#x3D; p &#x3D; [1] * (n + 1)
+        for i in range(1, n + 1):
+            p[i] &#x3D; p[i - 1] * self.base % self.mod
+            h[i] &#x3D; h[i - 1] * self.base + ord(s[i - 1])
+            h[i] %&#x3D; self.mod
+
+        def get_hash(self, l, r):
+            res &#x3D; self.h[r] - self.h[l] * self.p[r - l]
+            return res % self.mod</code></pre></div></figure>
+<h3 id="二维差分"><a href="#二维差分" class="headerlink" title="二维差分"></a>二维差分</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">for i in range(1, n + 1):
+    for j in range(1, m + 1):
+        b[i][j] &#x3D; a[i][j] - a[i - 1][j] - a[i][j - 1] + a[i - 1][j - 1]
+for i in range(q):
+    x1, y1, x2, y2, c &#x3D; mint()
+    b[x1][y1] +&#x3D; c
+    b[x1][y2 + 1] -&#x3D; c
+    b[x2 + 1][y1] -&#x3D; c
+    b[x2 + 1][y2 + 1] +&#x3D; c
+for i in range(1, n + 1):
+    for j in range(1, m + 1):
+        a[i][j] &#x3D; b[i][j] + a[i - 1][j] + a[i][j - 1] - a[i - 1][j - 1]
+        print(a[i][j], end &#x3D; &#39; &#39;)
+    print()</code></pre></div></figure>
+<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><h3 id="spfa"><a href="#spfa" class="headerlink" title="spfa"></a>spfa</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def spfa(u, n, g) -&gt; int:
+    q &#x3D; deque()
+    q.append(u)
+    vis &#x3D; set()
+    dist &#x3D; defaultdict(lambda : inf)
+    vis.add(u)
+    dist[u] &#x3D; 0
+    while q:
+        t &#x3D; q.popleft()
+        vis.remove(t)
+        for j, d in g[t]:
+            if dist[j] &gt; dist[t] + d:
+                dist[j] &#x3D; dist[t] + d
+                if j not in vis:
+                    vis.add(j)
+                    q.append(j)
+    return dist[n]</code></pre></div></figure>
+<h3 id="dijkstra"><a href="#dijkstra" class="headerlink" title="dijkstra"></a>dijkstra</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def dij(u, n, g) -&gt; int:
+    q &#x3D; [(0, u)] # 距离 顶点
+    vis &#x3D; set()
+    dist &#x3D; defaultdict(lambda : inf)
+    dist[1] &#x3D; 0
+    while q:
+        d, u &#x3D; heappop(q)
+        if u in vis:
+            continue
+        vis.add(u)
+        for j, d in g[u]:
+            if j not in vis and dist[j] &gt; dist[u] + d:
+                dist[j] &#x3D; dist[u] + d
+                heappush(q, (dist[j], j))
+    return dist[n]</code></pre></div></figure>
+<h3 id="krushkal"><a href="#krushkal" class="headerlink" title="krushkal"></a>krushkal</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def kruskal():
+    dsu &#x3D; DSU(n)
+    edges.sort(key &#x3D; lambda x : x[2])
+    res &#x3D; 0
+    for u, v, w in edges:
+        if dsu.same(u, v):
+            continue
+        dsu.merge(u, v)
+        res +&#x3D; w
+    return res if dsu.n &#x3D;&#x3D; 1 else inf</code></pre></div></figure>
 
                 
               </div>
@@ -546,7 +1205,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     </div>
   
   
@@ -569,7 +1228,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -602,7 +1261,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
     var toc = jQuery('#toc');
     if (toc.length === 0 || !window.tocbot) { return; }
     var boardCtn = jQuery('#board-ctn');
@@ -640,6 +1299,12 @@
 </script>
 
 
+  <script  src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
@@ -647,7 +1312,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
     window.anchors.options = {
       placement: CONFIG.anchorjs.placement,
       visible  : CONFIG.anchorjs.visible
@@ -693,13 +1358,11 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
+  <script defer src="/js/leancloud.js" ></script>
+
   <script  src="/js/local-search.js" ></script>
 
 
-
-
-  
-<script src="/js/randomCover.js"></script>
 
 
 

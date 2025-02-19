@@ -19,20 +19,20 @@
   <meta name="author" content="Asdaso">
   <meta name="keywords" content="blog,技术,编程">
   
-    <meta name="description" content="[TOC]print12a &#x3D; input()print(a)12345678910111213141516171819202122232425&#x2F;* CSS *&#x2F;@import url(https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;firacode@6.2.0&#x2F;distr&#x2F;fira_code.css);h1#site-title &#123;  font-size: 8vh!impor">
+    <meta name="description" content="[TOC]printa &#x3D; input() print(a)&#x2F;* CSS *&#x2F; @import url(https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;firacode@6.2.0&#x2F;distr&#x2F;fira_code.css);  h1#site-title &#123;   font-size: 8v">
 <meta property="og:type" content="article">
 <meta property="og:title" content="test">
 <meta property="og:url" content="http://example.com/post/d87f7e0c.html">
 <meta property="og:site_name" content="Asdasoのblog">
-<meta property="og:description" content="[TOC]print12a &#x3D; input()print(a)12345678910111213141516171819202122232425&#x2F;* CSS *&#x2F;@import url(https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;firacode@6.2.0&#x2F;distr&#x2F;fira_code.css);h1#site-title &#123;  font-size: 8vh!impor">
+<meta property="og:description" content="[TOC]printa &#x3D; input() print(a)&#x2F;* CSS *&#x2F; @import url(https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;firacode@6.2.0&#x2F;distr&#x2F;fira_code.css);  h1#site-title &#123;   font-size: 8v">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/cover/9.jpg">
+<meta property="og:image" content="http://example.com/img/cover/6.jpg">
 <meta property="article:published_time" content="2024-01-27T17:22:02.000Z">
 <meta property="article:modified_time" content="2024-02-06T12:43:02.377Z">
 <meta property="article:author" content="Asdaso">
 <meta property="article:tag" content="blog,技术,编程">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/cover/9.jpg">
+<meta name="twitter:image" content="http://example.com/img/cover/6.jpg">
   
   
   
@@ -46,6 +46,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
+  <link  rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
@@ -57,7 +59,7 @@
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -70,15 +72,11 @@
 
 
 
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"gHBUbGnezwPEckLGQuK5MYV1-MdYXbMMI","app_key":"kokqnKgfEiMRyh31b4ofNY5k","server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -88,6 +86,19 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 
   
@@ -104,7 +115,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Asdasoのblog</strong>
+      <strong>asdasoのblog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -171,20 +182,8 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/riji/" target="_self">
-                <i class="fas fa-heart"></i>
+                <i class="iconfont icon-book"></i>
                 <span>日记</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/link/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
               </a>
             </li>
           
@@ -197,6 +196,18 @@
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
               </a>
             </li>
           
@@ -224,7 +235,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/cover/9.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/cover/6.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -253,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          90 字
+          98 字
         
       </span>
     
@@ -270,6 +281,15 @@
     
 
     
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+      
     
   </div>
 
@@ -306,7 +326,32 @@
             
               <div class="markdown-body">
                 
-                <p>[TOC]<br><code>print</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">a = <span class="hljs-built_in">input</span>()<br><span class="hljs-built_in">print</span>(a)<br></code></pre></td></tr></table></figure><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-comment">/* CSS */</span><br><span class="hljs-keyword">@import</span> url(<span class="hljs-attribute">https</span>://cdn.jsdelivr.net/npm/firacode@<span class="hljs-number">6.2</span>.<span class="hljs-number">0</span>/distr/fira_code.css);<br><br><span class="hljs-selector-tag">h1</span><span class="hljs-selector-id">#site-title</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">8vh</span><span class="hljs-meta">!important</span>;<br>  <span class="hljs-attribute">text-shadow</span>:<span class="hljs-number">5px</span> <span class="hljs-number">2px</span> <span class="hljs-number">6px</span> <span class="hljs-number">#000</span><span class="hljs-meta">!important</span>;<br>  <span class="hljs-attribute">font-family</span>:Fira Code<span class="hljs-meta">!important</span><br>&#125;<br><span class="hljs-selector-tag">span</span><span class="hljs-selector-id">#subtitle</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">3vh</span><span class="hljs-meta">!important</span>;<br>  <span class="hljs-attribute">text-shadow</span>:<span class="hljs-number">5px</span> <span class="hljs-number">2px</span> <span class="hljs-number">6px</span> <span class="hljs-number">#000</span><span class="hljs-meta">!important</span>;<br>  <span class="hljs-attribute">font-family</span>:Fira Code<span class="hljs-meta">!important</span><br>&#125;<br><span class="hljs-selector-tag">a</span><span class="hljs-selector-id">#site-name</span> &#123;<br>  <span class="hljs-attribute">text-shadow</span>:<span class="hljs-number">5px</span> <span class="hljs-number">2px</span> <span class="hljs-number">6px</span> <span class="hljs-number">#000</span><span class="hljs-meta">!important</span>;<br>  <span class="hljs-attribute">font-family</span>:Fira Code<span class="hljs-meta">!important</span><br>&#125;<br><br><span class="hljs-selector-id">#article-container</span> pre, <span class="hljs-selector-id">#article-container</span> <span class="hljs-selector-tag">code</span> &#123;<br>  <span class="hljs-attribute">font-family</span>:Fira Code<span class="hljs-meta">!important</span>;<br>&#125;<br><span class="hljs-selector-class">.article-title</span> &#123;<br>  <span class="hljs-attribute">font-weight</span>: bolder;<br>  <span class="hljs-attribute">font-family</span>:Fira Code<span class="hljs-meta">!important</span>;<br>&#125;<br></code></pre></td></tr></table></figure></p>
+                <p>[TOC]<br><code>print</code><br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; input()
+print(a)</code></pre></div></figure><br><figure><div class="code-wrapper"><pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">&#x2F;* CSS *&#x2F;
+@import url(https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;firacode@6.2.0&#x2F;distr&#x2F;fira_code.css);
+
+h1#site-title &#123;
+  font-size: 8vh!important;
+  text-shadow:5px 2px 6px #000!important;
+  font-family:Fira Code!important
+&#125;
+span#subtitle &#123;
+  font-size: 3vh!important;
+  text-shadow:5px 2px 6px #000!important;
+  font-family:Fira Code!important
+&#125;
+a#site-name &#123;
+  text-shadow:5px 2px 6px #000!important;
+  font-family:Fira Code!important
+&#125;
+
+#article-container pre, #article-container code &#123;
+  font-family:Fira Code!important;
+&#125;
+.article-title &#123;
+  font-weight: bolder;
+  font-family:Fira Code!important;
+&#125;</code></pre></div></figure></p>
 
                 
               </div>
@@ -527,7 +572,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     </div>
   
   
@@ -550,7 +595,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -583,7 +628,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
     var toc = jQuery('#toc');
     if (toc.length === 0 || !window.tocbot) { return; }
     var boardCtn = jQuery('#board-ctn');
@@ -621,6 +666,12 @@
 </script>
 
 
+  <script  src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
@@ -628,7 +679,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
     window.anchors.options = {
       placement: CONFIG.anchorjs.placement,
       visible  : CONFIG.anchorjs.visible
@@ -674,13 +725,11 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
+  <script defer src="/js/leancloud.js" ></script>
+
   <script  src="/js/local-search.js" ></script>
 
 
-
-
-  
-<script src="/js/randomCover.js"></script>
 
 
 

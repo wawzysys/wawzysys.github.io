@@ -19,20 +19,20 @@
   <meta name="author" content="Asdaso">
   <meta name="keywords" content="blog,技术,编程">
   
-    <meta name="description" content="12&lt;!-- 字符串变量赋值 --&gt;String name&#x3D;sc.next(); 123Math.pow(a,2);Math.sqrt(a);Math.abs(x-y); &nbsp; 求最大值   $\text{max}(a, b) &#x3D; \frac{a + b + \text{abs}(a - b)}{2} $    $ \text{max}(a, b, c) &#x3D; \frac{\le">
+    <meta name="description" content="&lt;!-- 字符串变量赋值 --&gt; String name&#x3D;sc.next(); Math.pow(a,2); Math.sqrt(a); Math.abs(x-y); &nbsp; 求最大值   $\text{max}(a, b) &#x3D; \frac{a + b + \text{abs}(a - b)}{2} $    $ \text{max}(a, b, c) &#x3D; \frac{">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java_yi">
 <meta property="og:url" content="http://example.com/post/2979e7ed.html">
 <meta property="og:site_name" content="Asdasoのblog">
-<meta property="og:description" content="12&lt;!-- 字符串变量赋值 --&gt;String name&#x3D;sc.next(); 123Math.pow(a,2);Math.sqrt(a);Math.abs(x-y); &nbsp; 求最大值   $\text{max}(a, b) &#x3D; \frac{a + b + \text{abs}(a - b)}{2} $    $ \text{max}(a, b, c) &#x3D; \frac{\le">
+<meta property="og:description" content="&lt;!-- 字符串变量赋值 --&gt; String name&#x3D;sc.next(); Math.pow(a,2); Math.sqrt(a); Math.abs(x-y); &nbsp; 求最大值   $\text{max}(a, b) &#x3D; \frac{a + b + \text{abs}(a - b)}{2} $    $ \text{max}(a, b, c) &#x3D; \frac{">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/cover/22.jpg">
+<meta property="og:image" content="http://example.com/img/cover/12.jpg">
 <meta property="article:published_time" content="2024-09-03T13:36:25.000Z">
 <meta property="article:modified_time" content="2024-09-05T16:30:40.391Z">
 <meta property="article:author" content="Asdaso">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/cover/22.jpg">
+<meta name="twitter:image" content="http://example.com/img/cover/12.jpg">
   
   
   
@@ -46,6 +46,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
+  <link  rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
@@ -57,7 +59,7 @@
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -70,15 +72,11 @@
 
 
 
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"gHBUbGnezwPEckLGQuK5MYV1-MdYXbMMI","app_key":"kokqnKgfEiMRyh31b4ofNY5k","server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -88,6 +86,19 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 
   
@@ -104,7 +115,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Asdasoのblog</strong>
+      <strong>asdasoのblog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -171,20 +182,8 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/riji/" target="_self">
-                <i class="fas fa-heart"></i>
+                <i class="iconfont icon-book"></i>
                 <span>日记</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/link/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
               </a>
             </li>
           
@@ -197,6 +196,18 @@
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
               </a>
             </li>
           
@@ -224,7 +235,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/cover/22.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/cover/12.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -253,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          822 字
+          848 字
         
       </span>
     
@@ -264,12 +275,21 @@
         
         
         
-          7 分钟
+          8 分钟
         
       </span>
     
 
     
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+      
     
   </div>
 
@@ -306,17 +326,56 @@
             
               <div class="markdown-body">
                 
-                <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- 字符串变量赋值 --&gt;</span><br>String name=sc.next();<br></code></pre></td></tr></table></figure>
-<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs arcade">Math.<span class="hljs-built_in">pow</span>(a,<span class="hljs-number">2</span>);<br>Math.<span class="hljs-built_in">sqrt</span>(a);<br>Math.<span class="hljs-built_in">abs</span>(x-y);<br></code></pre></td></tr></table></figure>
+                <figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&lt;!-- 字符串变量赋值 --&gt;
+String name&#x3D;sc.next();</code></pre></div></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">Math.pow(a,2);
+Math.sqrt(a);
+Math.abs(x-y);</code></pre></div></figure>
 <p>&nbsp;</p>
 <p><strong>求最大值</strong></p>
 <p>  $\text{max}(a, b) = \frac{a + b + \text{abs}(a - b)}{2} $ </p>
 <p>  $ \text{max}(a, b, c) = \frac{\left(\frac{a + b + \text{abs}(a - b)}{2} + c + \text{abs}\left(\frac{a + b + \text{abs}(a - b)}{2} - c\right)\right)}{2}$</p>
 <p>&nbsp;</p>
-<p><strong>t+=1e-8;</strong><br>java 里面浮点数的不精确性，最后得到的是 0.9999996 ，int 强制转换后变为 0<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs perl">import java.util.Scanner;<br>public class Main&#123;<br>    public static void main(String[] args)&#123;<br>        Scanner sc=new Scanner(System.in);<br>        double t=sc.nextDouble();<br>        t+=<span class="hljs-number">1</span>e-<span class="hljs-number">8</span>;<br>        <span class="hljs-regexp">//</span> java 里面浮点数的不精确性，最后得到的是 <span class="hljs-number">0</span>.<span class="hljs-number">9999996</span> ，<span class="hljs-keyword">int</span> 强制转换后变为 <span class="hljs-number">0</span><br>        // 处理：给t加一个很小的值<span class="hljs-number">1</span>e-<span class="hljs-number">8</span><br>        System.out.println(<span class="hljs-string">&quot;NOTAS:&quot;</span>);<br>        System.out.printf(<span class="hljs-string">&quot;%d nota(s) de R$ 100.00\n&quot;</span>,(<span class="hljs-keyword">int</span>)t/<span class="hljs-number">100</span>);<br>        System.out.printf(<span class="hljs-string">&quot;%d nota(s) de R$ 50.00\n&quot;</span>,(<span class="hljs-keyword">int</span>)t%100/<span class="hljs-number">50</span>);<br>        System.out.printf(<span class="hljs-string">&quot;%d nota(s) de R$ 20.00\n&quot;</span>,(<span class="hljs-keyword">int</span>)t%10<span class="hljs-number">0</span>%50/<span class="hljs-number">20</span>);<br>        System.out.printf(<span class="hljs-string">&quot;%d nota(s) de R$ 10.00\n&quot;</span>,(<span class="hljs-keyword">int</span>)t%10<span class="hljs-number">0</span>%5<span class="hljs-number">0</span>%20/<span class="hljs-number">10</span>);<br>        System.out.printf(<span class="hljs-string">&quot;%d nota(s) de R$ 5.00\n&quot;</span>,(<span class="hljs-keyword">int</span>)t%10<span class="hljs-number">0</span>%5<span class="hljs-number">0</span>%2<span class="hljs-number">0</span>%10/<span class="hljs-number">5</span>);<br>        System.out.printf(<span class="hljs-string">&quot;%d nota(s) de R$ 2.00\n&quot;</span>,(<span class="hljs-keyword">int</span>)t%10<span class="hljs-number">0</span>%5<span class="hljs-number">0</span>%2<span class="hljs-number">0</span>%1<span class="hljs-number">0</span>%5/<span class="hljs-number">2</span>);<br>        System.out.println(<span class="hljs-string">&quot;MOEDAS:&quot;</span>);<br>        System.out.printf(<span class="hljs-string">&quot;%d moeda(s) de R$ 1.00\n&quot;</span>,(<span class="hljs-keyword">int</span>)t%10<span class="hljs-number">0</span>%5<span class="hljs-number">0</span>%2<span class="hljs-number">0</span>%1<span class="hljs-number">0</span>%<span class="hljs-number">5</span>%2/<span class="hljs-number">1</span>);<br>        System.out.printf(<span class="hljs-string">&quot;%d moeda(s) de R$ 0.50\n&quot;</span>,(<span class="hljs-keyword">int</span>)(t%1/<span class="hljs-number">0</span>.<span class="hljs-number">5</span>));<br>        System.out.printf(<span class="hljs-string">&quot;%d moeda(s) de R$ 0.25\n&quot;</span>,(<span class="hljs-keyword">int</span>)(t%<span class="hljs-number">1</span>%0.<span class="hljs-number">5</span>/<span class="hljs-number">0</span>.<span class="hljs-number">25</span>));<br>        System.out.printf(<span class="hljs-string">&quot;%d moeda(s) de R$ 0.10\n&quot;</span>,(<span class="hljs-keyword">int</span>)(t%<span class="hljs-number">1</span>%0.<span class="hljs-number">5</span>%0.<span class="hljs-number">25</span>/<span class="hljs-number">0</span>.<span class="hljs-number">1</span>));<br>        System.out.printf(<span class="hljs-string">&quot;%d moeda(s) de R$ 0.05\n&quot;</span>,(<span class="hljs-keyword">int</span>)(t%<span class="hljs-number">1</span>%0.<span class="hljs-number">5</span>%0.<span class="hljs-number">25</span>%0.<span class="hljs-number">1</span>/<span class="hljs-number">0</span>.<span class="hljs-number">05</span>));<br>        System.out.printf(<span class="hljs-string">&quot;%d moeda(s) de R$ 0.01\n&quot;</span>,(<span class="hljs-keyword">int</span>)(t%<span class="hljs-number">1</span>%0.<span class="hljs-number">5</span>%0.<span class="hljs-number">25</span>%0.<span class="hljs-number">1</span>%0.<span class="hljs-number">05</span>/<span class="hljs-number">0</span>.<span class="hljs-number">01</span>));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></p>
-<p>&nbsp;<br>java里 <strong>判断字符串相等不能用 a==”wsy”</strong><br>只能用 <strong>a.equals(wsy)</strong>，使用前提a不为空，否则报错<br>处理：<strong>“wsy”.equals(a)</strong><br><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">if</span>(&quot;onivoro&quot;.equals(z))&#123;<br>    <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.printf(&quot;homem&quot;);<br>&#125;<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.printf(&quot;vaca&quot;);<br></code></pre></td></tr></table></figure><br>&nbsp;<br>数据集<br><img src="image.png" srcset="/img/loading.gif" lazyload alt="alt text"><br>这段代码的作用是将指定目录下的所有以”.jpg”结尾的图片文件的标签写入同名的”.txt”文件中。假设有一个名叫”antsimage”的目录，里面存放了一些以”ants”开头的蚂蚁图片，我们需要将其标签写入同名的”.txt”文件中，以便后续使用。<br>代码核心部分使用了Python的os模块来定位文件位置和创建文件，主要分为以下步骤：</p>
+<p><strong>t+=1e-8;</strong><br>java 里面浮点数的不精确性，最后得到的是 0.9999996 ，int 强制转换后变为 0<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">import java.util.Scanner;
+public class Main&#123;
+    public static void main(String[] args)&#123;
+        Scanner sc&#x3D;new Scanner(System.in);
+        double t&#x3D;sc.nextDouble();
+        t+&#x3D;1e-8;
+        &#x2F;&#x2F; java 里面浮点数的不精确性，最后得到的是 0.9999996 ，int 强制转换后变为 0
+        &#x2F;&#x2F; 处理：给t加一个很小的值1e-8
+        System.out.println(&quot;NOTAS:&quot;);
+        System.out.printf(&quot;%d nota(s) de R$ 100.00\n&quot;,(int)t&#x2F;100);
+        System.out.printf(&quot;%d nota(s) de R$ 50.00\n&quot;,(int)t%100&#x2F;50);
+        System.out.printf(&quot;%d nota(s) de R$ 20.00\n&quot;,(int)t%100%50&#x2F;20);
+        System.out.printf(&quot;%d nota(s) de R$ 10.00\n&quot;,(int)t%100%50%20&#x2F;10);
+        System.out.printf(&quot;%d nota(s) de R$ 5.00\n&quot;,(int)t%100%50%20%10&#x2F;5);
+        System.out.printf(&quot;%d nota(s) de R$ 2.00\n&quot;,(int)t%100%50%20%10%5&#x2F;2);
+        System.out.println(&quot;MOEDAS:&quot;);
+        System.out.printf(&quot;%d moeda(s) de R$ 1.00\n&quot;,(int)t%100%50%20%10%5%2&#x2F;1);
+        System.out.printf(&quot;%d moeda(s) de R$ 0.50\n&quot;,(int)(t%1&#x2F;0.5));
+        System.out.printf(&quot;%d moeda(s) de R$ 0.25\n&quot;,(int)(t%1%0.5&#x2F;0.25));
+        System.out.printf(&quot;%d moeda(s) de R$ 0.10\n&quot;,(int)(t%1%0.5%0.25&#x2F;0.1));
+        System.out.printf(&quot;%d moeda(s) de R$ 0.05\n&quot;,(int)(t%1%0.5%0.25%0.1&#x2F;0.05));
+        System.out.printf(&quot;%d moeda(s) de R$ 0.01\n&quot;,(int)(t%1%0.5%0.25%0.1%0.05&#x2F;0.01));
+    &#125;
+&#125;</code></pre></div></figure></p>
+<p>&nbsp;<br>java里 <strong>判断字符串相等不能用 a==”wsy”</strong><br>只能用 <strong>a.equals(wsy)</strong>，使用前提a不为空，否则报错<br>处理：<strong>“wsy”.equals(a)</strong><br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">if(&quot;onivoro&quot;.equals(z))&#123;
+    System.out.printf(&quot;homem&quot;);
+&#125;
+else System.out.printf(&quot;vaca&quot;);</code></pre></div></figure><br>&nbsp;<br>数据集<br><img src="image.png" srcset="/img/loading.gif" lazyload alt="alt text"><br>这段代码的作用是将指定目录下的所有以”.jpg”结尾的图片文件的标签写入同名的”.txt”文件中。假设有一个名叫”antsimage”的目录，里面存放了一些以”ants”开头的蚂蚁图片，我们需要将其标签写入同名的”.txt”文件中，以便后续使用。<br>代码核心部分使用了Python的os模块来定位文件位置和创建文件，主要分为以下步骤：</p>
 <p>定义根目录rootdir、目标目录targetdir和标签label。在该段代码中，rootdir指的是存放所有图片的目录；targetdir指的是存放待处理图片的目录名称，本例中为”ants_image”；而label则是标签，这里为”ants”。<br>获取目标文件夹下所有图片文件的名称，并去掉文件扩展名”.jpg”，只保留文件名。<br>遍历所有文件，使用with open()语句创建同名”.txt”文件，并向其中写入标签label。<br>循环结束后，所有的图片的标签都写入了同名”.txt”文件中，存放在指定的目录out_dir下。</p>
-<p>总之，这段代码的作用是将一些图片的标签写入同名文件中，方便后续使用。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs stylus">import os<br><br>root_dir = <span class="hljs-string">&#x27;练手数据集/train&#x27;</span><br>target_dir = <span class="hljs-string">&#x27;ants_image&#x27;</span><br>img_path = os<span class="hljs-selector-class">.listdir</span>(os<span class="hljs-selector-class">.path</span><span class="hljs-selector-class">.join</span>(root_dir, target_dir))<br><span class="hljs-selector-tag">label</span> = target_dir<span class="hljs-selector-class">.split</span>(<span class="hljs-string">&#x27;_&#x27;</span>)【<span class="hljs-number">0</span>】<br>out_dir = <span class="hljs-string">&#x27;ants_label&#x27;</span><br><span class="hljs-keyword">for</span> <span class="hljs-selector-tag">i</span> <span class="hljs-keyword">in</span> img_path:<br>file_name = <span class="hljs-selector-tag">i</span><span class="hljs-selector-class">.split</span>(<span class="hljs-string">&#x27;.jpg&#x27;</span>)【<span class="hljs-number">0</span>】<br>with <span class="hljs-built_in">open</span>(os<span class="hljs-selector-class">.path</span><span class="hljs-selector-class">.join</span>(root_dir, out_dir,<span class="hljs-string">&quot;&#123;&#125;.txt&quot;</span><span class="hljs-selector-class">.format</span>(file_name)),<span class="hljs-string">&#x27;w&#x27;</span>) as f:<br>f<span class="hljs-selector-class">.write</span>(label)<br></code></pre></td></tr></table></figure><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">1<br></code></pre></td></tr></table></figure></p>
+<p>总之，这段代码的作用是将一些图片的标签写入同名文件中，方便后续使用。<br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">import os
+
+root_dir &#x3D; &#39;练手数据集&#x2F;train&#39;
+target_dir &#x3D; &#39;ants_image&#39;
+img_path &#x3D; os.listdir(os.path.join(root_dir, target_dir))
+label &#x3D; target_dir.split(&#39;_&#39;)【0】
+out_dir &#x3D; &#39;ants_label&#39;
+for i in img_path:
+file_name &#x3D; i.split(&#39;.jpg&#39;)【0】
+with open(os.path.join(root_dir, out_dir,&quot;&#123;&#125;.txt&quot;.format(file_name)),&#39;w&#39;) as f:
+f.write(label)</code></pre></div></figure><br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">1</code></pre></div></figure></p>
 
                 
               </div>
@@ -565,7 +624,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     </div>
   
   
@@ -588,7 +647,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -621,7 +680,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
     var toc = jQuery('#toc');
     if (toc.length === 0 || !window.tocbot) { return; }
     var boardCtn = jQuery('#board-ctn');
@@ -659,6 +718,12 @@
 </script>
 
 
+  <script  src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
@@ -666,7 +731,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
     window.anchors.options = {
       placement: CONFIG.anchorjs.placement,
       visible  : CONFIG.anchorjs.visible
@@ -712,13 +777,11 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
+  <script defer src="/js/leancloud.js" ></script>
+
   <script  src="/js/local-search.js" ></script>
 
 
-
-
-  
-<script src="/js/randomCover.js"></script>
 
 
 

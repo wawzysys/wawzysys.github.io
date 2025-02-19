@@ -19,12 +19,12 @@
   <meta name="author" content="Asdaso">
   <meta name="keywords" content="blog,技术,编程">
   
-    <meta name="description" content="12bisect_left:&gt;&#x3D;bisect_right:&gt; dict123dict &#x3D; defaultdict(list)# 设置无限大dict &#x3D; defaultdict(inf)  SortedDict1dict &#x3D; defaultdict(SortedDict) any1234567891011121314151617if any(1 in row for row in gri">
+    <meta name="description" content="bisect_left:&gt;&#x3D; bisect_right:&gt; dictdict &#x3D; defaultdict(list) # 设置无限大 dict &#x3D; defaultdict(inf)  SortedDictdict &#x3D; defaultdict(SortedDict) anyif any(1 in row for row in grid):">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python">
 <meta property="og:url" content="http://example.com/post/b9ebdeb8.html">
 <meta property="og:site_name" content="Asdasoのblog">
-<meta property="og:description" content="12bisect_left:&gt;&#x3D;bisect_right:&gt; dict123dict &#x3D; defaultdict(list)# 设置无限大dict &#x3D; defaultdict(inf)  SortedDict1dict &#x3D; defaultdict(SortedDict) any1234567891011121314151617if any(1 in row for row in gri">
+<meta property="og:description" content="bisect_left:&gt;&#x3D; bisect_right:&gt; dictdict &#x3D; defaultdict(list) # 设置无限大 dict &#x3D; defaultdict(inf)  SortedDictdict &#x3D; defaultdict(SortedDict) anyif any(1 in row for row in grid):">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/cover/8.jpg">
 <meta property="article:published_time" content="2024-01-27T16:59:10.000Z">
@@ -46,6 +46,8 @@
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
+  <link  rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
@@ -57,7 +59,7 @@
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
@@ -70,15 +72,11 @@
 
 
 
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"gHBUbGnezwPEckLGQuK5MYV1-MdYXbMMI","app_key":"kokqnKgfEiMRyh31b4ofNY5k","server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -88,6 +86,19 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 
   
@@ -104,7 +115,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Asdasoのblog</strong>
+      <strong>asdasoのblog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -171,20 +182,8 @@
           
             <li class="nav-item">
               <a class="nav-link" href="/riji/" target="_self">
-                <i class="fas fa-heart"></i>
+                <i class="iconfont icon-book"></i>
                 <span>日记</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/link/" target="_self">
-                <i class="iconfont icon-link-fill"></i>
-                <span>友链</span>
               </a>
             </li>
           
@@ -197,6 +196,18 @@
               <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
               </a>
             </li>
           
@@ -253,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.1k 字
+          4.3k 字
         
       </span>
     
@@ -264,12 +275,21 @@
         
         
         
-          35 分钟
+          36 分钟
         
       </span>
     
 
     
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+      
     
   </div>
 
@@ -306,12 +326,48 @@
             
               <div class="markdown-body">
                 
-                <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">bisect_left:&gt;=<br>bisect_right:&gt;<br></code></pre></td></tr></table></figure>
-<h2 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">dict</span> = defaultdict(<span class="hljs-built_in">list</span>)<br><span class="hljs-comment"># 设置无限大</span><br><span class="hljs-built_in">dict</span> = defaultdict(inf) <br></code></pre></td></tr></table></figure>
-<h2 id="SortedDict"><a href="#SortedDict" class="headerlink" title="SortedDict"></a>SortedDict</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">dict</span> = defaultdict(SortedDict)<br></code></pre></td></tr></table></figure>
-<h2 id="any"><a href="#any" class="headerlink" title="any"></a>any</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">if</span> <span class="hljs-built_in">any</span>(<span class="hljs-number">1</span> <span class="hljs-keyword">in</span> row <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> grid):<br>    <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span><br><span class="hljs-comment"># 检查列表中是否有真值</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">any</span>([<span class="hljs-number">0</span>, <span class="hljs-literal">False</span>, <span class="hljs-number">5</span>]))  <span class="hljs-comment"># True，因为5是真值</span><br><br><span class="hljs-comment"># 空列表中没有真值</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">any</span>([]))  <span class="hljs-comment"># False</span><br><br><span class="hljs-comment"># 字典在使用any时会检查键而不是值</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">any</span>(&#123;<span class="hljs-number">0</span>: <span class="hljs-string">&quot;False&quot;</span>, <span class="hljs-number">1</span>: <span class="hljs-string">&quot;True&quot;</span>&#125;))  <span class="hljs-comment"># True，因为有一个真键1</span><br><br><span class="hljs-comment"># 空字典</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">any</span>(&#123;&#125;))  <span class="hljs-comment"># False</span><br><br><span class="hljs-comment"># 检查列表中是否存在大于5的元素</span><br>nums = [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>]<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">any</span>(n &gt; <span class="hljs-number">5</span> <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> nums))  <span class="hljs-comment"># True</span><br></code></pre></td></tr></table></figure>
-<h2 id="copy"><a href="#copy" class="headerlink" title="copy"></a>copy</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#二位数组</span><br><span class="hljs-keyword">import</span> copy<br>pre_grid = copy.deepcopy(grid)<span class="hljs-comment">##pre_grid 和 grid两者独立</span><br>pre_grid = grid <span class="hljs-comment">##两者不独立</span><br>pre_grid = grid.copy() <span class="hljs-comment">##两者不独立</span><br><span class="hljs-comment"># 使用.copy()方法对列表进行浅复制（shallow copy）时，这个方法只会创建列表</span><br><span class="hljs-comment"># 本身的一个新的副本，但是不会对列表中的子列表（即列表中的列表）进行深度复制。</span><br><span class="hljs-comment"># 这意味着，如果原始列表中包含了其他列表（如二维数组或矩阵），那么新列表和原</span><br><span class="hljs-comment"># 始列表中的子列表仍然是相同的对象（即它们在内存中的地址是相同的）。</span><br><span class="hljs-comment"># 因此，当您修改grid中的任何元素时，pre_color中相应的子列表元素也会被修改，</span><br><span class="hljs-comment"># 因为它们实际上是指向同一块内存地址。</span><br><br></code></pre></td></tr></table></figure>
-<h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">a_copy = a.copy()<span class="hljs-comment">#两者独立 </span><br>a_copy = a[:]<span class="hljs-comment">#两者独立 使用切片</span><br>a_copy = a<span class="hljs-comment">#两者不独立</span><br><span class="hljs-comment">#对于一维数组（列表），可以使用 .copy() 方法或切片操作 [:] 来创建一个浅复制。</span><br><span class="hljs-comment"># 对于一维数组，这两种方法都能有效地复制数组，因为一维数组不包含嵌套的列表，</span><br><span class="hljs-comment"># 所以“浅复制”已经足够用于创建一个完全独立的副本</span><br><span class="hljs-comment"># 修改副本中的元素不会影响原始数组。</span><br></code></pre></td></tr></table></figure>
+                <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">bisect_left:&gt;&#x3D;
+bisect_right:&gt;</code></pre></div></figure>
+<h2 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">dict &#x3D; defaultdict(list)
+# 设置无限大
+dict &#x3D; defaultdict(inf) </code></pre></div></figure>
+<h2 id="SortedDict"><a href="#SortedDict" class="headerlink" title="SortedDict"></a>SortedDict</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">dict &#x3D; defaultdict(SortedDict)</code></pre></div></figure>
+<h2 id="any"><a href="#any" class="headerlink" title="any"></a>any</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">if any(1 in row for row in grid):
+    return -1
+# 检查列表中是否有真值
+print(any([0, False, 5]))  # True，因为5是真值
+
+# 空列表中没有真值
+print(any([]))  # False
+
+# 字典在使用any时会检查键而不是值
+print(any(&#123;0: &quot;False&quot;, 1: &quot;True&quot;&#125;))  # True，因为有一个真键1
+
+# 空字典
+print(any(&#123;&#125;))  # False
+
+# 检查列表中是否存在大于5的元素
+nums &#x3D; [1, 4, 6, 8]
+print(any(n &gt; 5 for n in nums))  # True</code></pre></div></figure>
+<h2 id="copy"><a href="#copy" class="headerlink" title="copy"></a>copy</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">#二位数组
+import copy
+pre_grid &#x3D; copy.deepcopy(grid)##pre_grid 和 grid两者独立
+pre_grid &#x3D; grid ##两者不独立
+pre_grid &#x3D; grid.copy() ##两者不独立
+# 使用.copy()方法对列表进行浅复制（shallow copy）时，这个方法只会创建列表
+# 本身的一个新的副本，但是不会对列表中的子列表（即列表中的列表）进行深度复制。
+# 这意味着，如果原始列表中包含了其他列表（如二维数组或矩阵），那么新列表和原
+# 始列表中的子列表仍然是相同的对象（即它们在内存中的地址是相同的）。
+# 因此，当您修改grid中的任何元素时，pre_color中相应的子列表元素也会被修改，
+# 因为它们实际上是指向同一块内存地址。
+</code></pre></div></figure>
+<h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">a_copy &#x3D; a.copy()#两者独立 
+a_copy &#x3D; a[:]#两者独立 使用切片
+a_copy &#x3D; a#两者不独立
+#对于一维数组（列表），可以使用 .copy() 方法或切片操作 [:] 来创建一个浅复制。
+# 对于一维数组，这两种方法都能有效地复制数组，因为一维数组不包含嵌套的列表，
+# 所以“浅复制”已经足够用于创建一个完全独立的副本
+# 修改副本中的元素不会影响原始数组。</code></pre></div></figure>
 <h2 id="可变对象"><a href="#可变对象" class="headerlink" title="可变对象"></a>可变对象</h2><ul>
 <li>可变对象（如列表、字典、集合等）则表现出“按引用传递”的特性。</li>
 <li>因为函数接收的参数是对象的引用，所以如果你在函数内部修改了一个可变对象（例如，添加、删除或者修改列表中的元素），</li>
@@ -322,84 +378,392 @@
 <li>如果你在函数内部试图改变一个不可变对象的值，实际上会创建一个新的对象，并将其绑定到函数内部的局部变量名上，而原始对象不会受到影响。</li>
 </ul>
 <h2 id="def-函数参数"><a href="#def-函数参数" class="headerlink" title="def 函数参数"></a>def 函数参数</h2><p>在Python中，所有的<strong><em>函数参数</em></strong>传递都可以视为“按对象引用传递”（pass by object reference）。这意味着函数内部接收到的是实际参数对象的引用，而不是对象的副本。这种传递方式的效果取决于对象本身是可变的（mutable）还是不可变的（immutable）。</p>
-<h3 id="不可变"><a href="#不可变" class="headerlink" title="不可变"></a>不可变</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">area = <span class="hljs-number">0</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">fun</span>(<span class="hljs-params">area</span>):<br>    area += <span class="hljs-number">1</span><br>fun(area)<br><span class="hljs-built_in">print</span>(area) <br><span class="hljs-comment"># 0</span><br><span class="hljs-comment">#area 不可变 </span><br><span class="hljs-comment">#函数fun中的area是一个局部变量，它仅在函数作用域内有效。尽管它与全局变量area同名，但它实际上是一个完全不同的变量。在fun函数内部修改area时，实际上是在修改这个局部变量，而不是全局变量area。因此，全局变量area的值不会因为调用fun函数而改变。</span><br></code></pre></td></tr></table></figure>
-<h3 id="Python中函数参数如何按引用传递（对于可变对象而言）"><a href="#Python中函数参数如何按引用传递（对于可变对象而言）" class="headerlink" title="Python中函数参数如何按引用传递（对于可变对象而言）"></a>Python中函数参数如何按引用传递（对于可变对象而言）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">area[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">fun</span>(<span class="hljs-params">area</span>):<br>    area[<span class="hljs-number">0</span>] += <span class="hljs-number">1</span><br>fun(area)<br><span class="hljs-built_in">print</span>(area[<span class="hljs-number">0</span>]) <br><span class="hljs-comment"># 1</span><br></code></pre></td></tr></table></figure>
-<h3 id="不可变对象-global"><a href="#不可变对象-global" class="headerlink" title="不可变对象 + global"></a>不可变对象 + global</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">area = <span class="hljs-number">0</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">fun</span>():<br>    <span class="hljs-keyword">global</span> area  <span class="hljs-comment"># 指明我们打算修改的是全局变量area</span><br>    area += <span class="hljs-number">1</span><br>fun()<br><span class="hljs-built_in">print</span>(area)  <br><span class="hljs-comment"># 结果将是1，因为fun函数被调用，全局变量area被修改</span><br><br></code></pre></td></tr></table></figure>
+<h3 id="不可变"><a href="#不可变" class="headerlink" title="不可变"></a>不可变</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">area &#x3D; 0
+def fun(area):
+    area +&#x3D; 1
+fun(area)
+print(area) 
+# 0
+#area 不可变 
+#函数fun中的area是一个局部变量，它仅在函数作用域内有效。尽管它与全局变量area同名，但它实际上是一个完全不同的变量。在fun函数内部修改area时，实际上是在修改这个局部变量，而不是全局变量area。因此，全局变量area的值不会因为调用fun函数而改变。</code></pre></div></figure>
+<h3 id="Python中函数参数如何按引用传递（对于可变对象而言）"><a href="#Python中函数参数如何按引用传递（对于可变对象而言）" class="headerlink" title="Python中函数参数如何按引用传递（对于可变对象而言）"></a>Python中函数参数如何按引用传递（对于可变对象而言）</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">area[0] &#x3D; 0
+def fun(area):
+    area[0] +&#x3D; 1
+fun(area)
+print(area[0]) 
+# 1</code></pre></div></figure>
+<h3 id="不可变对象-global"><a href="#不可变对象-global" class="headerlink" title="不可变对象 + global"></a>不可变对象 + global</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">area &#x3D; 0
+def fun():
+    global area  # 指明我们打算修改的是全局变量area
+    area +&#x3D; 1
+fun()
+print(area)  
+# 结果将是1，因为fun函数被调用，全局变量area被修改
+</code></pre></div></figure>
 <h3 id="global"><a href="#global" class="headerlink" title="global"></a>global</h3><ul>
 <li>使用<code>global</code>关键字在函数内部<strong>声明全局变量</strong>。</li>
 <li>当在函数内部修改全局变量时，如果不使用<code>global</code>关键字，</li>
 <li><code>Python</code>将会创建一个新的局部变量，而不是修改外部的全局变量。</li>
-<li>通过使用<code>global</code>关键字，可以明确指示Python在函数内部对全局变量进行修改。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">x = <span class="hljs-number">5</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">func</span>():<br>    <span class="hljs-keyword">global</span> x  <span class="hljs-comment"># 指明我们要修改的是全局变量x</span><br>    x = <span class="hljs-number">10</span><br>func()<br><span class="hljs-built_in">print</span>(x)  <span class="hljs-comment"># 输出将是10，因为全局变量x被修改了</span><br></code></pre></td></tr></table></figure>
+<li>通过使用<code>global</code>关键字，可以明确指示Python在函数内部对全局变量进行修改。<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; 5
+def func():
+    global x  # 指明我们要修改的是全局变量x
+    x &#x3D; 10
+func()
+print(x)  # 输出将是10，因为全局变量x被修改了</code></pre></div></figure>
 <h3 id="nonlocal"><a href="#nonlocal" class="headerlink" title="nonlocal"></a>nonlocal</h3></li>
 <li><code>nonlocal</code>关键字用于在嵌套函数中声明非局部变量（即不属于这个函数，但也不是全局的变量）。</li>
 <li>这通常用于在嵌套函数中修改封闭作用域（enclosing scope，即嵌套函数外部的另一个函数内部）的变量。</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">outer</span>():<br>    x = <span class="hljs-number">5</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">inner</span>():<br>        <span class="hljs-keyword">nonlocal</span> x  <span class="hljs-comment"># 指明我们要修改的是封闭作用域中的变量x</span><br>        x = <span class="hljs-number">10</span><br>    inner()<br>    <span class="hljs-built_in">print</span>(x)  <span class="hljs-comment"># 输出将是10，因为封闭作用域中的变量x被修改了</span><br>outer()<br><br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def outer():
+    x &#x3D; 5
+    def inner():
+        nonlocal x  # 指明我们要修改的是封闭作用域中的变量x
+        x &#x3D; 10
+    inner()
+    print(x)  # 输出将是10，因为封闭作用域中的变量x被修改了
+outer()
+</code></pre></div></figure>
 <h3 id="使用注意事项"><a href="#使用注意事项" class="headerlink" title="使用注意事项"></a>使用注意事项</h3><p><code>global</code>和<code>nonlocal</code>关键主要用于复杂的场景，比如需要在多层嵌套的函数中修改外部变量的值。然而，过度使用这些关键字可能会导致代码难以理解和维护，因此应该谨慎使用。<br>如果可以通过其他方式（如返回值、类属性等）来实现相同的功能，通常这些方式会更加清晰和优雅。</p>
 <h2 id="嵌套函数"><a href="#嵌套函数" class="headerlink" title="嵌套函数"></a>嵌套函数</h2><p>在Python中，嵌套函数可以访问其外部函数（父函数）作用域内的所有变量，无论这些变量是可变的还是不可变的。这种特性是由于Python的作用域和闭包的概念所决定的。当你在一个函数内定义另一个函数时，内部的函数（嵌套函数）可以访问外部函数的局部变量。</p>
 <h3 id="访问不可变变量"><a href="#访问不可变变量" class="headerlink" title="访问不可变变量"></a>访问不可变变量</h3><p>嵌套函数可以读取外部函数中定义的不可变变量（如整数、字符串、元组等），但不能直接修改它们。如果尝试修改，Python会在嵌套函数的局部作用域内创建一个同名的新变量，而不是修改外部函数的变量。这是因为不可变变量不能被更改，只能被替换。</p>
-<p>示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">Copy code<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">outer</span>():<br>    x = <span class="hljs-number">3</span>  <span class="hljs-comment"># 不可变变量</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">inner</span>():<br>        <span class="hljs-built_in">print</span>(x)  <span class="hljs-comment"># 可以访问外部函数的变量x</span><br>    inner()<br><br>outer()<br></code></pre></td></tr></table></figure></p>
+<p>示例：<br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">Copy code
+def outer():
+    x &#x3D; 3  # 不可变变量
+    def inner():
+        print(x)  # 可以访问外部函数的变量x
+    inner()
+
+outer()</code></pre></div></figure></p>
 <h3 id="修改可变变量"><a href="#修改可变变量" class="headerlink" title="修改可变变量"></a>修改可变变量</h3><p>对于可变变量（如列表、字典等），嵌套函数可以修改这些变量的内容，因为可变变量允许原地修改。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python">Copy code<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">outer</span>():<br>    lst = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]  <span class="hljs-comment"># 可变变量</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">inner</span>():<br>        lst.append(<span class="hljs-number">4</span>)  <span class="hljs-comment"># 修改外部函数的变量lst</span><br>    inner()<br>    <span class="hljs-built_in">print</span>(lst)<br><br>outer()<br></code></pre></td></tr></table></figure>
-<h3 id="使用nonlocal关键字"><a href="#使用nonlocal关键字" class="headerlink" title="使用nonlocal关键字"></a>使用nonlocal关键字</h3><p>如果需要在嵌套函数中修改外部函数的不可变变量，可以使用nonlocal关键字。这样做可以明确地告诉Python解释器你打算修改的是嵌套作用域中的变量，而不是创建一个新的局部变量。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python">python<br>Copy code<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">outer</span>():<br>    x = <span class="hljs-number">3</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">inner</span>():<br>        <span class="hljs-keyword">nonlocal</span> x<br>        x = <span class="hljs-number">5</span>  <span class="hljs-comment"># 修改的是外部函数的变量x</span><br>    inner()<br>    <span class="hljs-built_in">print</span>(x)  <span class="hljs-comment"># 输出5</span><br><br>outer()<br></code></pre></td></tr></table></figure><br>在这个示例中，nonlocal关键字使得inner函数能够修改外部函数outer中定义的不可变变量x的值。<br>总结来说，嵌套函数能够访问父函数中定义的所有变量，无论它们是可变的还是不可变的。但要修改不可变变量，需要使用nonlocal关键字。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>修改不可变复杂一点……<br>修改可变，不用加入函数参数直接改！<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">my_list = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">modify_list</span>():<br>    my_list.append(<span class="hljs-number">4</span>)<br><br>modify_list()<br><span class="hljs-built_in">print</span>(my_list)  <span class="hljs-comment"># 输出 [1, 2, 3, 4]</span><br><br></code></pre></td></tr></table></figure></p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">Copy code
+def outer():
+    lst &#x3D; [1, 2, 3]  # 可变变量
+    def inner():
+        lst.append(4)  # 修改外部函数的变量lst
+    inner()
+    print(lst)
+
+outer()</code></pre></div></figure>
+<h3 id="使用nonlocal关键字"><a href="#使用nonlocal关键字" class="headerlink" title="使用nonlocal关键字"></a>使用nonlocal关键字</h3><p>如果需要在嵌套函数中修改外部函数的不可变变量，可以使用nonlocal关键字。这样做可以明确地告诉Python解释器你打算修改的是嵌套作用域中的变量，而不是创建一个新的局部变量。<br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">python
+Copy code
+def outer():
+    x &#x3D; 3
+    def inner():
+        nonlocal x
+        x &#x3D; 5  # 修改的是外部函数的变量x
+    inner()
+    print(x)  # 输出5
+
+outer()</code></pre></div></figure><br>在这个示例中，nonlocal关键字使得inner函数能够修改外部函数outer中定义的不可变变量x的值。<br>总结来说，嵌套函数能够访问父函数中定义的所有变量，无论它们是可变的还是不可变的。但要修改不可变变量，需要使用nonlocal关键字。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>修改不可变复杂一点……<br>修改可变，不用加入函数参数直接改！<br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">my_list &#x3D; [1, 2, 3]
+
+def modify_list():
+    my_list.append(4)
+
+modify_list()
+print(my_list)  # 输出 [1, 2, 3, 4]
+</code></pre></div></figure></p>
 <h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="lambda"><a href="#lambda" class="headerlink" title="lambda"></a><code>lambda</code></h3><p>在python种,<code>lambda</code>函数后面可以跟一个列表或任何其他类型的表达式。<code>lambda</code>函数是一个简单的匿名函数，可以接受任何任何数量的参数，但只有一个表达式，这个表达式的就算结果就是函数的返回值。<br>例如：</p>
 <ul>
-<li>排序字典的时候，lambda接受两个参数 <code>item = [k, v]</code>,然后返回一个参数<code>item[1]</code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">sorted_dict_by_value = <span class="hljs-built_in">dict</span>(<span class="hljs-built_in">sorted</span>(my_dict.items(), key=<span class="hljs-keyword">lambda</span> item: item[<span class="hljs-number">1</span>]))<br></code></pre></td></tr></table></figure></li>
+<li>排序字典的时候，lambda接受两个参数 <code>item = [k, v]</code>,然后返回一个参数<code>item[1]</code><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">sorted_dict_by_value &#x3D; dict(sorted(my_dict.items(), key&#x3D;lambda item: item[1]))</code></pre></div></figure></li>
 <li>按值排序索引的时候,接受一个参数，返回一个列表里面两个参数<ul>
 <li>这里的 lambda 函数对于每个元素 x（在这个上下文中，x 是 lst 中的一个元素，即一个索引）返回一个由两个元素组成的列表：nums[x] 和 x。</li>
 <li>这个返回的列表用作排序的键：<ul>
 <li>第一个元素 nums[x] 是主要的排序依据。</li>
-<li>第二个元素 x 作为次要排序依据，确保在 nums[x] 相同的情况下，索引较小的元素排在前面。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">sort_lst = <span class="hljs-built_in">sorted</span>(lst, key=<span class="hljs-keyword">lambda</span> x: [nums[x], x])<br></code></pre></td></tr></table></figure>
+<li>第二个元素 x 作为次要排序依据，确保在 nums[x] 相同的情况下，索引较小的元素排在前面。<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">sort_lst &#x3D; sorted(lst, key&#x3D;lambda x: [nums[x], x])</code></pre></div></figure>
 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">my_dict = &#123;<span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;c&#x27;</span>: <span class="hljs-number">3</span>&#125;<br>sorted_dict = <span class="hljs-built_in">dict</span>(<span class="hljs-built_in">sorted</span>(my_dict.items()))<br><br>my_dict = &#123;<span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;c&#x27;</span>: <span class="hljs-number">3</span>&#125;<br>sorted_dict_by_value = <span class="hljs-built_in">dict</span>(<span class="hljs-built_in">sorted</span>(my_dict.items(), key=<span class="hljs-keyword">lambda</span> item: item[<span class="hljs-number">1</span>]))<br><br></code></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#升序</span><br>sorted_index = <span class="hljs-built_in">sorted</span>(<span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(nums)), key = nums.__getitem__)<br><span class="hljs-comment">#升序</span><br>sorted_index = [i <span class="hljs-keyword">for</span> i, _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">sorted</span>(<span class="hljs-built_in">enumerate</span>(nums), key=<span class="hljs-keyword">lambda</span> x: x[<span class="hljs-number">1</span>])]<br><span class="hljs-comment">#升序</span><br>nums_index = [[num, i] <span class="hljs-keyword">for</span>  i, num <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(nums)]<br>sorted_index = [i <span class="hljs-keyword">for</span> num, i <span class="hljs-keyword">in</span> <span class="hljs-built_in">sorted</span>(nums_index, key = <span class="hljs-keyword">lambda</span> x : x[<span class="hljs-number">0</span>])]<br><br><span class="hljs-comment">#根据列表nums中的值和索引对一个索引列表lst进行排序。</span><br><span class="hljs-comment">#根据nums中的值降序排序，如果有值相同，则根据索引降序排序。</span><br>n = <span class="hljs-built_in">len</span>(nums)<br>lst = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(n)) <span class="hljs-comment">#创建一个从0到n-1的索引列表，这个列表将被排序。</span><br>lst.sort(key=<span class="hljs-keyword">lambda</span> x: [-nums[x], -x])<br><span class="hljs-comment">#对lst进行就地排序（即排序后的结果直接修改lst）</span><br><span class="hljs-comment">#对于lst中的每一个元素x（这里的x是一个索引），lambda函数返回一个由两部分组成的列表[-nums[x], -x]。</span><br><span class="hljs-comment">#第一关键字 -nums[x]</span><br><span class="hljs-comment">#第二关键字 -x</span><br><br><br><span class="hljs-comment">#升序</span><br>n = <span class="hljs-built_in">len</span>(nums)<br>lst = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(n))<br>sort_lst = <span class="hljs-built_in">sorted</span>(lst, key = <span class="hljs-keyword">lambda</span> x: nums[x])<br><span class="hljs-comment">#sorted() 函数返回一个新列表，这个列表是按照 key 参数指定的方法排序的 lst 的副本。</span><br>sort_lst = <span class="hljs-built_in">sorted</span>(lst, key = <span class="hljs-keyword">lambda</span> x: [nums[x], x])<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">my_dict &#x3D; &#123;&#39;b&#39;: 1, &#39;a&#39;: 2, &#39;c&#39;: 3&#125;
+sorted_dict &#x3D; dict(sorted(my_dict.items()))
+
+my_dict &#x3D; &#123;&#39;b&#39;: 1, &#39;a&#39;: 2, &#39;c&#39;: 3&#125;
+sorted_dict_by_value &#x3D; dict(sorted(my_dict.items(), key&#x3D;lambda item: item[1]))
+</code></pre></div></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">#升序
+sorted_index &#x3D; sorted(range(len(nums)), key &#x3D; nums.__getitem__)
+#升序
+sorted_index &#x3D; [i for i, _ in sorted(enumerate(nums), key&#x3D;lambda x: x[1])]
+#升序
+nums_index &#x3D; [[num, i] for  i, num in enumerate(nums)]
+sorted_index &#x3D; [i for num, i in sorted(nums_index, key &#x3D; lambda x : x[0])]
+
+#根据列表nums中的值和索引对一个索引列表lst进行排序。
+#根据nums中的值降序排序，如果有值相同，则根据索引降序排序。
+n &#x3D; len(nums)
+lst &#x3D; list(range(n)) #创建一个从0到n-1的索引列表，这个列表将被排序。
+lst.sort(key&#x3D;lambda x: [-nums[x], -x])
+#对lst进行就地排序（即排序后的结果直接修改lst）
+#对于lst中的每一个元素x（这里的x是一个索引），lambda函数返回一个由两部分组成的列表[-nums[x], -x]。
+#第一关键字 -nums[x]
+#第二关键字 -x
+
+
+#升序
+n &#x3D; len(nums)
+lst &#x3D; list(range(n))
+sort_lst &#x3D; sorted(lst, key &#x3D; lambda x: nums[x])
+#sorted() 函数返回一个新列表，这个列表是按照 key 参数指定的方法排序的 lst 的副本。
+sort_lst &#x3D; sorted(lst, key &#x3D; lambda x: [nums[x], x])</code></pre></div></figure>
 <ul>
 <li><code>sort_lst = sorted(lst, key=lambda x: nums[x]):</code><br>这个表达式根据 <code>nums</code> 中每个索引 x 对应的值对 <code>lst</code> 进行排序。如果 nums 中存在相同的值，那么它们对应的索引在 <code>sort_lst</code> 中的相对顺序将按照它们在原列表 <code>lst</code> 中的顺序，也就是说，排序是稳定的。</li>
-<li><code>sort_lst = sorted(lst, key=lambda x: [nums[x], x]):</code><br>这个表达式在排序时考虑了两个因素：首先是 nums 中每个索引 x 对应的值，其次是索引 <code>x</code> 本身。这意味着，如果 <code>nums</code> 中有两个或多个相同的值，它们将进一步按照它们的索引进行排序。这种方法确保了即使在 <code>nums</code> 中的值相等时，排序结果也是确定的，因为索引值是唯一的。<h2 id="accumulate"><a href="#accumulate" class="headerlink" title="accumulate"></a>accumulate</h2>内置前缀和<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> itertools <br><span class="hljs-keyword">import</span> operator<br>data = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br><span class="hljs-comment"># 计算前缀和</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>(itertools.accumulate(data)))<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>(accumulate(data)))<br><span class="hljs-comment"># 计算到当前位置累积相乘得结果</span><br>data = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>, <span class="hljs-number">7</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>]<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>(itertools.accumulate(data, operator.mul, initial=<span class="hljs-number">2</span>)))<br><span class="hljs-comment"># 计算到当前位置的最大值并且输出</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>(itertools.accumulate(data, <span class="hljs-built_in">max</span>)))<br></code></pre></td></tr></table></figure>
-<h2 id="enumerate"><a href="#enumerate" class="headerlink" title="enumerate"></a>enumerate</h2>在Python中，enumerate 是一个内置函数，用于将一个可迭代的（比如列表、元组、字符串等）组合成一个索引序列，通常用于在for循环中获取每个元素的索引和值。这样可以在遍历时同时获得每个元素的索引位置和对应的值<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> index, value <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(iterable, start=<span class="hljs-number">0</span>):<br>    <span class="hljs-built_in">print</span>(index, value)<br><span class="hljs-comment">#这里的 iterable 是你想要遍历的可迭代对象，start 是一个可选参数，表示索引的起始值，默认为0。</span><br><span class="hljs-comment"># 下面是一个具体的例子：</span><br><br>my_list = [<span class="hljs-string">&#x27;apple&#x27;</span>, <span class="hljs-string">&#x27;banana&#x27;</span>, <span class="hljs-string">&#x27;cherry&#x27;</span>]<br><br><span class="hljs-comment"># 使用enumerate遍历列表</span><br><span class="hljs-keyword">for</span> index, value <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(my_list):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Index: <span class="hljs-subst">&#123;index&#125;</span>, Value: <span class="hljs-subst">&#123;value&#125;</span>&quot;</span>)<br><br><br>Index: <span class="hljs-number">0</span>, Value: apple<br>Index: <span class="hljs-number">1</span>, Value: banana<br>Index: <span class="hljs-number">2</span>, Value: cherry<br><br></code></pre></td></tr></table></figure>
+<li><code>sort_lst = sorted(lst, key=lambda x: [nums[x], x]):</code><br>这个表达式在排序时考虑了两个因素：首先是 nums 中每个索引 x 对应的值，其次是索引 <code>x</code> 本身。这意味着，如果 <code>nums</code> 中有两个或多个相同的值，它们将进一步按照它们的索引进行排序。这种方法确保了即使在 <code>nums</code> 中的值相等时，排序结果也是确定的，因为索引值是唯一的。<h2 id="accumulate"><a href="#accumulate" class="headerlink" title="accumulate"></a>accumulate</h2>内置前缀和<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import itertools 
+import operator
+data &#x3D; [1, 2, 3, 4, 5]
+# 计算前缀和
+print(list(itertools.accumulate(data)))
+print(list(accumulate(data)))
+# 计算到当前位置累积相乘得结果
+data &#x3D; [3, 4, 6, 2, 1, 9, 0, 7, 5, 8]
+print(list(itertools.accumulate(data, operator.mul, initial&#x3D;2)))
+# 计算到当前位置的最大值并且输出
+print(list(itertools.accumulate(data, max)))</code></pre></div></figure>
+<h2 id="enumerate"><a href="#enumerate" class="headerlink" title="enumerate"></a>enumerate</h2>在Python中，enumerate 是一个内置函数，用于将一个可迭代的（比如列表、元组、字符串等）组合成一个索引序列，通常用于在for循环中获取每个元素的索引和值。这样可以在遍历时同时获得每个元素的索引位置和对应的值<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">for index, value in enumerate(iterable, start&#x3D;0):
+    print(index, value)
+#这里的 iterable 是你想要遍历的可迭代对象，start 是一个可选参数，表示索引的起始值，默认为0。
+# 下面是一个具体的例子：
+
+my_list &#x3D; [&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;]
+
+# 使用enumerate遍历列表
+for index, value in enumerate(my_list):
+    print(f&quot;Index: &#123;index&#125;, Value: &#123;value&#125;&quot;)
+
+
+Index: 0, Value: apple
+Index: 1, Value: banana
+Index: 2, Value: cherry
+</code></pre></div></figure>
 使用 enumerate 可以使代码更加清晰和简洁，特别是当你需要索引和值时。</li>
 </ul>
-<h3 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h3><h4 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">g = defaultdict(<span class="hljs-built_in">list</span>)<br><span class="hljs-keyword">while</span> x, y <span class="hljs-keyword">in</span> deges:<br>    g[x].append(y)<br>    g[y].adppen(x)<br><br><span class="hljs-keyword">while</span> x, y, d <span class="hljs-keyword">in</span> deges():<br>    g[x].append((y, d))<br>    g[y].append((x, d))<br></code></pre></td></tr></table></figure>
-<h4 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 数组</span><br>p = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(n))<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">find</span>(<span class="hljs-params">x</span>):<br>    <span class="hljs-keyword">if</span> x != p[x]:<br>        p[x] = find(p[x])<br>    <span class="hljs-keyword">return</span> p[x]<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge</span>(<span class="hljs-params">x, y</span>):<br>    px = find(x)<br>    py = find(y)<br>    <span class="hljs-keyword">if</span> px != py:<br>        p[px] = p[py]<br><br><span class="hljs-comment"># 增加联通分量的大小，联通分量的数量</span><br><br>p = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(n))  <span class="hljs-comment"># 父节点数组</span><br>size = [<span class="hljs-number">1</span>] * n  <span class="hljs-comment"># 连通分量大小数组，初始时每个连通分量大小为1</span><br>num_components = n  <span class="hljs-comment"># 初始时每个节点自成一个连通分量，所以总数为n</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">find</span>(<span class="hljs-params">x</span>):<br>    <span class="hljs-keyword">if</span> x != p[x]:<br>        p[x] = find(p[x])  <span class="hljs-comment"># 路径压缩</span><br>    <span class="hljs-keyword">return</span> p[x]<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge</span>(<span class="hljs-params">x, y</span>):<br>    px = find(x)<br>    py = find(y)<br>    <span class="hljs-keyword">if</span> px != py:  <span class="hljs-comment"># 只有当两个节点属于不同的连通分量时，才进行合并</span><br>        <span class="hljs-keyword">global</span> num_components<br>        <span class="hljs-keyword">if</span> size[px] &lt; size[py]:  <span class="hljs-comment"># 将较小的连通分量合并到较大的连通分量</span><br>            p[px] = py  <span class="hljs-comment"># 更新父节点</span><br>            size[py] += size[px]  <span class="hljs-comment"># 更新连通分量的大小</span><br>        <span class="hljs-keyword">else</span>:<br>            p[py] = px<br>            size[px] += size[py]<br>        num_components -= <span class="hljs-number">1</span>  <span class="hljs-comment"># 减少连通分量的总数</span><br><br></code></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">UnionFind</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, n</span>):<br>        self.root = [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n)]<br>        self.size = [<span class="hljs-number">1</span>]*n<br>        self.part = n<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">find</span>(<span class="hljs-params">self, x</span>):<br>        <span class="hljs-keyword">if</span> x != self.root[x]:<br>            <span class="hljs-comment"># 在查询的时候合并到顺带直接根节点</span><br>            root_x = self.find(self.root[x])<br>            self.root[x] = root_x<br>            <span class="hljs-keyword">return</span> root_x<br>        <span class="hljs-keyword">return</span> x<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">union</span>(<span class="hljs-params">self, x, y</span>):<br>        root_x = self.find(x)<br>        root_y = self.find(y)<br>        <span class="hljs-keyword">if</span> root_x == root_y:<br>            <span class="hljs-keyword">return</span><br>        <span class="hljs-keyword">if</span> self.size[root_x] &gt;= self.size[root_y]:<br>            root_x, root_y = root_y, root_x<br>        self.root[root_x] = root_y<br>        self.size[root_y] += self.size[root_x]<br>        <span class="hljs-comment"># 将非根节点的秩赋0</span><br>        self.size[root_x] = <span class="hljs-number">0</span><br>        self.part -= <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">is_connected</span>(<span class="hljs-params">self, x, y</span>):<br>        <span class="hljs-keyword">return</span> self.find(x) == self.find(y)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_root_part</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-comment"># 获取每个根节点对应的组</span><br>        part = defaultdict(<span class="hljs-built_in">list</span>)<br>        n = <span class="hljs-built_in">len</span>(self.root)<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>            part[self.find(i)].append(i)<br>        <span class="hljs-keyword">return</span> part<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_root_size</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-comment"># 获取每个根节点对应的组大小</span><br>        size = defaultdict(<span class="hljs-built_in">int</span>)<br>        n = <span class="hljs-built_in">len</span>(self.root)<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>            size[self.find(i)] = self.size[self.find(i)]<br>        <span class="hljs-keyword">return</span> size<br></code></pre></td></tr></table></figure>
-<h2 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">quick_pow</span>(<span class="hljs-params">a, b, mod</span>):<span class="hljs-comment">#快速幂</span><br>    res = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">while</span> b:<br>        <span class="hljs-keyword">if</span> b &amp; <span class="hljs-number">1</span>:<br>            res = res * a % mod<br>        a = a * a % mod<br>        b &gt;&gt;= <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> res<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">inverse</span>(<span class="hljs-params">a, mod</span>): <span class="hljs-comment">#求逆元</span><br>    <span class="hljs-keyword">return</span> quick_pow(a, mod - <span class="hljs-number">2</span>, mod)<br></code></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">gcd</span>(<span class="hljs-params">a, b</span>):<br>    <span class="hljs-keyword">return</span> a <span class="hljs-keyword">if</span> b == <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> gcd(b, a % b)<br></code></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">sieve</span>(<span class="hljs-params">n</span>):<br>    primes = []<br>    st = [<span class="hljs-number">0</span>] * (n + <span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, n + <span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> st[i]:<br>            primes.append(i)<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(i * i, n + <span class="hljs-number">1</span>, i):<br>            st[j] = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> primes<br><br></code></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">is_prime</span>(<span class="hljs-params">n</span>):<br>    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    i = <span class="hljs-number">2</span><br>    <span class="hljs-keyword">while</span> i &lt;=n // i:<br>        <span class="hljs-keyword">if</span> n % i == <span class="hljs-number">0</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>        i += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br></code></pre></td></tr></table></figure>
+<h3 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h3><h4 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h4><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">g &#x3D; defaultdict(list)
+while x, y in deges:
+    g[x].append(y)
+    g[y].adppen(x)
+
+while x, y, d in deges():
+    g[x].append((y, d))
+    g[y].append((x, d))</code></pre></div></figure>
+<h4 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h4><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"># 数组
+p &#x3D; list(range(n))
+
+def find(x):
+    if x !&#x3D; p[x]:
+        p[x] &#x3D; find(p[x])
+    return p[x]
+def merge(x, y):
+    px &#x3D; find(x)
+    py &#x3D; find(y)
+    if px !&#x3D; py:
+        p[px] &#x3D; p[py]
+
+# 增加联通分量的大小，联通分量的数量
+
+p &#x3D; list(range(n))  # 父节点数组
+size &#x3D; [1] * n  # 连通分量大小数组，初始时每个连通分量大小为1
+num_components &#x3D; n  # 初始时每个节点自成一个连通分量，所以总数为n
+
+def find(x):
+    if x !&#x3D; p[x]:
+        p[x] &#x3D; find(p[x])  # 路径压缩
+    return p[x]
+
+def merge(x, y):
+    px &#x3D; find(x)
+    py &#x3D; find(y)
+    if px !&#x3D; py:  # 只有当两个节点属于不同的连通分量时，才进行合并
+        global num_components
+        if size[px] &lt; size[py]:  # 将较小的连通分量合并到较大的连通分量
+            p[px] &#x3D; py  # 更新父节点
+            size[py] +&#x3D; size[px]  # 更新连通分量的大小
+        else:
+            p[py] &#x3D; px
+            size[px] +&#x3D; size[py]
+        num_components -&#x3D; 1  # 减少连通分量的总数
+</code></pre></div></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">class UnionFind:
+    def __init__(self, n):
+        self.root &#x3D; [i for i in range(n)]
+        self.size &#x3D; [1]*n
+        self.part &#x3D; n
+
+    def find(self, x):
+        if x !&#x3D; self.root[x]:
+            # 在查询的时候合并到顺带直接根节点
+            root_x &#x3D; self.find(self.root[x])
+            self.root[x] &#x3D; root_x
+            return root_x
+        return x
+
+    def union(self, x, y):
+        root_x &#x3D; self.find(x)
+        root_y &#x3D; self.find(y)
+        if root_x &#x3D;&#x3D; root_y:
+            return
+        if self.size[root_x] &gt;&#x3D; self.size[root_y]:
+            root_x, root_y &#x3D; root_y, root_x
+        self.root[root_x] &#x3D; root_y
+        self.size[root_y] +&#x3D; self.size[root_x]
+        # 将非根节点的秩赋0
+        self.size[root_x] &#x3D; 0
+        self.part -&#x3D; 1
+        return
+
+    def is_connected(self, x, y):
+        return self.find(x) &#x3D;&#x3D; self.find(y)
+
+    def get_root_part(self):
+        # 获取每个根节点对应的组
+        part &#x3D; defaultdict(list)
+        n &#x3D; len(self.root)
+        for i in range(n):
+            part[self.find(i)].append(i)
+        return part
+
+    def get_root_size(self):
+        # 获取每个根节点对应的组大小
+        size &#x3D; defaultdict(int)
+        n &#x3D; len(self.root)
+        for i in range(n):
+            size[self.find(i)] &#x3D; self.size[self.find(i)]
+        return size</code></pre></div></figure>
+<h2 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def quick_pow(a, b, mod):#快速幂
+    res &#x3D; 1
+    while b:
+        if b &amp; 1:
+            res &#x3D; res * a % mod
+        a &#x3D; a * a % mod
+        b &gt;&gt;&#x3D; 1
+    return res
+def inverse(a, mod): #求逆元
+    return quick_pow(a, mod - 2, mod)</code></pre></div></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def gcd(a, b):
+    return a if b &#x3D;&#x3D; 0 else gcd(b, a % b)</code></pre></div></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def sieve(n):
+    primes &#x3D; []
+    st &#x3D; [0] * (n + 1)
+    for i in range(2, n + 1):
+        if not st[i]:
+            primes.append(i)
+        for j in range(i * i, n + 1, i):
+            st[j] &#x3D; 1
+    return primes
+</code></pre></div></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def is_prime(n):
+    if n &lt; 2:
+        return False
+    i &#x3D; 2
+    while i &lt;&#x3D;n &#x2F;&#x2F; i:
+        if n % i &#x3D;&#x3D; 0:
+            return False
+        i +&#x3D; 1
+    return True</code></pre></div></figure>
 <p>用Python编码更简单：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs stylus">n = <span class="hljs-built_in">int</span>(<span class="hljs-selector-tag">input</span>()) <br>s = <span class="hljs-number">1</span> <br>ans = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> <span class="hljs-selector-tag">i</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,n+<span class="hljs-number">1</span>,<span class="hljs-number">1</span>):    <br>    s *= <span class="hljs-selector-tag">i</span><br>    ans += s <br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(ans)</span></span><br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">n &#x3D; int(input()) 
+s &#x3D; 1 
+ans &#x3D; 0
+for i in range(1,n+1,1):    
+    s *&#x3D; i
+    ans +&#x3D; s 
+print(ans)</code></pre></div></figure>
 <h2 id="C-2-构造随机数和随机字符串"><a href="#C-2-构造随机数和随机字符串" class="headerlink" title="C.2 构造随机数和随机字符串"></a>C.2 构造随机数和随机字符串</h2><p>用Python构造测试数据，比c++简单得多。它能直接产生极大的数字，方便地产生随机字符等。下<br>（1）导入库</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import random</code></pre></div></figure>
 <p>可以写成：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">from random import *</code></pre></div></figure>
 <p>此时后面的代码能够简单一点，例如把<code>random.randint</code>直接写为<code>randint</code><br>（2）在指定范围内生成一个很大的随机整数：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span> (random.randint(-<span class="hljs-number">9999999999999999</span>,<span class="hljs-number">9999999999999999</span>))<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.randint(-9999999999999999,9999999999999999))</code></pre></div></figure>
 <p>输出示例：428893995939258<br>（3）在指定范围内（0到100000）生成一个随机偶数：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span> (random.randrange(<span class="hljs-number">0</span>, <span class="hljs-number">100001</span>, <span class="hljs-number">2</span>))<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.randrange(0, 100001, 2))</code></pre></div></figure>
 <p>输出示例：14908<br>（4）生成一个0到1之间的随机浮点数：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span> (random.random())<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.random())</code></pre></div></figure>
 <p>输出示例：0.2856636141181378<br>（5）在指定范围内（1到20）生成一个随机浮点数：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span> (random.uniform(<span class="hljs-number">1</span>, <span class="hljs-number">20</span>))<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.uniform(1, 20))</code></pre></div></figure>
 <p>输出示例：9.81984258258233<br>（6）在指定字符中生成一个随机字符：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span> (random.choice(<span class="hljs-string">&#x27;abcdefghijklmnopqrst@#$%^&amp;*()&#x27;</span>))<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.choice(&#39;abcdefghijklmnopqrst@#$%^&amp;*()&#39;))</code></pre></div></figure>
 <p>输出示例：d<br>（7）在指定字符中生成指定数量的随机字符：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span> (random.sample(<span class="hljs-string">&#x27;zyxwvutsrqponmlkjihgfedcba&#x27;</span>,<span class="hljs-number">5</span>))<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.sample(&#39;zyxwvutsrqponmlkjihgfedcba&#39;,5))</code></pre></div></figure>
 <p>输出示例：[‘z’, ‘u’, ‘x’, ‘w’, ‘j’]<br>（8）导入库</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> string<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import string</code></pre></div></figure>
 <p>若写成<code>from string import *</code>，下面的<code>string.ascii_letters</code>改为<code>ascii_letters</code><br>（9）用a-z、A-Z、0-9生成指定数量的随机字符串：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">ran_str = <span class="hljs-string">&#x27;&#x27;</span>.join(random.sample(string.ascii_letters + string.digits, <span class="hljs-number">8</span>))<br><span class="hljs-built_in">print</span> (ran_str)<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">ran_str &#x3D; &#39;&#39;.join(random.sample(string.ascii_letters + string.digits, 8))
+print (ran_str)</code></pre></div></figure>
 <p>输出示例：iCTm6yxN<br>（10）从多个字符中选取指定数量的字符组成新字符串：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span> (<span class="hljs-string">&#x27;&#x27;</span>.join(random.sample([<span class="hljs-string">&#x27;m&#x27;</span>,<span class="hljs-string">&#x27;l&#x27;</span>,<span class="hljs-string">&#x27;k&#x27;</span>,<span class="hljs-string">&#x27;j&#x27;</span>,<span class="hljs-string">&#x27;i&#x27;</span>,<span class="hljs-string">&#x27;h&#x27;</span>,<span class="hljs-string">&#x27;g&#x27;</span>,<span class="hljs-string">&#x27;d&#x27;</span>], <span class="hljs-number">5</span>)))<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (&#39;&#39;.join(random.sample([&#39;m&#39;,&#39;l&#39;,&#39;k&#39;,&#39;j&#39;,&#39;i&#39;,&#39;h&#39;,&#39;g&#39;,&#39;d&#39;], 5)))</code></pre></div></figure>
 <p>输出示例：mjlhd<br>（11）打乱数组的顺序：</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver"><span class="hljs-keyword">items</span> = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>]   <br><span class="hljs-built_in">random</span>.shuffle(<span class="hljs-keyword">items</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(<span class="hljs-keyword">items</span>),<span class="hljs-number">1</span>):      <span class="hljs-comment">#逐个打印</span><br>   print (<span class="hljs-keyword">items</span>[i],<span class="hljs-string">&quot; &quot;</span>,<span class="hljs-keyword">end</span>=<span class="hljs-string">&#x27;&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">items &#x3D; [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]   
+random.shuffle(items)
+for i in range(0,len(items),1):      #逐个打印
+   print (items[i],&quot; &quot;,end&#x3D;&#39;&#39;)</code></pre></div></figure>
 <p>输出示例：1 0 8 3 5 7 9 4 6 2</p>
-<h2 id="对拍"><a href="#对拍" class="headerlink" title="对拍"></a>对拍</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint, uniform<br><span class="hljs-keyword">import</span> subprocess<br><br>T = <span class="hljs-number">10</span> <span class="hljs-comment"># 样例组数</span><br><br><span class="hljs-comment"># 生成随机数据的函数</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_date</span>():<br>     A = [<span class="hljs-number">0</span>] * <span class="hljs-number">1010</span><br>     <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, T + <span class="hljs-number">1</span>):<br>          <span class="hljs-comment"># 数据的文件名</span><br>          filename = <span class="hljs-string">f&quot;in_<span class="hljs-subst">&#123;t&#125;</span>.txt&quot;</span><br>          <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&quot;w&quot;</span>) <span class="hljs-keyword">as</span> file:<br>               n = randint(<span class="hljs-number">1</span>, <span class="hljs-number">1000</span>)<br>               k = randint(<span class="hljs-number">1</span>, n)<br>               file.write(<span class="hljs-built_in">str</span>(n)+ <span class="hljs-string">&quot; &quot;</span> + <span class="hljs-built_in">str</span>(k) + <span class="hljs-string">&quot;\n&quot;</span>)<br>               <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>                    A[i] = randint(<span class="hljs-number">0</span>, <span class="hljs-number">100</span>)<br>               nums = <span class="hljs-string">&quot; &quot;</span>.join(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">str</span>, A[:n]))<br>               file.write(nums + <span class="hljs-string">&quot;\n&quot;</span>)<br>     <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;generate_ok:......<span class="hljs-subst">&#123;T&#125;</span>&#x27;</span>)<br><br><span class="hljs-comment"># 调用py程序函数</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">process_name</span>):<br>     <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, T + <span class="hljs-number">1</span>):<br>          <span class="hljs-comment"># 文件名</span><br>          out_filename = <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;process_name&#125;</span>_out_<span class="hljs-subst">&#123;t&#125;</span>.txt&quot;</span><br>          in_filename = <span class="hljs-string">f&quot;in_<span class="hljs-subst">&#123;t&#125;</span>.txt&quot;</span><br>          subprocess.run([<span class="hljs-string">&#x27;python&#x27;</span>, <span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;process_name&#125;</span>.py&#x27;</span>],<br>                         stdin = <span class="hljs-built_in">open</span>(in_filename, <span class="hljs-string">&quot;r&quot;</span>),<br>                         stdout = <span class="hljs-built_in">open</span>(out_filename, <span class="hljs-string">&quot;w&quot;</span>))<br>     <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;run_<span class="hljs-subst">&#123;process_name&#125;</span>_ok:......<span class="hljs-subst">&#123;T&#125;</span>&#x27;</span>)<br><br><span class="hljs-comment"># 对比txt文件是否相同的函数</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">diff</span>(<span class="hljs-params">file1, file2</span>):<br>     <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, T + <span class="hljs-number">1</span>):<br>          f1 = <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;file1&#125;</span>_out_<span class="hljs-subst">&#123;t&#125;</span>.txt&quot;</span><br>          f2 = <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;file2&#125;</span>_out_<span class="hljs-subst">&#123;t&#125;</span>.txt&quot;</span><br>          <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(f1, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> s, <span class="hljs-built_in">open</span>(f2, <span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> ss:<br>               lines1 = s.readlines()<br>               lines2 = ss.readlines()<br>               <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(lines1) != <span class="hljs-built_in">len</span>(lines2):<br>                    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;t&#125;</span>:lines error&#x27;</span>)<br>                    <span class="hljs-keyword">continue</span><br>               ok = <span class="hljs-number">1</span><br>               <span class="hljs-keyword">for</span> line1,line2 <span class="hljs-keyword">in</span> <span class="hljs-built_in">zip</span>(lines1, lines2):<br>                    <span class="hljs-keyword">if</span> line1 != line2:<br>                         <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;t&#125;</span>:exist error&#x27;</span>)<br>                         ok = <span class="hljs-number">0</span><br>                         <span class="hljs-keyword">break</span><br>               <span class="hljs-keyword">if</span> ok: <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;t&#125;</span>:ok&#x27;</span>)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    <span class="hljs-comment"># 生成输入文件</span><br>    generate_date()<br><br>    <span class="hljs-comment"># 调用正解</span><br>    file_true = <span class="hljs-string">&quot;True&quot;</span><br>    run(file_true)<br><br>    <span class="hljs-comment"># 调用测试程序</span><br>    file_my = <span class="hljs-string">&quot;A&quot;</span><br>    run(file_my)<br><br>    <span class="hljs-comment"># 调用对比程序</span><br>    diff(file_true, file_my)<br></code></pre></td></tr></table></figure>
+<h2 id="对拍"><a href="#对拍" class="headerlink" title="对拍"></a>对拍</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import os
+from random import randint, uniform
+import subprocess
+
+T &#x3D; 10 # 样例组数
+
+# 生成随机数据的函数
+def generate_date():
+     A &#x3D; [0] * 1010
+     for t in range(1, T + 1):
+          # 数据的文件名
+          filename &#x3D; f&quot;in_&#123;t&#125;.txt&quot;
+          with open(filename, &quot;w&quot;) as file:
+               n &#x3D; randint(1, 1000)
+               k &#x3D; randint(1, n)
+               file.write(str(n)+ &quot; &quot; + str(k) + &quot;\n&quot;)
+               for i in range(n):
+                    A[i] &#x3D; randint(0, 100)
+               nums &#x3D; &quot; &quot;.join(map(str, A[:n]))
+               file.write(nums + &quot;\n&quot;)
+     print(f&#39;generate_ok:......&#123;T&#125;&#39;)
+
+# 调用py程序函数
+def run(process_name):
+     for t in range(1, T + 1):
+          # 文件名
+          out_filename &#x3D; f&quot;&#123;process_name&#125;_out_&#123;t&#125;.txt&quot;
+          in_filename &#x3D; f&quot;in_&#123;t&#125;.txt&quot;
+          subprocess.run([&#39;python&#39;, f&#39;&#123;process_name&#125;.py&#39;],
+                         stdin &#x3D; open(in_filename, &quot;r&quot;),
+                         stdout &#x3D; open(out_filename, &quot;w&quot;))
+     print(f&#39;run_&#123;process_name&#125;_ok:......&#123;T&#125;&#39;)
+
+# 对比txt文件是否相同的函数
+def diff(file1, file2):
+     for t in range(1, T + 1):
+          f1 &#x3D; f&quot;&#123;file1&#125;_out_&#123;t&#125;.txt&quot;
+          f2 &#x3D; f&quot;&#123;file2&#125;_out_&#123;t&#125;.txt&quot;
+          with open(f1, &quot;r&quot;) as s, open(f2, &quot;r&quot;) as ss:
+               lines1 &#x3D; s.readlines()
+               lines2 &#x3D; ss.readlines()
+               if len(lines1) !&#x3D; len(lines2):
+                    print(f&#39;&#123;t&#125;:lines error&#39;)
+                    continue
+               ok &#x3D; 1
+               for line1,line2 in zip(lines1, lines2):
+                    if line1 !&#x3D; line2:
+                         print(f&#39;&#123;t&#125;:exist error&#39;)
+                         ok &#x3D; 0
+                         break
+               if ok: print(f&#39;&#123;t&#125;:ok&#39;)
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    # 生成输入文件
+    generate_date()
+
+    # 调用正解
+    file_true &#x3D; &quot;True&quot;
+    run(file_true)
+
+    # 调用测试程序
+    file_my &#x3D; &quot;A&quot;
+    run(file_my)
+
+    # 调用对比程序
+    diff(file_true, file_my)</code></pre></div></figure>
 
                 
               </div>
@@ -627,7 +991,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     </div>
   
   
@@ -650,7 +1014,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
@@ -683,7 +1047,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
     var toc = jQuery('#toc');
     if (toc.length === 0 || !window.tocbot) { return; }
     var boardCtn = jQuery('#board-ctn');
@@ -721,6 +1085,12 @@
 </script>
 
 
+  <script  src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js" ></script>
+
+  <script  src="https://unpkg.com/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
@@ -728,7 +1098,7 @@
 
   
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
     window.anchors.options = {
       placement: CONFIG.anchorjs.placement,
       visible  : CONFIG.anchorjs.visible
@@ -774,13 +1144,11 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
+  <script defer src="/js/leancloud.js" ></script>
+
   <script  src="/js/local-search.js" ></script>
 
 
-
-
-  
-<script src="/js/randomCover.js"></script>
 
 
 
