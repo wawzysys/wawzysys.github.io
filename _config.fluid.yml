@@ -839,11 +839,6 @@ about:
     - { class: "iconfont icon-github-fill", link: "https://github.com/wawzysys", tip: "GitHub" }
     - { class: "iconfont icon-mail", link: "mailto:asdaso@wzxjtu.top", tip: "Email" }
     - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
-  
-  # 添加评论配置
-  comments:
-    enable: true
-    type: giscus
 
 
 #---------------------------
@@ -942,11 +937,12 @@ links:
     enable: false
     content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
 
-  # 评论插件
   comments:
     enable: true
+    # 指定的插件，需要同时设置对应插件的必要参数
+    # The specified plugin needs to set the necessary parameters at the same time
+    # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
     type: giscus
-
 
 #---------------------------
 # 日记页
@@ -958,9 +954,11 @@ riji:
   banner_img_height: 60
   banner_mask_alpha: 0.3
   
-  # 评论插件
   comments:
     enable: true
+    # 指定的插件，需要同时设置对应插件的必要参数
+    # The specified plugin needs to set the necessary parameters at the same time
+    # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
     type: giscus
 
 
@@ -1025,24 +1023,42 @@ static_prefix:
 
   moment: https://lib.baomitu.com/moment.js/2.29.4/
 
-# 评论配置
-# Comments plugin
-#---------------------------
-comments:
-  type: giscus
-  enable: true
-  scope: all
-  count: true
-  card_post_count: true
-  lazyload: false
-  placement: bottom
 
-# Giscus 配置
+# # Giscus 配置
+# giscus:
+#   repo: wawzysys/blog_comments
+#   repo-id: R_kgDOLHQ9jA
+#   category: General
+#   category-id: DIC_kwDOLHQ9jM4Ccjnz
+#   theme-light: light
+#   theme-dark: dark
+#   mapping: pathname
+#   reactions-enabled: 1
+#   emit-metadata: 0
+#   input-position: top
+#   lang: zh-CN
+
+# <script src="https://giscus.app/client.js"
+#         data-repo="wawzysys/fluif_comments"
+#         data-repo-id="R_kgDON8D8Zw"
+#         data-category="Announcements"
+#         data-category-id="DIC_kwDON8D8Z84CnGuL"
+#         data-mapping="url"
+#         data-strict="0"
+#         data-reactions-enabled="1"
+#         data-emit-metadata="0"
+#         data-input-position="bottom"
+#         data-theme="preferred_color_scheme"
+#         data-lang="zh-CN"
+#         crossorigin="anonymous"
+#         async>
+# </script>
+
 giscus:
-  repo: wawzysys/blog_comments
-  repo-id: R_kgDOLHQ9jA
-  category: General
-  category-id: DIC_kwDOLHQ9jM4Ccjnz
+  repo: wawzysys/fluif_comments
+  repo-id: R_kgDON8D8Zw
+  category: Announcements
+  category-id: DIC_kwDON8D8Z84CnGuL
   theme-light: light
   theme-dark: dark
   mapping: pathname
