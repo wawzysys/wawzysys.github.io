@@ -1,0 +1,184 @@
+/* å­—ä½“ä¿®æ”¹ */
+/* @font-face {
+    font-family:'arzhu';
+    src: url('../font/ZCOOLKuaiLe-Regular.ttf');
+    font-display:swap
+}
+h1#site-title {
+    font-family:arzhu!important
+}
+span#subtitle {
+    font-family:arzhu!important
+}
+a#site-name {
+    font-family:arzhu!important
+} */
+
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+h1#site-title {
+    font-size: 8vh !important;
+    text-shadow: 5px 2px 6px #000 !important;
+    font-family: Fira Code !important
+}
+
+span#subtitle {
+    font-size: 3vh !important;
+    text-shadow: 5px 2px 6px #000 !important;
+    font-family: Fira Code !important
+}
+
+a#site-name {
+    text-shadow: 5px 2px 6px #000 !important;
+    font-family: Fira Code !important
+}
+
+#article-container pre,
+#article-container code {
+    font-family: Fira Code !important;
+}
+
+.article-title {
+    font-family: Fira Code !important;
+    font-weight: bolder;
+}
+
+/* å…¨å±€èƒŒæ™¯é€æ˜Žæ¸å˜ */
+#recent-posts>.recent-post-item,
+.layout_page>div:first-child:not(.recent-posts),
+.layout_post>#page,
+.layout_post>#post,
+.read-mode .layout_post>#post {
+    /* background: var(--light_bg_color) */
+    /* è®¾ç½®å…ƒç´ èƒŒæ™¯ä¸ºé€æ˜Ž */
+    background-color: transparent;
+
+    /* åº”ç”¨æ¯›çŽ»ç’ƒæ•ˆæžœ */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+#aside-content .card-widget {
+    /* background: var(--light_bg_color) */
+    /* è®¾ç½®å…ƒç´ èƒŒæ™¯ä¸ºé€æ˜Ž */
+    background-color: transparent;
+
+    /* åº”ç”¨æ¯›çŽ»ç’ƒæ•ˆæžœ */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+#post {
+    /* background: var(--light_bg_color) */
+    /* è®¾ç½®å…ƒç´ èƒŒæ™¯ä¸ºé€æ˜Ž */
+    background-color: transparent;
+
+    /* åº”ç”¨æ¯›çŽ»ç’ƒæ•ˆæžœ */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+body::before {
+    opacity: 0.5;
+}
+
+#web_bg {
+    background: linear-gradient(90deg, rgba(247, 149, 51, .1), rgba(243, 112, 85, .1) 15%, rgba(239, 78, 123, .1) 30%, rgba(161, 102, 171, .1) 44%, rgba(80, 115, 184, .1) 58%, rgba(16, 152, 173, .1) 72%, rgba(7, 179, 155, .1) 86%, rgba(109, 186, 130, .1));
+    /* background: url(https://www.colopen-blog.com/image/images/2023/04/08/003.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* opacity: 0.3; */
+}
+
+
+/* é¡µè„šé€æ˜Žæ¸å˜ */
+#footer {
+    background: rgba(255, 255, 255, .15);
+    color: #000;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    backdrop-filter: saturate(100%) blur(5px)
+}
+
+#footer::before {
+    background: rgba(255, 255, 255, .15)
+}
+
+#footer #footer-wrap {
+    color: var(--font-color)
+}
+
+#footer #footer-wrap a {
+    color: var(--font-color)
+}
+
+/* ä»£ç é«˜äº®å­—ä½“ */
+:root {
+    --hl-color: #24292e;
+    --hl-bg: rgb(246 248 250);
+    --hltools-bg: #49b1f587;
+    --hltools-color: #ffffff;
+    --hlnumber-bg: rgb(235 239 241);
+    --hlnumber-color: #221a0f52;
+}
+
+.hljs {
+    background: white;
+    color: black;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-variable {
+    color: #008000;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag {
+    color: #00f;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-addition {
+    color: #a31515;
+}
+
+.hljs-deletion,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-meta {
+    color: #2b91af;
+}
+
+.hljs-doctag {
+    color: #808080;
+}
+
+.hljs-attr {
+    color: #f00;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+    color: #00b0e8;
+}
+
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}
