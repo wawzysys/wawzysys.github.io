@@ -338,8 +338,7 @@ lazyload:
   # The factor of viewport height that triggers loading
   offset_factor: 2
 
-# 图标库，包含了大量社交类图标，主题依赖的不包含在内，因此可自行修改，详见 https://hexo.fluid-dev.com/docs/icon/
-# Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
+# 图标库，包含了大量社交类图标，主题依赖的不包含在内，因此可自行修改
 iconfont: //at.alicdn.com/t/c/font_1736178_k526ubmyhba.css
 
 # 添加 Font Awesome CDN
@@ -757,168 +756,10 @@ post:
   # Comment plugin
   comments:
     enable: true
-    # 评论区的位置，可选值：top | bottom
+    # 指定的插件，需要同时设置对应插件的必要参数
+    # The specified plugin needs to set the necessary parameters at the same time
+    # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
     type: giscus
-
-
-#---------------------------
-# 评论插件
-# Comment plugins
-#
-# 开启评论需要先设置上方 `post: comments: enable: true`，然后根据 `type` 设置下方对应的评论插件参数
-# Enable comments need to be set `post: comments: enable: true`, then set the corresponding comment plugin parameters below according to `type`
-#---------------------------
-
-# Utterances
-# 基于 GitHub Issues
-# Based on GitHub Issues
-# See: https://utteranc.es
-utterances:
-  repo:
-  issue_term: pathname
-  label: utterances
-  theme: github-light
-  theme_dark: github-dark
-
-# Disqus
-# 基于第三方的服务，国内用户直接使用容易被墙，建议配合 Disqusjs
-# Based on third-party service
-# See: https://disqus.com
-disqus:
-  shortname:
-  # 以下为 Disqusjs 支持, 国内用户如果想使用 Disqus 建议配合使用
-  # The following are Disqusjs configurations, please ignore if DisqusJS is not required
-  # See: https://github.com/SukkaW/DisqusJS
-  disqusjs: false
-  apikey:
-
-# Gitalk
-# 基于 GitHub Issues
-# Based on GitHub Issues
-# See: https://github.com/gitalk/gitalk#options
-gitalk:
-  clientID:
-  clientSecret:
-  repo:
-  owner:
-  admin: ['name']
-  language: zh-CN
-  labels: ['Gitalk']
-  perPage: 10
-  pagerDirection: last
-  distractionFreeMode: false
-  createIssueManually: true
-  # 默认 proxy 可能会失效，解决方法请见下方链接
-  # The default proxy may be invalid, refer to the links for solutions
-  # https://github.com/gitalk/gitalk/issues/429
-  # https://github.com/Zibri/cloudflare-cors-anywhere
-  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
-
-# Valine
-# 基于 LeanCloud
-# Based on LeanCloud
-# See: https://valine.js.org/
-valine:
-  appId:
-  appKey:
-  path: window.location.pathname
-  placeholder:
-  avatar: 'retro'
-  meta: ['nick', 'mail', 'link']
-  requiredFields: []
-  pageSize: 10
-  lang: 'zh-CN'
-  highlight: false
-  recordIP: false
-  serverURLs: ''
-  emojiCDN:
-  emojiMaps:
-  enableQQ: false
-
-# Waline
-# 从 Valine 衍生而来，额外增加了服务端和多种功能
-# Derived from Valine, with self-hosted service and new features
-# See: https://waline.js.org/
-waline:
-  serverURL: ''
-  path: window.location.pathname
-  meta: ['nick', 'mail', 'link']
-  requiredMeta: ['nick']
-  lang: 'zh-CN'
-  emoji: ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
-  dark: 'html[data-user-color-scheme="dark"]'
-  wordLimit: 0
-  pageSize: 10
-
-# 畅言 Changyan
-# 基于第三方的服务
-# Based on third-party service, insufficient support for regions outside China
-# http://changyan.kuaizhan.com
-changyan:
-  appid: ''
-  appkey: ''
-
-# 来必力 Livere
-# 基于第三方的服务
-# Based on third-party service
-# See: https://www.livere.com
-livere:
-  uid: ''
-
-# Remark42
-# 需要自托管服务端
-# Based on self-hosted service
-# See: https://remark42.com
-remark42:
-  host:
-  site_id:
-  max_shown_comments: 10
-  locale: zh
-  components: ['embed']
-
-# Twikoo
-# 支持腾讯云、Vercel、Railway 等多种平台部署
-# Based on Tencent CloudBase
-# See: https://twikoo.js.org
-twikoo:
-  envId:
-  region: ap-shanghai
-  path: window.location.pathname
-
-# Cusdis
-# 基于第三方服务或自托管服务
-# Based on third-party or self-hosted service
-# See https://cusdis.com
-cusdis:
-  host:
-  app_id:
-  lang: zh-cn
-
-# Giscus
-# 基于 GitHub Discussions，类似于 Utterances
-# Based on GitHub Discussions, similar to Utterances
-# See: https://giscus.app/
-giscus:
-  repo: wawzysys/blog_comments
-  repo-id: R_kgDOLHQ9jA
-  category: General
-  category-id: DIC_kwDOLHQ9jM4Ccjnz
-  theme-light: light
-  theme-dark: dark
-  mapping: pathname
-  reactions-enabled: 1
-  emit-metadata: 0
-  input-position: top
-  lang: zh-CN
-
-# Discuss
-# 多平台、多数据库、自托管、免费开源评论系统
-# Self-hosted, small size, multi-platform, multi-database, free and open source commenting system
-# See: https://discuss.js.org
-discuss:
-  serverURLs:
-  path: window.location.pathname
-
 
 #---------------------------
 # 归档页
@@ -957,6 +798,12 @@ category:
   # 单个分类中折叠展示文章数的最大值，超过限制会显示 More，0 则不限制
   # The maximum number of posts in a single category. If the limit is exceeded, it will be displayed More. If 0 no limit
   post_limit: 10
+  comments:
+    enable: true
+    # 指定的插件，需要同时设置对应插件的必要参数
+    # The specified plugin needs to set the necessary parameters at the same time
+    # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
+    type: giscus
 
 
 #---------------------------
@@ -990,7 +837,7 @@ about:
   intro: "Asdasoの小世界"
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/wawzysys", tip: "GitHub" }
-    - { class: "iconfont icon-email", link: "mailto:asdaso@wzxjtu.top", tip: "Email" }
+    - { class: "iconfont icon-mail", link: "mailto:asdaso@wzxjtu.top", tip: "Email" }
     - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
   
   # 添加评论配置
@@ -1092,7 +939,7 @@ links:
 
   # 友链下方自定义区域
   custom:
-    enable: true
+    enable: false
     content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
 
   # 评论插件
@@ -1177,3 +1024,29 @@ static_prefix:
   hint: https://lib.baomitu.com/hint.css/2.7.0/
 
   moment: https://lib.baomitu.com/moment.js/2.29.4/
+
+# 评论配置
+# Comments plugin
+#---------------------------
+comments:
+  type: giscus
+  enable: true
+  scope: all
+  count: true
+  card_post_count: true
+  lazyload: false
+  placement: bottom
+
+# Giscus 配置
+giscus:
+  repo: wawzysys/blog_comments
+  repo-id: R_kgDOLHQ9jA
+  category: General
+  category-id: DIC_kwDOLHQ9jM4Ccjnz
+  theme-light: light
+  theme-dark: dark
+  mapping: pathname
+  reactions-enabled: 1
+  emit-metadata: 0
+  input-position: top
+  lang: zh-CN
