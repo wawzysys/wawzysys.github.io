@@ -5,7 +5,11 @@ layout: about
 top_img: /img/111.jpg 
 ---
 > 大家好，我是asdaso！
->
+- 🍻 🇨🇳 [XJTU](https://www.xjtu.edu.cn/), _BSc in Software Engineering_
+- ⚡ Python & Go & C++ & JAVA & JavaScript.
+- 🎄 OS Kernel/ Android/ Cross-platform client development
+- ✍️ [Blogger](https://wzxjtu.xyz/)
+- 🏃 Running(Seldom now)/  BasketBall/ Dating with my sweetheart
 > 欢迎访问我的博客或与我联系交流！
 
 座右铭座右铭！！ 
