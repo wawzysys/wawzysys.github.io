@@ -19,20 +19,20 @@
   <meta name="author" content="Asdaso">
   <meta name="keywords" content="blog,技术,编程">
   
-    <meta name="description" content="bisect_left:&gt;&#x3D; bisect_right:&gt; dictdict &#x3D; defaultdict(list) # 设置无限大 dict &#x3D; defaultdict(inf)  SortedDictdict &#x3D; defaultdict(SortedDict) anyif any(1 in row for row in grid):">
+    <meta name="description" content="bisect_left:&gt;&#x3D; bisect_right:&gt;  dict dict &#x3D; defaultdict(list) # 设置无限大 dict &#x3D; defaultdict(inf)   SortedDict dict &#x3D; defaultdict(SortedDict)  any if any(1 in row for row in grid)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python">
 <meta property="og:url" content="http://example.com/post/b9ebdeb8.html">
 <meta property="og:site_name" content="Asdasoのblog">
-<meta property="og:description" content="bisect_left:&gt;&#x3D; bisect_right:&gt; dictdict &#x3D; defaultdict(list) # 设置无限大 dict &#x3D; defaultdict(inf)  SortedDictdict &#x3D; defaultdict(SortedDict) anyif any(1 in row for row in grid):">
+<meta property="og:description" content="bisect_left:&gt;&#x3D; bisect_right:&gt;  dict dict &#x3D; defaultdict(list) # 设置无限大 dict &#x3D; defaultdict(inf)   SortedDict dict &#x3D; defaultdict(SortedDict)  any if any(1 in row for row in grid)">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/cover/9.jpg">
+<meta property="og:image" content="http://example.com/img/cover/21.jpg">
 <meta property="article:published_time" content="2024-01-27T16:59:10.000Z">
 <meta property="article:modified_time" content="2024-09-05T16:08:24.066Z">
 <meta property="article:author" content="Asdaso">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/cover/9.jpg">
+<meta name="twitter:image" content="http://example.com/img/cover/21.jpg">
   
   
   
@@ -235,7 +235,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/cover/9.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/cover/21.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -328,11 +328,14 @@
                 
                 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">bisect_left:&gt;&#x3D;
 bisect_right:&gt;</code></pre></div></figure>
-<h2 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">dict &#x3D; defaultdict(list)
+<h2 id="dict"><a class="markdownIt-Anchor" href="#dict"></a> dict</h2>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">dict &#x3D; defaultdict(list)
 # 设置无限大
 dict &#x3D; defaultdict(inf) </code></pre></div></figure>
-<h2 id="SortedDict"><a href="#SortedDict" class="headerlink" title="SortedDict"></a>SortedDict</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">dict &#x3D; defaultdict(SortedDict)</code></pre></div></figure>
-<h2 id="any"><a href="#any" class="headerlink" title="any"></a>any</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">if any(1 in row for row in grid):
+<h2 id="sorteddict"><a class="markdownIt-Anchor" href="#sorteddict"></a> SortedDict</h2>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">dict &#x3D; defaultdict(SortedDict)</code></pre></div></figure>
+<h2 id="any"><a class="markdownIt-Anchor" href="#any"></a> any</h2>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">if any(1 in row for row in grid):
     return -1
 # 检查列表中是否有真值
 print(any([0, False, 5]))  # True，因为5是真值
@@ -349,7 +352,8 @@ print(any(&#123;&#125;))  # False
 # 检查列表中是否存在大于5的元素
 nums &#x3D; [1, 4, 6, 8]
 print(any(n &gt; 5 for n in nums))  # True</code></pre></div></figure>
-<h2 id="copy"><a href="#copy" class="headerlink" title="copy"></a>copy</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">#二位数组
+<h2 id="copy"><a class="markdownIt-Anchor" href="#copy"></a> copy</h2>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">#二位数组
 import copy
 pre_grid &#x3D; copy.deepcopy(grid)##pre_grid 和 grid两者独立
 pre_grid &#x3D; grid ##两者不独立
@@ -361,24 +365,29 @@ pre_grid &#x3D; grid.copy() ##两者不独立
 # 因此，当您修改grid中的任何元素时，pre_color中相应的子列表元素也会被修改，
 # 因为它们实际上是指向同一块内存地址。
 </code></pre></div></figure>
-<h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">a_copy &#x3D; a.copy()#两者独立 
+<h3 id="一维数组"><a class="markdownIt-Anchor" href="#一维数组"></a> 一维数组</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">a_copy &#x3D; a.copy()#两者独立 
 a_copy &#x3D; a[:]#两者独立 使用切片
 a_copy &#x3D; a#两者不独立
 #对于一维数组（列表），可以使用 .copy() 方法或切片操作 [:] 来创建一个浅复制。
 # 对于一维数组，这两种方法都能有效地复制数组，因为一维数组不包含嵌套的列表，
 # 所以“浅复制”已经足够用于创建一个完全独立的副本
 # 修改副本中的元素不会影响原始数组。</code></pre></div></figure>
-<h2 id="可变对象"><a href="#可变对象" class="headerlink" title="可变对象"></a>可变对象</h2><ul>
+<h2 id="可变对象"><a class="markdownIt-Anchor" href="#可变对象"></a> 可变对象</h2>
+<ul>
 <li>可变对象（如列表、字典、集合等）则表现出“按引用传递”的特性。</li>
 <li>因为函数接收的参数是对象的引用，所以如果你在函数内部修改了一个可变对象（例如，添加、删除或者修改列表中的元素），</li>
 <li>那么这些修改会反映到原始对象上，因为实际上你和函数内部操作的是同一个对象。</li>
 </ul>
-<h2 id="不可变对象"><a href="#不可变对象" class="headerlink" title="不可变对象"></a>不可变对象</h2><ul>
+<h2 id="不可变对象"><a class="markdownIt-Anchor" href="#不可变对象"></a> 不可变对象</h2>
+<ul>
 <li>不可变对象（如<strong>整数、浮点数、字符串、元组</strong>等）看起来像是“按值传递”，因为它们的值不能被修改。</li>
 <li>如果你在函数内部试图改变一个不可变对象的值，实际上会创建一个新的对象，并将其绑定到函数内部的局部变量名上，而原始对象不会受到影响。</li>
 </ul>
-<h2 id="def-函数参数"><a href="#def-函数参数" class="headerlink" title="def 函数参数"></a>def 函数参数</h2><p>在Python中，所有的<strong><em>函数参数</em></strong>传递都可以视为“按对象引用传递”（pass by object reference）。这意味着函数内部接收到的是实际参数对象的引用，而不是对象的副本。这种传递方式的效果取决于对象本身是可变的（mutable）还是不可变的（immutable）。</p>
-<h3 id="不可变"><a href="#不可变" class="headerlink" title="不可变"></a>不可变</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">area &#x3D; 0
+<h2 id="def-函数参数"><a class="markdownIt-Anchor" href="#def-函数参数"></a> def 函数参数</h2>
+<p>在Python中，所有的***函数参数***传递都可以视为“按对象引用传递”（pass by object reference）。这意味着函数内部接收到的是实际参数对象的引用，而不是对象的副本。这种传递方式的效果取决于对象本身是可变的（mutable）还是不可变的（immutable）。</p>
+<h3 id="不可变"><a class="markdownIt-Anchor" href="#不可变"></a> 不可变</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">area &#x3D; 0
 def fun(area):
     area +&#x3D; 1
 fun(area)
@@ -386,13 +395,15 @@ print(area)
 # 0
 #area 不可变 
 #函数fun中的area是一个局部变量，它仅在函数作用域内有效。尽管它与全局变量area同名，但它实际上是一个完全不同的变量。在fun函数内部修改area时，实际上是在修改这个局部变量，而不是全局变量area。因此，全局变量area的值不会因为调用fun函数而改变。</code></pre></div></figure>
-<h3 id="Python中函数参数如何按引用传递（对于可变对象而言）"><a href="#Python中函数参数如何按引用传递（对于可变对象而言）" class="headerlink" title="Python中函数参数如何按引用传递（对于可变对象而言）"></a>Python中函数参数如何按引用传递（对于可变对象而言）</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">area[0] &#x3D; 0
+<h3 id="python中函数参数如何按引用传递对于可变对象而言"><a class="markdownIt-Anchor" href="#python中函数参数如何按引用传递对于可变对象而言"></a> Python中函数参数如何按引用传递（对于可变对象而言）</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">area[0] &#x3D; 0
 def fun(area):
     area[0] +&#x3D; 1
 fun(area)
 print(area[0]) 
 # 1</code></pre></div></figure>
-<h3 id="不可变对象-global"><a href="#不可变对象-global" class="headerlink" title="不可变对象 + global"></a>不可变对象 + global</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">area &#x3D; 0
+<h3 id="不可变对象-global"><a class="markdownIt-Anchor" href="#不可变对象-global"></a> 不可变对象 + global</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">area &#x3D; 0
 def fun():
     global area  # 指明我们打算修改的是全局变量area
     area +&#x3D; 1
@@ -400,17 +411,21 @@ fun()
 print(area)  
 # 结果将是1，因为fun函数被调用，全局变量area被修改
 </code></pre></div></figure>
-<h3 id="global"><a href="#global" class="headerlink" title="global"></a>global</h3><ul>
+<h3 id="global"><a class="markdownIt-Anchor" href="#global"></a> global</h3>
+<ul>
 <li>使用<code>global</code>关键字在函数内部<strong>声明全局变量</strong>。</li>
 <li>当在函数内部修改全局变量时，如果不使用<code>global</code>关键字，</li>
 <li><code>Python</code>将会创建一个新的局部变量，而不是修改外部的全局变量。</li>
-<li>通过使用<code>global</code>关键字，可以明确指示Python在函数内部对全局变量进行修改。<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; 5
+<li>通过使用<code>global</code>关键字，可以明确指示Python在函数内部对全局变量进行修改。</li>
+</ul>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; 5
 def func():
     global x  # 指明我们要修改的是全局变量x
     x &#x3D; 10
 func()
 print(x)  # 输出将是10，因为全局变量x被修改了</code></pre></div></figure>
-<h3 id="nonlocal"><a href="#nonlocal" class="headerlink" title="nonlocal"></a>nonlocal</h3></li>
+<h3 id="nonlocal"><a class="markdownIt-Anchor" href="#nonlocal"></a> nonlocal</h3>
+<ul>
 <li><code>nonlocal</code>关键字用于在嵌套函数中声明非局部变量（即不属于这个函数，但也不是全局的变量）。</li>
 <li>这通常用于在嵌套函数中修改封闭作用域（enclosing scope，即嵌套函数外部的另一个函数内部）的变量。</li>
 </ul>
@@ -423,18 +438,24 @@ print(x)  # 输出将是10，因为全局变量x被修改了</code></pre></div><
     print(x)  # 输出将是10，因为封闭作用域中的变量x被修改了
 outer()
 </code></pre></div></figure>
-<h3 id="使用注意事项"><a href="#使用注意事项" class="headerlink" title="使用注意事项"></a>使用注意事项</h3><p><code>global</code>和<code>nonlocal</code>关键主要用于复杂的场景，比如需要在多层嵌套的函数中修改外部变量的值。然而，过度使用这些关键字可能会导致代码难以理解和维护，因此应该谨慎使用。<br>如果可以通过其他方式（如返回值、类属性等）来实现相同的功能，通常这些方式会更加清晰和优雅。</p>
-<h2 id="嵌套函数"><a href="#嵌套函数" class="headerlink" title="嵌套函数"></a>嵌套函数</h2><p>在Python中，嵌套函数可以访问其外部函数（父函数）作用域内的所有变量，无论这些变量是可变的还是不可变的。这种特性是由于Python的作用域和闭包的概念所决定的。当你在一个函数内定义另一个函数时，内部的函数（嵌套函数）可以访问外部函数的局部变量。</p>
-<h3 id="访问不可变变量"><a href="#访问不可变变量" class="headerlink" title="访问不可变变量"></a>访问不可变变量</h3><p>嵌套函数可以读取外部函数中定义的不可变变量（如整数、字符串、元组等），但不能直接修改它们。如果尝试修改，Python会在嵌套函数的局部作用域内创建一个同名的新变量，而不是修改外部函数的变量。这是因为不可变变量不能被更改，只能被替换。</p>
-<p>示例：<br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">Copy code
+<h3 id="使用注意事项"><a class="markdownIt-Anchor" href="#使用注意事项"></a> 使用注意事项</h3>
+<p><code>global</code>和<code>nonlocal</code>关键主要用于复杂的场景，比如需要在多层嵌套的函数中修改外部变量的值。然而，过度使用这些关键字可能会导致代码难以理解和维护，因此应该谨慎使用。<br />
+如果可以通过其他方式（如返回值、类属性等）来实现相同的功能，通常这些方式会更加清晰和优雅。</p>
+<h2 id="嵌套函数"><a class="markdownIt-Anchor" href="#嵌套函数"></a> 嵌套函数</h2>
+<p>在Python中，嵌套函数可以访问其外部函数（父函数）作用域内的所有变量，无论这些变量是可变的还是不可变的。这种特性是由于Python的作用域和闭包的概念所决定的。当你在一个函数内定义另一个函数时，内部的函数（嵌套函数）可以访问外部函数的局部变量。</p>
+<h3 id="访问不可变变量"><a class="markdownIt-Anchor" href="#访问不可变变量"></a> 访问不可变变量</h3>
+<p>嵌套函数可以读取外部函数中定义的不可变变量（如整数、字符串、元组等），但不能直接修改它们。如果尝试修改，Python会在嵌套函数的局部作用域内创建一个同名的新变量，而不是修改外部函数的变量。这是因为不可变变量不能被更改，只能被替换。</p>
+<p>示例：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">Copy code
 def outer():
     x &#x3D; 3  # 不可变变量
     def inner():
         print(x)  # 可以访问外部函数的变量x
     inner()
 
-outer()</code></pre></div></figure></p>
-<h3 id="修改可变变量"><a href="#修改可变变量" class="headerlink" title="修改可变变量"></a>修改可变变量</h3><p>对于可变变量（如列表、字典等），嵌套函数可以修改这些变量的内容，因为可变变量允许原地修改。</p>
+outer()</code></pre></div></figure>
+<h3 id="修改可变变量"><a class="markdownIt-Anchor" href="#修改可变变量"></a> 修改可变变量</h3>
+<p>对于可变变量（如列表、字典等），嵌套函数可以修改这些变量的内容，因为可变变量允许原地修改。</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">Copy code
 def outer():
     lst &#x3D; [1, 2, 3]  # 可变变量
@@ -444,7 +465,9 @@ def outer():
     print(lst)
 
 outer()</code></pre></div></figure>
-<h3 id="使用nonlocal关键字"><a href="#使用nonlocal关键字" class="headerlink" title="使用nonlocal关键字"></a>使用nonlocal关键字</h3><p>如果需要在嵌套函数中修改外部函数的不可变变量，可以使用nonlocal关键字。这样做可以明确地告诉Python解释器你打算修改的是嵌套作用域中的变量，而不是创建一个新的局部变量。<br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">python
+<h3 id="使用nonlocal关键字"><a class="markdownIt-Anchor" href="#使用nonlocal关键字"></a> 使用nonlocal关键字</h3>
+<p>如果需要在嵌套函数中修改外部函数的不可变变量，可以使用nonlocal关键字。这样做可以明确地告诉Python解释器你打算修改的是嵌套作用域中的变量，而不是创建一个新的局部变量。</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">python
 Copy code
 def outer():
     x &#x3D; 3
@@ -454,29 +477,42 @@ def outer():
     inner()
     print(x)  # 输出5
 
-outer()</code></pre></div></figure><br>在这个示例中，nonlocal关键字使得inner函数能够修改外部函数outer中定义的不可变变量x的值。<br>总结来说，嵌套函数能够访问父函数中定义的所有变量，无论它们是可变的还是不可变的。但要修改不可变变量，需要使用nonlocal关键字。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>修改不可变复杂一点……<br>修改可变，不用加入函数参数直接改！<br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">my_list &#x3D; [1, 2, 3]
+outer()</code></pre></div></figure>
+<p>在这个示例中，nonlocal关键字使得inner函数能够修改外部函数outer中定义的不可变变量x的值。<br />
+总结来说，嵌套函数能够访问父函数中定义的所有变量，无论它们是可变的还是不可变的。但要修改不可变变量，需要使用nonlocal关键字。</p>
+<h3 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h3>
+<p>修改不可变复杂一点…<br />
+修改可变，不用加入函数参数直接改！</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">my_list &#x3D; [1, 2, 3]
 
 def modify_list():
     my_list.append(4)
 
 modify_list()
 print(my_list)  # 输出 [1, 2, 3, 4]
-</code></pre></div></figure></p>
-<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="lambda"><a href="#lambda" class="headerlink" title="lambda"></a><code>lambda</code></h3><p>在python种,<code>lambda</code>函数后面可以跟一个列表或任何其他类型的表达式。<code>lambda</code>函数是一个简单的匿名函数，可以接受任何任何数量的参数，但只有一个表达式，这个表达式的就算结果就是函数的返回值。<br>例如：</p>
+</code></pre></div></figure>
+<h2 id="排序"><a class="markdownIt-Anchor" href="#排序"></a> 排序</h2>
+<h3 id="lambda"><a class="markdownIt-Anchor" href="#lambda"></a> <code>lambda</code></h3>
+<p>在python种,<code>lambda</code>函数后面可以跟一个列表或任何其他类型的表达式。<code>lambda</code>函数是一个简单的匿名函数，可以接受任何任何数量的参数，但只有一个表达式，这个表达式的就算结果就是函数的返回值。<br />
+例如：</p>
 <ul>
-<li>排序字典的时候，lambda接受两个参数 <code>item = [k, v]</code>,然后返回一个参数<code>item[1]</code><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">sorted_dict_by_value &#x3D; dict(sorted(my_dict.items(), key&#x3D;lambda item: item[1]))</code></pre></div></figure></li>
-<li>按值排序索引的时候,接受一个参数，返回一个列表里面两个参数<ul>
+<li>排序字典的时候，lambda接受两个参数 <code>item = [k, v]</code>,然后返回一个参数<code>item[1]</code></li>
+</ul>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">sorted_dict_by_value &#x3D; dict(sorted(my_dict.items(), key&#x3D;lambda item: item[1]))</code></pre></div></figure>
+<ul>
+<li>按值排序索引的时候,接受一个参数，返回一个列表里面两个参数
+<ul>
 <li>这里的 lambda 函数对于每个元素 x（在这个上下文中，x 是 lst 中的一个元素，即一个索引）返回一个由两个元素组成的列表：nums[x] 和 x。</li>
-<li>这个返回的列表用作排序的键：<ul>
+<li>这个返回的列表用作排序的键：
+<ul>
 <li>第一个元素 nums[x] 是主要的排序依据。</li>
-<li>第二个元素 x 作为次要排序依据，确保在 nums[x] 相同的情况下，索引较小的元素排在前面。<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">sort_lst &#x3D; sorted(lst, key&#x3D;lambda x: [nums[x], x])</code></pre></div></figure>
-</li>
+<li>第二个元素 x 作为次要排序依据，确保在 nums[x] 相同的情况下，索引较小的元素排在前面。</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">sort_lst &#x3D; sorted(lst, key&#x3D;lambda x: [nums[x], x])</code></pre></div></figure>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">my_dict &#x3D; &#123;&#39;b&#39;: 1, &#39;a&#39;: 2, &#39;c&#39;: 3&#125;
 sorted_dict &#x3D; dict(sorted(my_dict.items()))
 
@@ -509,8 +545,14 @@ sort_lst &#x3D; sorted(lst, key &#x3D; lambda x: nums[x])
 #sorted() 函数返回一个新列表，这个列表是按照 key 参数指定的方法排序的 lst 的副本。
 sort_lst &#x3D; sorted(lst, key &#x3D; lambda x: [nums[x], x])</code></pre></div></figure>
 <ul>
-<li><code>sort_lst = sorted(lst, key=lambda x: nums[x]):</code><br>这个表达式根据 <code>nums</code> 中每个索引 x 对应的值对 <code>lst</code> 进行排序。如果 nums 中存在相同的值，那么它们对应的索引在 <code>sort_lst</code> 中的相对顺序将按照它们在原列表 <code>lst</code> 中的顺序，也就是说，排序是稳定的。</li>
-<li><code>sort_lst = sorted(lst, key=lambda x: [nums[x], x]):</code><br>这个表达式在排序时考虑了两个因素：首先是 nums 中每个索引 x 对应的值，其次是索引 <code>x</code> 本身。这意味着，如果 <code>nums</code> 中有两个或多个相同的值，它们将进一步按照它们的索引进行排序。这种方法确保了即使在 <code>nums</code> 中的值相等时，排序结果也是确定的，因为索引值是唯一的。<h2 id="accumulate"><a href="#accumulate" class="headerlink" title="accumulate"></a>accumulate</h2>内置前缀和<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import itertools 
+<li><code>sort_lst = sorted(lst, key=lambda x: nums[x]):</code><br />
+这个表达式根据 <code>nums</code> 中每个索引 x 对应的值对 <code>lst</code> 进行排序。如果 nums 中存在相同的值，那么它们对应的索引在 <code>sort_lst</code> 中的相对顺序将按照它们在原列表 <code>lst</code> 中的顺序，也就是说，排序是稳定的。</li>
+<li><code>sort_lst = sorted(lst, key=lambda x: [nums[x], x]):</code><br />
+这个表达式在排序时考虑了两个因素：首先是 nums 中每个索引 x 对应的值，其次是索引 <code>x</code> 本身。这意味着，如果 <code>nums</code> 中有两个或多个相同的值，它们将进一步按照它们的索引进行排序。这种方法确保了即使在 <code>nums</code> 中的值相等时，排序结果也是确定的，因为索引值是唯一的。</li>
+</ul>
+<h2 id="accumulate"><a class="markdownIt-Anchor" href="#accumulate"></a> accumulate</h2>
+<p>内置前缀和</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import itertools 
 import operator
 data &#x3D; [1, 2, 3, 4, 5]
 # 计算前缀和
@@ -521,7 +563,9 @@ data &#x3D; [3, 4, 6, 2, 1, 9, 0, 7, 5, 8]
 print(list(itertools.accumulate(data, operator.mul, initial&#x3D;2)))
 # 计算到当前位置的最大值并且输出
 print(list(itertools.accumulate(data, max)))</code></pre></div></figure>
-<h2 id="enumerate"><a href="#enumerate" class="headerlink" title="enumerate"></a>enumerate</h2>在Python中，enumerate 是一个内置函数，用于将一个可迭代的（比如列表、元组、字符串等）组合成一个索引序列，通常用于在for循环中获取每个元素的索引和值。这样可以在遍历时同时获得每个元素的索引位置和对应的值<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">for index, value in enumerate(iterable, start&#x3D;0):
+<h2 id="enumerate"><a class="markdownIt-Anchor" href="#enumerate"></a> enumerate</h2>
+<p>在Python中，enumerate 是一个内置函数，用于将一个可迭代的（比如列表、元组、字符串等）组合成一个索引序列，通常用于在for循环中获取每个元素的索引和值。这样可以在遍历时同时获得每个元素的索引位置和对应的值</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">for index, value in enumerate(iterable, start&#x3D;0):
     print(index, value)
 #这里的 iterable 是你想要遍历的可迭代对象，start 是一个可选参数，表示索引的起始值，默认为0。
 # 下面是一个具体的例子：
@@ -537,9 +581,10 @@ Index: 0, Value: apple
 Index: 1, Value: banana
 Index: 2, Value: cherry
 </code></pre></div></figure>
-使用 enumerate 可以使代码更加清晰和简洁，特别是当你需要索引和值时。</li>
-</ul>
-<h3 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h3><h4 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h4><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">g &#x3D; defaultdict(list)
+<p>使用 enumerate 可以使代码更加清晰和简洁，特别是当你需要索引和值时。</p>
+<h3 id="图论"><a class="markdownIt-Anchor" href="#图论"></a> 图论</h3>
+<h4 id="邻接表"><a class="markdownIt-Anchor" href="#邻接表"></a> 邻接表</h4>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">g &#x3D; defaultdict(list)
 while x, y in deges:
     g[x].append(y)
     g[y].adppen(x)
@@ -547,7 +592,8 @@ while x, y in deges:
 while x, y, d in deges():
     g[x].append((y, d))
     g[y].append((x, d))</code></pre></div></figure>
-<h4 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h4><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"># 数组
+<h4 id="并查集"><a class="markdownIt-Anchor" href="#并查集"></a> 并查集</h4>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"># 数组
 p &#x3D; list(range(n))
 
 def find(x):
@@ -630,7 +676,8 @@ def merge(x, y):
         for i in range(n):
             size[self.find(i)] &#x3D; self.size[self.find(i)]
         return size</code></pre></div></figure>
-<h2 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def quick_pow(a, b, mod):#快速幂
+<h2 id="数论"><a class="markdownIt-Anchor" href="#数论"></a> 数论</h2>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def quick_pow(a, b, mod):#快速幂
     res &#x3D; 1
     while b:
         if b &amp; 1:
@@ -669,36 +716,49 @@ for i in range(1,n+1,1):
     s *&#x3D; i
     ans +&#x3D; s 
 print(ans)</code></pre></div></figure>
-<h2 id="C-2-构造随机数和随机字符串"><a href="#C-2-构造随机数和随机字符串" class="headerlink" title="C.2 构造随机数和随机字符串"></a>C.2 构造随机数和随机字符串</h2><p>用Python构造测试数据，比c++简单得多。它能直接产生极大的数字，方便地产生随机字符等。下<br>（1）导入库</p>
+<h2 id="c2-构造随机数和随机字符串"><a class="markdownIt-Anchor" href="#c2-构造随机数和随机字符串"></a> C.2 构造随机数和随机字符串</h2>
+<p>用Python构造测试数据，比c++简单得多。它能直接产生极大的数字，方便地产生随机字符等。下<br />
+（1）导入库</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import random</code></pre></div></figure>
 <p>可以写成：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">from random import *</code></pre></div></figure>
-<p>此时后面的代码能够简单一点，例如把<code>random.randint</code>直接写为<code>randint</code><br>（2）在指定范围内生成一个很大的随机整数：</p>
+<p>此时后面的代码能够简单一点，例如把<code>random.randint</code>直接写为<code>randint</code><br />
+（2）在指定范围内生成一个很大的随机整数：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.randint(-9999999999999999,9999999999999999))</code></pre></div></figure>
-<p>输出示例：428893995939258<br>（3）在指定范围内（0到100000）生成一个随机偶数：</p>
+<p>输出示例：428893995939258<br />
+（3）在指定范围内（0到100000）生成一个随机偶数：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.randrange(0, 100001, 2))</code></pre></div></figure>
-<p>输出示例：14908<br>（4）生成一个0到1之间的随机浮点数：</p>
+<p>输出示例：14908<br />
+（4）生成一个0到1之间的随机浮点数：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.random())</code></pre></div></figure>
-<p>输出示例：0.2856636141181378<br>（5）在指定范围内（1到20）生成一个随机浮点数：</p>
+<p>输出示例：0.2856636141181378<br />
+（5）在指定范围内（1到20）生成一个随机浮点数：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.uniform(1, 20))</code></pre></div></figure>
-<p>输出示例：9.81984258258233<br>（6）在指定字符中生成一个随机字符：</p>
+<p>输出示例：9.81984258258233<br />
+（6）在指定字符中生成一个随机字符：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.choice(&#39;abcdefghijklmnopqrst@#$%^&amp;*()&#39;))</code></pre></div></figure>
-<p>输出示例：d<br>（7）在指定字符中生成指定数量的随机字符：</p>
+<p>输出示例：d<br />
+（7）在指定字符中生成指定数量的随机字符：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (random.sample(&#39;zyxwvutsrqponmlkjihgfedcba&#39;,5))</code></pre></div></figure>
-<p>输出示例：[‘z’, ‘u’, ‘x’, ‘w’, ‘j’]<br>（8）导入库</p>
+<p>输出示例：[‘z’, ‘u’, ‘x’, ‘w’, ‘j’]<br />
+（8）导入库</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import string</code></pre></div></figure>
-<p>若写成<code>from string import *</code>，下面的<code>string.ascii_letters</code>改为<code>ascii_letters</code><br>（9）用a-z、A-Z、0-9生成指定数量的随机字符串：</p>
+<p>若写成<code>from string import *</code>，下面的<code>string.ascii_letters</code>改为<code>ascii_letters</code><br />
+（9）用a-z、A-Z、0-9生成指定数量的随机字符串：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">ran_str &#x3D; &#39;&#39;.join(random.sample(string.ascii_letters + string.digits, 8))
 print (ran_str)</code></pre></div></figure>
-<p>输出示例：iCTm6yxN<br>（10）从多个字符中选取指定数量的字符组成新字符串：</p>
+<p>输出示例：iCTm6yxN<br />
+（10）从多个字符中选取指定数量的字符组成新字符串：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">print (&#39;&#39;.join(random.sample([&#39;m&#39;,&#39;l&#39;,&#39;k&#39;,&#39;j&#39;,&#39;i&#39;,&#39;h&#39;,&#39;g&#39;,&#39;d&#39;], 5)))</code></pre></div></figure>
-<p>输出示例：mjlhd<br>（11）打乱数组的顺序：</p>
+<p>输出示例：mjlhd<br />
+（11）打乱数组的顺序：</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">items &#x3D; [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]   
 random.shuffle(items)
 for i in range(0,len(items),1):      #逐个打印
    print (items[i],&quot; &quot;,end&#x3D;&#39;&#39;)</code></pre></div></figure>
 <p>输出示例：1 0 8 3 5 7 9 4 6 2</p>
-<h2 id="对拍"><a href="#对拍" class="headerlink" title="对拍"></a>对拍</h2><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import os
+<h2 id="对拍"><a class="markdownIt-Anchor" href="#对拍"></a> 对拍</h2>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import os
 from random import randint, uniform
 import subprocess
 

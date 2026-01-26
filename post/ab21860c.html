@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/cover/18.jpg">
 <meta property="article:published_time" content="2024-01-21T19:01:24.000Z">
-<meta property="article:modified_time" content="2024-03-01T12:56:21.578Z">
+<meta property="article:modified_time" content="2026-01-26T08:46:40.751Z">
 <meta property="article:author" content="Asdaso">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
@@ -264,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          467 字
+          647 字
         
       </span>
     
@@ -275,7 +275,7 @@
         
         
         
-          4 分钟
+          6 分钟
         
       </span>
     
@@ -326,50 +326,144 @@
             
               <div class="markdown-body">
                 
-                <h1 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo new &quot;name&quot;</code></pre></div></figure>
+                <h1 id="发表文章"><a class="markdownIt-Anchor" href="#发表文章"></a> 发表文章</h1>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo new &quot;name&quot;</code></pre></div></figure>
 <p>这篇文章会出现在/source/_post/</p>
-<h1 id="发表page"><a href="#发表page" class="headerlink" title="发表page"></a>发表page</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo page &quot;name&quot;</code></pre></div></figure>
-<h1 id="修改完毕之后在本地查看效果"><a href="#修改完毕之后在本地查看效果" class="headerlink" title="修改完毕之后在本地查看效果"></a>修改完毕之后在本地查看效果</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo clean
+<h1 id="发表page"><a class="markdownIt-Anchor" href="#发表page"></a> 发表page</h1>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo page &quot;name&quot;</code></pre></div></figure>
+<h1 id="修改完毕之后在本地查看效果"><a class="markdownIt-Anchor" href="#修改完毕之后在本地查看效果"></a> 修改完毕之后在本地查看效果</h1>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo clean
 hexo generate
 hexo cl &amp;&amp; hexo g
 hexo serve</code></pre></div></figure>
-<h1 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h1><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo d </code></pre></div></figure>
+<h1 id="上传"><a class="markdownIt-Anchor" href="#上传"></a> 上传</h1>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">hexo d</code></pre></div></figure>
 <p>需要输入ssh密码</p>
-<h2 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h2><h3 id="彩色标签云"><a href="#彩色标签云" class="headerlink" title="彩色标签云"></a>彩色标签云</h3><p>在<code>config.yal</code>中将<code>aside</code>中的<code>card_tags</code>的<code>enable</code>设置为<code>true</code>即可</p>
-<h3 id="用giscus实现评论"><a href="#用giscus实现评论" class="headerlink" title="用giscus实现评论"></a>用<code>giscus</code>实现评论</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">待整理</code></pre></div></figure>
-<h3 id="实现鼠标彩色"><a href="#实现鼠标彩色" class="headerlink" title="实现鼠标彩色"></a>实现鼠标彩色</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">待整理</code></pre></div></figure>
-<h3 id="社交信息"><a href="#社交信息" class="headerlink" title="社交信息"></a>社交信息</h3><figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">social:
+<h2 id="双主题架构"><a class="markdownIt-Anchor" href="#双主题架构"></a> 双主题架构</h2>
+<h3 id="分支说明"><a class="markdownIt-Anchor" href="#分支说明"></a> 分支说明</h3>
+<p>本项目采用双主题架构，通过不同分支管理不同主题的源文件：</p>
+<table>
+<thead>
+<tr>
+<th>分支</th>
+<th>主题</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>main</td>
+<td>-</td>
+<td>部署分支（生成的静态网页）</td>
+</tr>
+<tr>
+<td>fluid</td>
+<td>Fluid</td>
+<td>当前使用的主主题</td>
+</tr>
+<tr>
+<td>butterfly</td>
+<td>Butterfly</td>
+<td>备用主题</td>
+</tr>
+<tr>
+<td>sync</td>
+<td>-</td>
+<td>多设备同步分支</td>
+</tr>
+</tbody>
+</table>
+<h3 id="主题切换步骤"><a class="markdownIt-Anchor" href="#主题切换步骤"></a> 主题切换步骤</h3>
+<p><strong>切换到 Butterfly 主题：</strong></p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># 1. 切换到 butterfly 分支
+git checkout butterfly
+
+# 2. 修改 _config.yml 中的主题配置
+# theme: butterfly
+
+# 3. 重新生成并部署
+hexo clean
+hexo generate
+hexo deploy</code></pre></div></figure>
+<p><strong>切换到 Fluid 主题：</strong></p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># 1. 切换到 fluid 分支
+git checkout fluid
+
+# 2. 修改 _config.yml 中的主题配置
+# theme: fluid
+
+# 3. 重新生成并部署
+hexo clean
+hexo generate
+hexo deploy</code></pre></div></figure>
+<h3 id="主题配置文件"><a class="markdownIt-Anchor" href="#主题配置文件"></a> 主题配置文件</h3>
+<ul>
+<li>Fluid 主题配置：<code>_config.fluid.yml</code></li>
+<li>Butterfly 主题配置：<code>_config.butterfly.yml</code></li>
+<li>主题文件位置：<code>themes/fluid/</code> 和 <code>themes/butterfly/</code></li>
+</ul>
+<h2 id="美化"><a class="markdownIt-Anchor" href="#美化"></a> 美化</h2>
+<h3 id="彩色标签云"><a class="markdownIt-Anchor" href="#彩色标签云"></a> 彩色标签云</h3>
+<p>在<code>config.yal</code>中将<code>aside</code>中的<code>card_tags</code>的<code>enable</code>设置为<code>true</code>即可</p>
+<h3 id="用giscus实现评论"><a class="markdownIt-Anchor" href="#用giscus实现评论"></a> 用<code>giscus</code>实现评论</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">待整理</code></pre></div></figure>
+<h3 id="实现鼠标彩色"><a class="markdownIt-Anchor" href="#实现鼠标彩色"></a> 实现鼠标彩色</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">待整理</code></pre></div></figure>
+<h3 id="社交信息"><a class="markdownIt-Anchor" href="#社交信息"></a> 社交信息</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">social:
   fab fa-github:  &quot;填入github主页&quot;|| Github || &#39;#24292e&#39;
   fas fa-envelope:  mailto:&quot;邮箱&quot; || Email || &#39;#4a7dbe&#39;
   fab fa-qq: fab fa-qq: tencent:&#x2F;&#x2F;AddContact&#x2F;?fromId&#x3D;45&amp;fromSubId&#x3D;1&amp;subcmd&#x3D;all&amp;uin&#x3D;&quot;QQ号👌&quot;&amp;website&#x3D;www.oicqzone.com || QQ || &#39;#qq-color-code&#39;</code></pre></div></figure>
-<h3 id="背景图片and渐变"><a href="#背景图片and渐变" class="headerlink" title="背景图片and渐变"></a>背景图片and渐变</h3><p><strong>⚠️：先在<code>config.butterfly.yaml</code>中将<code>backgroud</code>设一个图片 <code>url()</code><br>网上都没有这一步<br>但我试了好多次，只加个<code>css</code>不出现图片，不知道为什么</strong><br><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">background:  url(https:&#x2F;&#x2F;picx.zhimg.com&#x2F;80&#x2F;v2-7ee6f104979814d2bf420461e3872475_1440w.webp?source&#x3D;1def8aca)
+<h3 id="背景图片and渐变"><a class="markdownIt-Anchor" href="#背景图片and渐变"></a> 背景图片and渐变</h3>
+<p><strong>⚠️：先在<code>config.butterfly.yaml</code>中将<code>backgroud</code>设一个图片 <code>url()</code><br />
+网上都没有这一步<br />
+但我试了好多次，只加个<code>css</code>不出现图片，不知道为什么</strong></p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">background:  url(https:&#x2F;&#x2F;picx.zhimg.com&#x2F;80&#x2F;v2-7ee6f104979814d2bf420461e3872475_1440w.webp?source&#x3D;1def8aca)
 写css
-然后inject</code></pre></div></figure></p>
-<h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">写css
 然后inject</code></pre></div></figure>
-<h2 id="目前还不会的"><a href="#目前还不会的" class="headerlink" title="目前还不会的"></a>目前还不会的</h2><h3 id="2024-1-11"><a href="#2024-1-11" class="headerlink" title="2024.1.11"></a>2024.1.11</h3><ul>
+<h3 id="代码高亮"><a class="markdownIt-Anchor" href="#代码高亮"></a> 代码高亮</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">写css
+然后inject</code></pre></div></figure>
+<h2 id="目前还不会的"><a class="markdownIt-Anchor" href="#目前还不会的"></a> 目前还不会的</h2>
+<h3 id="2024111"><a class="markdownIt-Anchor" href="#2024111"></a> 2024.1.11</h3>
+<ul>
 <li>[ ] <code>giscus</code>不会将评论顺序默认改成最新的</li>
 <li>[ ] 最新留言or评论不会弄到右边</li>
 <li>[x] 将评论在某些page不显示</li>
-<li>[x] 文章背景虚化   2024.1.22完成<h3 id="待做"><a href="#待做" class="headerlink" title="待做"></a>待做</h3></li>
+<li>[x] 文章背景虚化   2024.1.22完成</li>
+</ul>
+<h3 id="待做"><a class="markdownIt-Anchor" href="#待做"></a> 待做</h3>
+<ul>
 <li>[ ] <code>about</code>完善</li>
 </ul>
-<h3 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h3><h4 id="用picgo-app："><a href="#用picgo-app：" class="headerlink" title="用picgo app："></a>用<code>picgo</code> app：</h4><p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240301205606.png" srcset="/img/loading.gif" lazyload alt=""><br>从粘贴板上传图片快捷键：<code>ctrl+shift+p</code></p>
-<h4 id="用vscode-markdowm-picgo-插件"><a href="#用vscode-markdowm-picgo-插件" class="headerlink" title="用vscode + markdowm + picgo(插件)"></a>用vscode + markdowm + picgo(插件)</h4><p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240123001458.png" srcset="/img/loading.gif" lazyload alt="20240123001458"><br><code>cdn</code>加速<br><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240123001522.png" srcset="/img/loading.gif" lazyload alt="20240123001522"><br>从粘贴板上传图片快捷键：<code>artl+shift+u</code></p>
-<h4 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a><code>Typora</code></h4><p>文件-&gt;偏好设置-&gt;图像</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240301205545.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240301205518.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h3 id="图床"><a class="markdownIt-Anchor" href="#图床"></a> 图床</h3>
+<h4 id="用picgo-app"><a class="markdownIt-Anchor" href="#用picgo-app"></a> 用<code>picgo</code> app：</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240301205606.png" srcset="/img/loading.gif" lazyload alt="" /><br />
+从粘贴板上传图片快捷键：<code>ctrl+shift+p</code></p>
+<h4 id="用vscode-markdowm-picgo插件"><a class="markdownIt-Anchor" href="#用vscode-markdowm-picgo插件"></a> 用vscode + markdowm + picgo(插件)</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240123001458.png" srcset="/img/loading.gif" lazyload alt="20240123001458" /><br />
+<code>cdn</code>加速<br />
+<img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240123001522.png" srcset="/img/loading.gif" lazyload alt="20240123001522" /><br />
+从粘贴板上传图片快捷键：<code>artl+shift+u</code></p>
+<h4 id="typora"><a class="markdownIt-Anchor" href="#typora"></a> <code>Typora</code></h4>
+<p>文件-&gt;偏好设置-&gt;图像</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240301205545.png" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240301205518.png" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p>点击<strong>验证图片上传选项</strong>查看是否配置好</p>
-<h3 id="git-子仓库："><a href="#git-子仓库：" class="headerlink" title="git 子仓库："></a>git 子仓库：</h3><figure><div class="code-wrapper"><pre class="line-numbers language-git" data-language="git"><code class="language-git">cd themes&#x2F;butterfly
+<h3 id="git-子仓库"><a class="markdownIt-Anchor" href="#git-子仓库"></a> git 子仓库：</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-git" data-language="git"><code class="language-git">cd themes&#x2F;butterfly
 git add .
 git commit -m &quot;update&quot;
 cd ..&#x2F;..&#x2F;
 git add themes&#x2F;butterfly
 git commit -m &quot;update&quot;
 git push origin hexo</code></pre></div></figure>
-<h3 id="将ssh代理改为https"><a href="#将ssh代理改为https" class="headerlink" title="将ssh代理改为https"></a>将ssh代理改为https</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">temp</code></pre></div></figure>
-<h3 id="可以单独将public上传到github仓库，不用hexo-d"><a href="#可以单独将public上传到github仓库，不用hexo-d" class="headerlink" title="可以单独将public上传到github仓库，不用hexo d"></a>可以单独将public上传到github仓库，不用<code>hexo d</code></h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">temp</code></pre></div></figure>
-<h3 id="副标题"><a href="#副标题" class="headerlink" title="副标题"></a>副标题</h3><p>在’_config.yaml’里面更改</p>
+<h3 id="将ssh代理改为https"><a class="markdownIt-Anchor" href="#将ssh代理改为https"></a> 将ssh代理改为https</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">temp</code></pre></div></figure>
+<h3 id="可以单独将public上传到github仓库不用hexo-d"><a class="markdownIt-Anchor" href="#可以单独将public上传到github仓库不用hexo-d"></a> 可以单独将public上传到github仓库，不用<code>hexo d</code></h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">temp</code></pre></div></figure>
+<h3 id="副标题"><a class="markdownIt-Anchor" href="#副标题"></a> 副标题</h3>
+<p>在’_config.yaml’里面更改</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">title: asdaso的blog
 subtitle:
   enable: true
@@ -383,7 +477,8 @@ author: asdaso
 language: zh-CN
 timezone: &#39;&#39;
 </code></pre></div></figure>
-<h3 id="封面不显示正文"><a href="#封面不显示正文" class="headerlink" title="封面不显示正文"></a>封面不显示正文</h3><p><code>method</code>选择1表示显示介绍</p>
+<h3 id="封面不显示正文"><a class="markdownIt-Anchor" href="#封面不显示正文"></a> 封面不显示正文</h3>
+<p><code>method</code>选择1表示显示介绍</p>
 <figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">index_post_content:
   method: 1  #description
   length: 500 # if you set method to 2 or 3, the length need to config</code></pre></div></figure>

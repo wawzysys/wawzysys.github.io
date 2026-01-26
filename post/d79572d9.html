@@ -19,20 +19,20 @@
   <meta name="author" content="Asdaso">
   <meta name="keywords" content="blog,技术,编程">
   
-    <meta name="description" content="pymodelimport sys sys.setrecursionlimit(100000) input&#x3D;lambda:sys.stdin.readline().strip() # write&#x3D;lambda x:sys.stdout.write(str(x)+&#39;\n&#39;) # from decimal import Decimal # from datetime">
+    <meta name="description" content="pymodel import sys sys.setrecursionlimit(100000) input&#x3D;lambda:sys.stdin.readline().strip() # write&#x3D;lambda x:sys.stdout.write(str(x)+&#39;\n&#39;) # from decimal import Decimal # from dateti">
 <meta property="og:type" content="article">
 <meta property="og:title" content="model">
 <meta property="og:url" content="http://example.com/post/d79572d9.html">
 <meta property="og:site_name" content="Asdasoのblog">
-<meta property="og:description" content="pymodelimport sys sys.setrecursionlimit(100000) input&#x3D;lambda:sys.stdin.readline().strip() # write&#x3D;lambda x:sys.stdout.write(str(x)+&#39;\n&#39;) # from decimal import Decimal # from datetime">
+<meta property="og:description" content="pymodel import sys sys.setrecursionlimit(100000) input&#x3D;lambda:sys.stdin.readline().strip() # write&#x3D;lambda x:sys.stdout.write(str(x)+&#39;\n&#39;) # from decimal import Decimal # from dateti">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/cover/8.jpg">
+<meta property="og:image" content="http://example.com/img/cover/18.jpg">
 <meta property="article:published_time" content="2024-05-18T12:23:59.000Z">
 <meta property="article:modified_time" content="2024-05-18T12:24:56.078Z">
 <meta property="article:author" content="Asdaso">
 <meta property="article:tag" content="blog,技术,编程">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/cover/8.jpg">
+<meta name="twitter:image" content="http://example.com/img/cover/18.jpg">
   
   
   
@@ -235,7 +235,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/cover/8.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/cover/18.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -326,7 +326,8 @@
             
               <div class="markdown-body">
                 
-                <h3 id="pymodel"><a href="#pymodel" class="headerlink" title="pymodel"></a>pymodel</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import sys
+                <h3 id="pymodel"><a class="markdownIt-Anchor" href="#pymodel"></a> pymodel</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import sys
 sys.setrecursionlimit(100000)
 input&#x3D;lambda:sys.stdin.readline().strip()
 # write&#x3D;lambda x:sys.stdout.write(str(x)+&#39;\n&#39;)
@@ -354,7 +355,8 @@ if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
     #   solve()
 
     solve()</code></pre></div></figure>
-<h3 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">class DSU:
+<h3 id="并查集"><a class="markdownIt-Anchor" href="#并查集"></a> 并查集</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">class DSU:
     def __init__(self, n):
         self.parent &#x3D; list(range(n))
         self.size &#x3D; [1] * n
@@ -380,7 +382,8 @@ if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
     def connected(self, x, y):
         x, y &#x3D; self.find(x), self.find(y)
         return x &#x3D;&#x3D; y</code></pre></div></figure>
-<h3 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">class Factorial:
+<h3 id="组合数"><a class="markdownIt-Anchor" href="#组合数"></a> 组合数</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">class Factorial:
     def __init__(self, N, mod) -&gt; None:
         N +&#x3D; 1
         self.mod &#x3D; mod
@@ -411,7 +414,8 @@ if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
 
     def inv(self, n):
         return self.f[n - 1] * self.g[n] % self.mod</code></pre></div></figure>
-<h3 id="质数筛"><a href="#质数筛" class="headerlink" title="质数筛"></a>质数筛</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">pri &#x3D; []
+<h3 id="质数筛"><a class="markdownIt-Anchor" href="#质数筛"></a> 质数筛</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">pri &#x3D; []
 not_prime &#x3D; [False] * N
 
 def pre(n):
@@ -424,7 +428,8 @@ def pre(n):
             not_prime[i * pri_j] &#x3D; True
             if i % pri_j &#x3D;&#x3D; 0:
                 break</code></pre></div></figure>
-<h3 id="质因数个数"><a href="#质因数个数" class="headerlink" title="质因数个数"></a>质因数个数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def divide(n):
+<h3 id="质因数个数"><a class="markdownIt-Anchor" href="#质因数个数"></a> 质因数个数</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def divide(n):
     ans &#x3D; []
     i &#x3D; 2
     while i &lt;&#x3D; n &#x2F;&#x2F; i:
@@ -438,7 +443,8 @@ def pre(n):
     if n &gt; 1:
         ans.append((n, 1))
     return ans</code></pre></div></figure>
-<h3 id="约数之和"><a href="#约数之和" class="headerlink" title="约数之和"></a>约数之和</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">mod &#x3D; int(1e9 + 7)
+<h3 id="约数之和"><a class="markdownIt-Anchor" href="#约数之和"></a> 约数之和</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">mod &#x3D; int(1e9 + 7)
 primes &#x3D; &#123;&#125;
 a &#x3D; int(input())
 while a:
@@ -466,7 +472,8 @@ for i,val in primes.items():
         t &#x3D; (t * i + 1) % mod
     res &#x3D; res * t % mod
 print(res)</code></pre></div></figure>
-<h3 id="约数个数"><a href="#约数个数" class="headerlink" title="约数个数"></a>约数个数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">mod &#x3D; 1e9 + 7
+<h3 id="约数个数"><a class="markdownIt-Anchor" href="#约数个数"></a> 约数个数</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">mod &#x3D; 1e9 + 7
 
 primes &#x3D; &#123;&#125;
 a &#x3D; int(input())
@@ -492,7 +499,9 @@ res &#x3D; 1
 for i in primes.values():
     res &#x3D; int(res * (i + 1) % mod)
 print(res)</code></pre></div></figure>
-<h3 id="欧拉函数"><a href="#欧拉函数" class="headerlink" title="欧拉函数"></a>欧拉函数</h3><p><img src="image.png" srcset="/img/loading.gif" lazyload alt="alt text"><br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">n &#x3D; int(input())
+<h3 id="欧拉函数"><a class="markdownIt-Anchor" href="#欧拉函数"></a> 欧拉函数</h3>
+<p><img src="image.png" srcset="/img/loading.gif" lazyload alt="alt text" /></p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">n &#x3D; int(input())
 for i in range(n):
     a &#x3D; int(input())
     res &#x3D; a
@@ -505,8 +514,9 @@ for i in range(n):
         j +&#x3D; 1
     if a &gt; 1:
         res &#x3D; res * (a - 1) &#x2F;&#x2F; a
-    print(int(res))</code></pre></div></figure></p>
-<h3 id="筛法求欧拉函数"><a href="#筛法求欧拉函数" class="headerlink" title="筛法求欧拉函数"></a>筛法求欧拉函数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">N &#x3D; 1000010
+    print(int(res))</code></pre></div></figure>
+<h3 id="筛法求欧拉函数"><a class="markdownIt-Anchor" href="#筛法求欧拉函数"></a> 筛法求欧拉函数</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">N &#x3D; 1000010
 primes &#x3D; [0]*N
 phi &#x3D; [0]*N
 st &#x3D; [False]*N
@@ -528,7 +538,9 @@ def get_eulers(n):
             phi[primes[j] * i] &#x3D; phi[i] * (primes[j] - 1)
             j +&#x3D; 1
 </code></pre></div></figure>
-<h3 id="扩展欧几里得"><a href="#扩展欧几里得" class="headerlink" title="扩展欧几里得"></a>扩展欧几里得</h3><p><img src="image-1.png" srcset="/img/loading.gif" lazyload alt="alt text"><br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def extend_gcd(a,b,x,y):
+<h3 id="扩展欧几里得"><a class="markdownIt-Anchor" href="#扩展欧几里得"></a> 扩展欧几里得</h3>
+<p><img src="image-1.png" srcset="/img/loading.gif" lazyload alt="alt text" /></p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def extend_gcd(a,b,x,y):
     if not b:
         return a,1,0
 
@@ -542,8 +554,10 @@ while n:
     a,b &#x3D; map(int,input().split())
     x,y &#x3D; 0,0
     d,x,y &#x3D; extend_gcd(a,b,x,y)
-    print(x,y)</code></pre></div></figure></p>
-<h3 id="线性同余方程"><a href="#线性同余方程" class="headerlink" title="线性同余方程"></a>线性同余方程</h3><p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240518200819.png" srcset="/img/loading.gif" lazyload alt="20240518200819"><br><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def extend_gcd(a,b,x,y):
+    print(x,y)</code></pre></div></figure>
+<h3 id="线性同余方程"><a class="markdownIt-Anchor" href="#线性同余方程"></a> 线性同余方程</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/wawzysys/imgbed@main/20240518200819.png" srcset="/img/loading.gif" lazyload alt="20240518200819" /></p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def extend_gcd(a,b,x,y):
     if not b:
         return a,1,0
 
@@ -560,13 +574,16 @@ while n:
     if b % d:
         print(&quot;impossible&quot;)
     else:
-        print(x * (b &#x2F;&#x2F; d) % m)</code></pre></div></figure></p>
-<h3 id="求组合数"><a href="#求组合数" class="headerlink" title="求组合数"></a>求组合数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import math
+        print(x * (b &#x2F;&#x2F; d) % m)</code></pre></div></figure>
+<h3 id="求组合数"><a class="markdownIt-Anchor" href="#求组合数"></a> 求组合数</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import math
 def C(n, m):
     return math.factorial(n) &#x2F;&#x2F; (math.factorial(m) * math.factorial(n - m))
 n, m &#x3D; map(int, input().split())
 print(C(n, m))</code></pre></div></figure>
-<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"># 左闭右闭
+<h2 id="数据结构"><a class="markdownIt-Anchor" href="#数据结构"></a> 数据结构</h2>
+<h3 id="树状数组"><a class="markdownIt-Anchor" href="#树状数组"></a> 树状数组</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python"># 左闭右闭
 class FenWick:
     def __init__(self, n: int):
         self.n &#x3D; n
@@ -588,7 +605,8 @@ class FenWick:
         while i &lt;&#x3D; self.n:
             self.tr[i] +&#x3D; val
             i +&#x3D; i &amp; -i</code></pre></div></figure>
-<h3 id="线段数"><a href="#线段数" class="headerlink" title="线段数"></a>线段数</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import sys
+<h3 id="线段数"><a class="markdownIt-Anchor" href="#线段数"></a> 线段数</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">import sys
 from collections import defaultdict
 # region fastio
 input &#x3D; lambda: sys.stdin.readline().rstrip()
@@ -680,7 +698,8 @@ def solve():
 if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
 
     solve()</code></pre></div></figure>
-<h3 id="SortedList"><a href="#SortedList" class="headerlink" title="SortedList"></a>SortedList</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">
+<h3 id="sortedlist"><a class="markdownIt-Anchor" href="#sortedlist"></a> SortedList</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">
 class SortedList:
     def __init__(self, iterable&#x3D;[], _load&#x3D;200):
         &quot;&quot;&quot;Initialize sorted list instance.&quot;&quot;&quot;
@@ -914,7 +933,8 @@ class SortedList:
     def __repr__(self):
         &quot;&quot;&quot;Return string representation of sorted list.&quot;&quot;&quot;
         return &#39;SortedList(&#123;0&#125;)&#39;.format(list(self))</code></pre></div></figure>
-<h3 id="字符串哈希"><a href="#字符串哈希" class="headerlink" title="字符串哈希"></a>字符串哈希</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">class StringHash:
+<h3 id="字符串哈希"><a class="markdownIt-Anchor" href="#字符串哈希"></a> 字符串哈希</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">class StringHash:
     def __init__(self, s):
         n &#x3D; len(s)
         self.base &#x3D; 131
@@ -929,7 +949,8 @@ class SortedList:
         def get_hash(self, l, r):
             res &#x3D; self.h[r] - self.h[l] * self.p[r - l]
             return res % self.mod</code></pre></div></figure>
-<h3 id="二维差分"><a href="#二维差分" class="headerlink" title="二维差分"></a>二维差分</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">for i in range(1, n + 1):
+<h3 id="二维差分"><a class="markdownIt-Anchor" href="#二维差分"></a> 二维差分</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">for i in range(1, n + 1):
     for j in range(1, m + 1):
         b[i][j] &#x3D; a[i][j] - a[i - 1][j] - a[i][j - 1] + a[i - 1][j - 1]
 for i in range(q):
@@ -943,7 +964,9 @@ for i in range(1, n + 1):
         a[i][j] &#x3D; b[i][j] + a[i - 1][j] + a[i][j - 1] - a[i - 1][j - 1]
         print(a[i][j], end &#x3D; &#39; &#39;)
     print()</code></pre></div></figure>
-<h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><h3 id="spfa"><a href="#spfa" class="headerlink" title="spfa"></a>spfa</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def spfa(u, n, g) -&gt; int:
+<h2 id="图论"><a class="markdownIt-Anchor" href="#图论"></a> 图论</h2>
+<h3 id="spfa"><a class="markdownIt-Anchor" href="#spfa"></a> spfa</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def spfa(u, n, g) -&gt; int:
     q &#x3D; deque()
     q.append(u)
     vis &#x3D; set()
@@ -960,7 +983,8 @@ for i in range(1, n + 1):
                     vis.add(j)
                     q.append(j)
     return dist[n]</code></pre></div></figure>
-<h3 id="dijkstra"><a href="#dijkstra" class="headerlink" title="dijkstra"></a>dijkstra</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def dij(u, n, g) -&gt; int:
+<h3 id="dijkstra"><a class="markdownIt-Anchor" href="#dijkstra"></a> dijkstra</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def dij(u, n, g) -&gt; int:
     q &#x3D; [(0, u)] # 距离 顶点
     vis &#x3D; set()
     dist &#x3D; defaultdict(lambda : inf)
@@ -975,7 +999,8 @@ for i in range(1, n + 1):
                 dist[j] &#x3D; dist[u] + d
                 heappush(q, (dist[j], j))
     return dist[n]</code></pre></div></figure>
-<h3 id="krushkal"><a href="#krushkal" class="headerlink" title="krushkal"></a>krushkal</h3><figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def kruskal():
+<h3 id="krushkal"><a class="markdownIt-Anchor" href="#krushkal"></a> krushkal</h3>
+<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">def kruskal():
     dsu &#x3D; DSU(n)
     edges.sort(key &#x3D; lambda x : x[2])
     res &#x3D; 0
