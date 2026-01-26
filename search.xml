@@ -23,19 +23,6 @@
     
     
     <entry>
-      <title>windows</title>
-      <link href="/post/e3e7859b.html"/>
-      <url>/post/e3e7859b.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="软件"><a class="markdownIt-Anchor" href="#软件"></a> 软件</h2><h3 id="snipaste"><a class="markdownIt-Anchor" href="#snipaste"></a> <code>snipaste</code></h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">F1 截图F3 粘贴，可以把粘贴的文字也变成图片</code></pre></div></figure><h3 id="powertoys"><a class="markdownIt-Anchor" href="#powertoys"></a> <code>powertoys</code></h3><p>作用：<br />粘贴为纯文本<br />图片提取文字</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>belief</title>
       <link href="/post/2f811454.html"/>
       <url>/post/2f811454.html</url>
@@ -113,6 +100,19 @@
             <tag> java </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>windows</title>
+      <link href="/post/e3e7859b.html"/>
+      <url>/post/e3e7859b.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="软件"><a class="markdownIt-Anchor" href="#软件"></a> 软件</h2><h3 id="snipaste"><a class="markdownIt-Anchor" href="#snipaste"></a> <code>snipaste</code></h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">F1 截图F3 粘贴，可以把粘贴的文字也变成图片</code></pre></div></figure><h3 id="powertoys"><a class="markdownIt-Anchor" href="#powertoys"></a> <code>powertoys</code></h3><p>作用：<br />粘贴为纯文本<br />图片提取文字</p>]]></content>
+      
+      
       
     </entry>
     
