@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>windows</title>
+    <link href="/post/e3e7859b.html"/>
+    <url>/post/e3e7859b.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="软件"><a class="markdownIt-Anchor" href="#软件"></a> 软件</h2><h3 id="snipaste"><a class="markdownIt-Anchor" href="#snipaste"></a> <code>snipaste</code></h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">F1 截图F3 粘贴，可以把粘贴的文字也变成图片</code></pre></div></figure><h3 id="powertoys"><a class="markdownIt-Anchor" href="#powertoys"></a> <code>powertoys</code></h3><p>作用：<br />粘贴为纯文本<br />图片提取文字</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>belief</title>
     <link href="/post/2f811454.html"/>
     <url>/post/2f811454.html</url>
@@ -137,19 +150,6 @@
     <url>/post/7ade1d5c.html</url>
     
     <content type="html"><![CDATA[<figure><div class="code-wrapper"><pre class="line-numbers language-python" data-language="python"><code class="language-python">#是用urllib模块import urlliburl &#x3D; &quot;http:&#x2F;&#x2F;www.baidu.com&quot;response &#x3D; urllib.request.urlopen(url)#read 方法 返回的字节形式的二进制数据#decode 方法 将二进制数据解码成字符串content &#x3D; response.read().decode(&quot;utf-8&quot;)print(content)</code></pre></div></figure>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>windows</title>
-    <link href="/post/e3e7859b.html"/>
-    <url>/post/e3e7859b.html</url>
-    
-    <content type="html"><![CDATA[<h2 id="软件"><a class="markdownIt-Anchor" href="#软件"></a> 软件</h2><h3 id="snipaste"><a class="markdownIt-Anchor" href="#snipaste"></a> <code>snipaste</code></h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">F1 截图F3 粘贴，可以把粘贴的文字也变成图片</code></pre></div></figure><h3 id="powertoys"><a class="markdownIt-Anchor" href="#powertoys"></a> <code>powertoys</code></h3><p>作用：<br />粘贴为纯文本<br />图片提取文字</p>]]></content>
     
     
     
