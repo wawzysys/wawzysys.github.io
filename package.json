@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "riji": "powershell -ExecutionPolicy Bypass -File tools/new-riji.ps1",
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
