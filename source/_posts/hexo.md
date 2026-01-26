@@ -24,9 +24,60 @@ hexo serve
 ```
 # 上传
 ```
-hexo d 
+hexo d
 ```
 需要输入ssh密码
+
+## 双主题架构
+
+### 分支说明
+
+本项目采用双主题架构，通过不同分支管理不同主题的源文件：
+
+| 分支 | 主题 | 说明 |
+|------|------|------|
+| main | - | 部署分支（生成的静态网页） |
+| fluid | Fluid | 当前使用的主主题 |
+| butterfly | Butterfly | 备用主题 |
+| sync | - | 多设备同步分支 |
+
+### 主题切换步骤
+
+**切换到 Butterfly 主题：**
+
+```bash
+# 1. 切换到 butterfly 分支
+git checkout butterfly
+
+# 2. 修改 _config.yml 中的主题配置
+# theme: butterfly
+
+# 3. 重新生成并部署
+hexo clean
+hexo generate
+hexo deploy
+```
+
+**切换到 Fluid 主题：**
+
+```bash
+# 1. 切换到 fluid 分支
+git checkout fluid
+
+# 2. 修改 _config.yml 中的主题配置
+# theme: fluid
+
+# 3. 重新生成并部署
+hexo clean
+hexo generate
+hexo deploy
+```
+
+### 主题配置文件
+
+- Fluid 主题配置：`_config.fluid.yml`
+- Butterfly 主题配置：`_config.butterfly.yml`
+- 主题文件位置：`themes/fluid/` 和 `themes/butterfly/`
 
 
 ## 美化
