@@ -135,3 +135,10 @@ symbols_count_time:
   awl: 2 # 每个单词所占字符数，中文建议设置为2，英文建议设置为4
   wpm: 300 # 每分钟阅读单词数，中文建议设置为300，英文建议设置为275
   suffix: "mins" # 时间单位
+
+# MathJax 公式渲染
+mathjax:
+  enable: true
+  per_page: false
+  engine: 'mathjax'
+  cdn: 'https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js'

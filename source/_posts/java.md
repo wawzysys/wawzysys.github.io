@@ -2,6 +2,7 @@
 title: java_yi
 tags: java
 categories: java
+math: true
 archives: true
 abbrlink: 2979e7ed
 date: 2024-09-03 21:36:25
@@ -19,11 +20,15 @@ Math.abs(x-y);
 
 **求最大值**
 
-  $\text{max}(a, b) = \frac{a + b + \text{abs}(a - b)}{2} $ 
+$$
+\text{max}(a, b) = \frac{a + b + \text{abs}(a - b)}{2}
+$$
 
 
 
-  $ \text{max}(a, b, c) = \frac{\left(\frac{a + b + \text{abs}(a - b)}{2} + c + \text{abs}\left(\frac{a + b + \text{abs}(a - b)}{2} - c\right)\right)}{2}$
+$$
+\text{max}(a, b, c) = \frac{\left(\frac{a + b + \text{abs}(a - b)}{2} + c + \text{abs}\left(\frac{a + b + \text{abs}(a - b)}{2} - c\right)\right)}{2}
+$$
    
 
 
