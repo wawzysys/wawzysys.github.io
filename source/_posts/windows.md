@@ -1,6 +1,7 @@
 ---
 title: windows
 abbrlink: e3e7859b
+date: 2024-05-30 16:38:56
 ---
 ## 软件
 ### `snipaste`
